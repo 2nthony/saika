@@ -21,6 +21,7 @@ export default {
     target() {
       return this.$store.getters.target
     },
+
     css() {
       const { cssVariables } = this.$store.getters
       const content = Object.keys(cssVariables).reduce((res, key) => {
