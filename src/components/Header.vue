@@ -7,7 +7,7 @@
         </h1>
       </div>
       <div class="HeaderRight">
-        <HeaderNav :nav="nav" />
+        <HeaderNav v-if="nav" :nav="nav" />
       </div>
     </div>
   </header>
@@ -65,6 +65,7 @@ export default {
   white-space: nowrap;
 
   & a {
+    color: var(--text-color);
     text-decoration: none;
   }
 }
