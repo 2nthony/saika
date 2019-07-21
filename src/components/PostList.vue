@@ -3,11 +3,13 @@
     <div
       v-for="(post, k) in props.posts"
       :key="k"
-      class="PostListItem"
+      class="PostItem"
     >
-      <SaikaLink :to="post.link">
-        <h2>{{ post.title || post.link }}</h2>
-      </SaikaLink>
+      <h2 class="PostTitle">
+        <SaikaLink :to="post.link">
+          {{ post.title || post.link }}
+        </SaikaLink>
+      </h2>
     </div>
   </div>
 </template>
