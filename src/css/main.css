@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  color: var(--text-color);
+  background: var(--page-background);
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.Wrap {
+  margin: 40px 80px;
+  max-width: 770px;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 var(--gap);
+    max-width: 100%;
+  }
+}
+
+.ExternalLinkIcon {
+  margin-left: 3px;
+  color: #aaa;
+  display: inline-block;
+}
+
+.Content a {
+  color: var(--accent-color);
+  &:hover {
+    text-decoration: undeline;
+  }
+}
+
+::selection {
+  background: var(--selection);
+  color: #000;
+}
