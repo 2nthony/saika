@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import marked from './utils/marked'
+import markedRenderer from './utils/markedRenderer'
+import highlight from './utils/highlight'
 import { getFileUrl, getFilenameByPath } from './utils'
 import cssVariables from './utils/cssVariables'
 
@@ -41,7 +43,10 @@ const store = new Vuex.Store({
       const content = await fetch(page.file).then(res => res.text())
       page.content = content
 
-      page.content = marked(page.content)
+      page.content = marked(page.content, {
+        renderer: markedRenderer(),
+        highlight
+      })
 
       commit('SET_PAGE', page)
       commit('SET_FETCHING', false)

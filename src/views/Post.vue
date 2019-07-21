@@ -50,7 +50,7 @@ export default {
 
       const component = {
         name: 'PageContent',
-        template: `<div class="PageContent">${
+        template: `<div class="page-content">${
           page.content
         }</div>`
       }
@@ -67,3 +67,6 @@ export default {
   }
 }
 </script>
+
+<style src="../css/prism.css"></style>
+<style src="../css/page-content.css"></style>

@@ -19,9 +19,11 @@
     "lint": "xo",
     "test": "npm run lint && echo lol",
     "build": "poi --prod --config build/lib.config.js",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "example": "poi -s --config example/poi.js"
   },
   "dependencies": {
+    "prismjs": "^1.16.0",
     "vue": "^2.6.10",
     "vue-content-loader": "^0.2.2",
     "vue-router": "^3.0.7",
