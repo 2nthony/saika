@@ -1,0 +1,124 @@
+.page-content {
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    font-weight: 600;
+  }
+
+  & h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  & h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 40px;
+    padding-bottom: 5px;
+  }
+
+  & code {
+    font-family: var(--code-font);
+    color: #bd10e0;
+    font-size: 0.9em;
+    white-space: pre-wrap;
+    &.inline::before {
+      content: '\`';
+    }
+    &.inline::after {
+      content: '\`';
+    }
+  }
+
+  & .pre-wrapper {
+    margin: 2rem 0;
+    position: relative;
+    background: white;
+
+    &:before {
+      content: attr(data-lang);
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font: 12px var(--code-font);
+      color: #cacaca;
+    }
+  }
+
+  & pre {
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    position: relative;
+    white-space: pre;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    & code {
+      color: #000;
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+
+  & table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+  }
+
+  & table th,
+  & table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+  }
+
+  & thead th {
+    color: var(--table-header-color);
+    background: var(--table-header-background);
+    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    font-weight: 400;
+    font-size: 12px;
+    padding: 10px;
+
+    &:first-child {
+      border-left: 1px solid var(--border-color);
+      border-radius: 4px 0px 0px 4px;
+    }
+
+    &:last-child {
+      border-right: 1px solid var(--border-color);
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  & ol,
+  & ul {
+    padding: 0;
+    list-style-type: none;
+    margin-left: 15px;
+
+    & > li {
+      &::before {
+        content: '-';
+        display: inline-block;
+        color: #999;
+        position: absolute;
+        margin-left: -15px;
+      }
+    }
+  }
+
+  & ol {
+    list-style-type: decimal;
+    & > li {
+      &::before {
+        content: '';
+      }
+    }
+  }
+}
