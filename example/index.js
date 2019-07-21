@@ -3,6 +3,16 @@ import Saika from '../src'
 /* eslint-disable no-new */
 new Saika({
   target: 'app',
+  nav: [
+    {
+      title: 'github',
+      link: 'https://github.com/evillt'
+    },
+    {
+      title: 'twitter',
+      link: 'https://twitter.com/evillt'
+    }
+  ],
   posts: [
     {
       title: 'hello saika',
