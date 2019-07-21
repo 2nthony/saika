@@ -10,7 +10,7 @@
   "files": [
     "dist",
     "lib",
-    "!**/__test__/"
+    "!**/__test__/**"
   ],
   "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
   "main": "dist/saika.js",
