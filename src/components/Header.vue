@@ -1,12 +1,12 @@
 <template>
   <header class="Header">
-    <div class="HeaderInner">
-      <div class="HeaderLeft">
-        <h1 class="SiteTitle">
+    <div class="header-inner">
+      <div class="header-left">
+        <h1 class="site-title">
           <SaikaLink to="/">{{ Title }}</SaikaLink>
         </h1>
       </div>
-      <div class="HeaderRight">
+      <div class="header-right">
         <HeaderNav v-if="nav" :nav="nav" />
       </div>
     </div>
@@ -48,7 +48,7 @@ export default {
   background: var(--header-background);
 }
 
-.HeaderInner {
+.header-inner {
   height: 100%;
   padding: 0 var(--gap);
   position: relative;
@@ -56,7 +56,7 @@ export default {
   align-items: center;
 }
 
-.SiteTitle {
+.site-title {
   font-weight: normal;
   margin: 0 25px 0 0;
   font-size: 1.2rem;
@@ -70,7 +70,7 @@ export default {
   }
 }
 
-.HeaderRight {
+.header-right {
   display: flex;
   position: absolute;
   right: 20px;

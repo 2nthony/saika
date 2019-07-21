@@ -1,11 +1,11 @@
 <template functional>
-  <div class="PostList">
+  <div class="post-list">
     <div
       v-for="(post, k) in props.posts"
       :key="k"
-      class="PostItem"
+      class="post-item"
     >
-      <h2 class="PostTitle">
+      <h2 class="post-title">
         <SaikaLink :to="post.link">
           {{ post.title || post.link }}
         </SaikaLink>
