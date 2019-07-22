@@ -1,25 +1,37 @@
-<template>
-  <div class="Wrap">
-    <div class="Home">
-      <PostList :posts="posts" />
-    </div>
-  </div>
-</template>
-
 <script>
 import PostList from '../components/PostList.vue'
 
 export default {
   name: 'HomePage',
 
+  functional: true,
+
   components: {
     PostList
   },
 
-  computed: {
-    posts() {
-      return this.$store.getters.posts
-    }
+  render(h, { parent }) {
+    return h(
+      'div',
+      {
+        class: 'Wrap'
+      },
+      [
+        h(
+          'div',
+          {
+            class: 'Home'
+          },
+          [
+            h(PostList, {
+              props: {
+                posts: parent.$store.getters.posts
+              }
+            })
+          ]
+        )
+      ]
+    )
   }
 }
 </script>
