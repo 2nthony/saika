@@ -1,6 +1,6 @@
 # Saika
 
-> Write blog effortlessly
+> Effortless blogging
 
 Please consider starring the project to show your ❤️ and support.
 
@@ -39,7 +39,7 @@ The `index.html` looks like:
   <script src="https://cdn.jsdelivr.net/npm/saika"></script>
   <script>
     new Saika({
-      target: 'saika',
+      target: '#saika',
       posts: [
         {
           title: 'MyPost',
@@ -53,7 +53,9 @@ The `index.html` looks like:
 
 Then you can serve this folder as a static website on your machine using:
 
-- Node.js: `npm i -g serve && serve .`
+- Node.js:
+  - `npm i -g serve && serve .`
+  - `npm i http-server && hs`
 - Python: `python -m SimpleHTTPServer`
 - Golang: `caddy`
 - ...or whatever static web server
@@ -65,6 +67,11 @@ Then you can serve this folder as a static website on your machine using:
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
+
+## Credits
+
+- [docute](https://github.com/egoist/docute)
+- [zeit/design](https://zeit.co/design)
 
 ## Author
 
