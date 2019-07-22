@@ -11,8 +11,16 @@ new Saika({
   ],
   posts: [
     {
-      title: 'Usage',
-      link: '/usage'
+      title: 'Introduction',
+      link: '/introduction'
+    },
+    {
+      title: 'Credits',
+      link: '/credits'
+    },
+    {
+      title: 'Not Found',
+      link: '/hello-from-the-outside'
     }
   ]
 })

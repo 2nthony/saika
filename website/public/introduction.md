@@ -1,4 +1,27 @@
-# Usage
+# Introduction to Saika
+
+The fastest way to create a blog site for your project.
+
+## What is Saika
+
+Saika is basically a JavaScript file that fetches Markdown files and renders them as a single-page application.
+
+It's totally runtime-driven so there's no server-side components involved which also means there's no build process. You only need to create an HTML file and a bunch of Markdown documents and your website is almost ready!
+
+## How does it work
+
+In short: URL is the API.
+
+We fetch and render corresponding markdown file for the URL you visit:
+
+```
+/         => /README.md
+/foo      => /foo.md
+/foo/     => /foo/README.md
+/foo/bar  => /foo/bar.md
+```
+
+## Quick Start
 
 Let say you have following files in `./my-blog` folder:
 
@@ -44,7 +67,6 @@ Then you can serve this folder as a static website on your machine using:
 - Golang: `caddy`
 - ...or whatever static web server
 
-## Credits
+## Browser Compatibility
 
-- [docute](https://github.com/egoist/docute)
-- [zeit/design](https://zeit.co/design)
+Saika supports all ever-green browsers, i.e. No IE support!
