@@ -27,14 +27,11 @@ The `index.html` looks like:
 <head>
   <meta charset="utf-8" />
   <title>My Blog</title>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/saika/dist/saika.css"
-  />
+  <link rel="stylesheet" href="https://unpkg.com/saika/dist/saika.css" />
 </head>
 <body>
   <div id="saika"></div>
-  <script src="https://cdn.jsdelivr.net/npm/saika"></script>
+  <script src="https://unpkg.com/saika"></script>
   <script>
     new Saika({
       target: '#saika',
