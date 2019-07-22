@@ -10,7 +10,7 @@
       </content-loader>
     </div>
     <div v-else class="Content">
-      <component :is="PageContent" />
+      <component :is="PostContent" />
     </div>
   </div>
 </template>
@@ -30,12 +30,12 @@ export default {
       return this.$store.state.isFetchingFile
     },
 
-    PageContent() {
-      const { page } = this.$store.state
+    PostContent() {
+      const { post } = this.$store.state
 
       const component = {
-        name: 'PageContent',
-        template: `<div class="page-content">${page.content}</div>`
+        name: 'PostContent',
+        template: `<div class="post-content">${post.content}</div>`
       }
 
       return component
@@ -63,4 +63,4 @@ export default {
 </script>
 
 <style src="../css/prism.css"></style>
-<style src="../css/page-content.css"></style>
+<style src="../css/post-content.css"></style>

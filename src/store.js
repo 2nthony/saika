@@ -12,7 +12,7 @@ const store = new Vuex.Store({
   state: {
     originConfig: {},
     isFetchingFile: true,
-    page: {
+    post: {
       content: ''
     }
   },
@@ -26,8 +26,8 @@ const store = new Vuex.Store({
       state.isFetchingFile = isFetchingFile
     },
 
-    SET_PAGE(state, page) {
-      state.page = page
+    SET_POST(state, post) {
+      state.post = post
     }
   },
 
@@ -35,20 +35,20 @@ const store = new Vuex.Store({
     async fetchFile({ commit, getters }, path) {
       commit('SET_FETCHING', true)
 
-      const page = {}
+      const post = {}
 
       const filename = getFilenameByPath(path)
-      page.file = getFileUrl(getters.config.sourcePath, filename)
+      post.file = getFileUrl(getters.config.sourcePath, filename)
 
-      const content = await fetch(page.file).then(res => res.text())
-      page.content = content
+      const content = await fetch(post.file).then(res => res.text())
+      post.content = content
 
-      page.content = marked(page.content, {
+      post.content = marked(post.content, {
         renderer: markedRenderer(),
         highlight
       })
 
-      commit('SET_PAGE', page)
+      commit('SET_POST', post)
       commit('SET_FETCHING', false)
     }
   },
