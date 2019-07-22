@@ -1,6 +1,6 @@
 # Saika
 
-> Effortlessly blogging, donr right.
+> Effortlessly blogging, done right.
 
 Please consider starring the project to show your ❤️ and support.
 
