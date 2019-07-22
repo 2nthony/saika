@@ -71,12 +71,8 @@
   },
   "lint-staged": {
     "linters": {
-      "*.js": [
+      "*.{js,vue,css,md,json}": [
         "xo --fix",
-        "git add"
-      ],
-      "*.{json,md}": [
-        "prettier --write",
         "git add"
       ]
     }
