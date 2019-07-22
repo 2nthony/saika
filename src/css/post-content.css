@@ -43,14 +43,14 @@
   & code {
     font-family: var(--code-font);
     color: #bd10e0;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     white-space: pre-wrap;
 
-    &.inline::before {
+    &.inline-code::before {
       content: '\`';
     }
 
-    &.inline::after {
+    &.inline-code::after {
       content: '\`';
     }
   }

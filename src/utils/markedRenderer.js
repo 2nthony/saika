@@ -4,7 +4,7 @@ export default function() {
   const renderer = new marked.Renderer()
 
   // Disable template interpolation in code
-  renderer.codespan = text => `<code v-pre class="inline">${text}</code>`
+  renderer.codespan = text => `<code v-pre class="inline-code">${text}</code>`
   const origCode = renderer.code
   renderer.code = function(code, lang, escaped) {
     let res = origCode.call(this, code, lang, escaped)
