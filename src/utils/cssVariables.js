@@ -11,6 +11,8 @@ export default {
   borderColor: '#eaeaea',
   inlineCodeColor: 'var(--purple)',
   gap: '20px',
+  pageFont:
+    '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
   codeFont:
     'Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif',
   tableHeaderBackground: '#fafafa',
