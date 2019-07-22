@@ -49,17 +49,13 @@ export default {
 
     leftNav() {
       const { nav } = this.$store.getters.config
-      return (
-        nav &&
-        nav.filter(item => item.position === 'left')
-      )
+      return nav && nav.filter(item => item.position === 'left')
     },
 
     rightNav() {
       const { nav } = this.$store.getters.config
       return (
-        nav &&
-        nav.filter(item => item.position === 'right' || !item.position)
+        nav && nav.filter(item => item.position === 'right' || !item.position)
       )
     }
   }
