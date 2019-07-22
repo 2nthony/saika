@@ -42,7 +42,7 @@
 
   & code {
     font-family: var(--code-font);
-    color: #bd10e0;
+    color: var(--inline-code-color);
     font-size: 0.9rem;
     white-space: pre-wrap;
 
