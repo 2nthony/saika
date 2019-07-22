@@ -20,7 +20,10 @@
     "test": "npm run lint && echo lol",
     "build": "poi --prod --config build/lib.config.js",
     "prepublishOnly": "npm run build",
-    "example": "poi -s --config example/poi.js"
+    "example": "poi -s --config example/poi.js",
+    "website": "poi -s --config build/website.config.js",
+    "website:build": "poi --prod --config build/website.config.js",
+    "now-build": "npm run website:build"
   },
   "dependencies": {
     "prismjs": "^1.16.0",
@@ -50,6 +53,10 @@
       "plugin:vue/essential"
     ],
     "prettier": true,
+    "ignores": [
+      "**/website/**",
+      "**/dist/**"
+    ],
     "envs": [
       "browser"
     ],
