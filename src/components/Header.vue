@@ -7,9 +7,10 @@
             <component :is="Logo" />
           </SaikaLink>
         </h1>
+        <HeaderNav v-if="leftNav" :nav="leftNav" />
       </div>
       <div class="header-right">
-        <HeaderNav v-if="nav" :nav="nav" />
+        <HeaderNav v-if="rightNav" :nav="rightNav" />
       </div>
     </div>
   </header>
@@ -46,9 +47,20 @@ export default {
       }
     },
 
-    nav() {
+    leftNav() {
       const { nav } = this.$store.getters.config
-      return nav
+      return (
+        nav &&
+        nav.filter(item => item.position === 'left')
+      )
+    },
+
+    rightNav() {
+      const { nav } = this.$store.getters.config
+      return (
+        nav &&
+        nav.filter(item => item.position === 'right' || !item.position)
+      )
     }
   }
 }
@@ -86,6 +98,10 @@ export default {
     color: var(--text-color);
     text-decoration: none;
   }
+}
+
+.header-left {
+  display: flex;
 }
 
 .header-right {
