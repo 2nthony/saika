@@ -3,7 +3,9 @@
     <div class="header-inner">
       <div class="header-left">
         <h1 class="site-title">
-          <SaikaLink to="/">{{ Title }}</SaikaLink>
+          <SaikaLink to="/">
+            <component :is="Logo" />
+          </SaikaLink>
         </h1>
       </div>
       <div class="header-right">
@@ -24,10 +26,26 @@ export default {
   },
 
   computed: {
-    Title() {
-      const { title } = this.$store.getters.config
-      return title
+    Logo() {
+      const { title, logo } = this.$store.getters.config
+
+      if (typeof logo ==='string') {
+        return {
+          template: logo
+        }
+      }
+
+      if (typeof logo ==='object') {
+        return logo
+      }
+
+      return {
+        render(h) {
+          return h('span', null, [title])
+        }
+      }
     },
+
     nav() {
       const { nav } = this.$store.getters.config
       return nav
