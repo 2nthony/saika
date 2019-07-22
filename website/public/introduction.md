@@ -1,6 +1,6 @@
 # Introduction to Saika
 
-The fastest way to create a blog-site for your project.
+Saika is modified from docute to create a blog site, effortless and done right.
 
 ## What is Saika
 
