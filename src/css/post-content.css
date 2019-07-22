@@ -20,6 +20,26 @@
     padding-bottom: 5px;
   }
 
+  & h3 {
+    font-size: 1.7rem;
+    margin: 40px 0 30px 0;
+  }
+
+  & h4 {
+    font-size: 1.4rem;
+  }
+
+  & h5 {
+    font-size: 1.1rem;
+  }
+
+  & p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
   & code {
     font-family: var(--code-font);
     color: #bd10e0;
@@ -34,7 +54,7 @@
   }
 
   & .pre-wrapper {
-    margin: 2rem 0;
+    margin: 24px 0 40px;
     position: relative;
     background: white;
 
@@ -119,6 +139,25 @@
       &::before {
         content: '';
       }
+    }
+  }
+
+  & img {
+    max-width: 100%;
+  }
+
+  & blockquote {
+    border-left: .25rem solid #dfe2e5;
+    padding: 0 1rem;
+    color: #6a737d;
+    margin: 20px 0;
+
+    & p {
+      margin: 15px 0 0 0;
+    }
+
+    & > *:first-child {
+      margin-top: 0;
     }
   }
 }
