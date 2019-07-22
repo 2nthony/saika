@@ -45,9 +45,11 @@
     color: #bd10e0;
     font-size: 0.9em;
     white-space: pre-wrap;
+
     &.inline::before {
       content: '\`';
     }
+
     &.inline::after {
       content: '\`';
     }
@@ -135,6 +137,7 @@
 
   & ol {
     list-style-type: decimal;
+
     & > li {
       &::before {
         content: '';
