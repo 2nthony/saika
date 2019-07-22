@@ -5,8 +5,6 @@
 Please consider starring the project to show your ❤️ and support.
 
 [![NPM version](https://badgen.net/npm/v/saika?icon=npm)](https://npmjs.com/package/saika)
-[![NPM download](https://badgen.net/npm/dm/saika?icon=npm)](https://npmjs.com/package/saika)
-[![jsDelivr hits](https://badgen.net/jsdelivr/hits/npm/saika)](https://www.jsdelivr.com/package/npm/saika)
 [![CircleCI](https://badgen.net/circleci/github/evillt/saika?icon=circleci)](https://circleci.com/gh/evillt/saika/tree/master)
 [![License](https://badgen.net/npm/license/saika)](./LICENSE)
 [![donate](https://badgen.net/badge/support%20me/donate/f2a)](https://donate.evila.me)
