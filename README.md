@@ -55,7 +55,7 @@ Then you can serve this folder as a static website on your machine using:
 
 - Node.js:
   - `npm i -g serve && serve .`
-  - `npm i http-server && hs`
+  - `npm i -g http-server && hs`
 - Python: `python -m SimpleHTTPServer`
 - Golang: `caddy`
 - ...or whatever static web server
