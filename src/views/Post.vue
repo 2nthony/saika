@@ -17,6 +17,7 @@
 
 <script>
 import { ContentLoader } from 'vue-content-loader'
+import NotFound from './NotFound.vue'
 
 export default {
   name: 'PostPage',
@@ -35,7 +36,11 @@ export default {
 
       const component = {
         name: 'PostContent',
-        template: `<div class="post-content">${post.content}</div>`
+        components: {
+          NotFound
+        },
+        template: `<div class="post-content">${post.content ||
+          '<NotFound />'}</div>`
       }
 
       return component

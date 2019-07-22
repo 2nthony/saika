@@ -40,13 +40,18 @@ const store = new Vuex.Store({
       const filename = getFilenameByPath(path)
       post.file = getFileUrl(getters.config.sourcePath, filename)
 
-      const content = await fetch(post.file).then(res => res.text())
-      post.content = content
-
-      post.content = marked(post.content, {
-        renderer: markedRenderer(),
-        highlight
+      const content = await fetch(post.file).then(res => {
+        if (res.ok) {
+          return res.text()
+        }
       })
+
+      if (content) {
+        post.content = marked(content, {
+          renderer: markedRenderer(),
+          highlight
+        })
+      }
 
       commit('SET_POST', post)
       commit('SET_FETCHING', false)
