@@ -16,6 +16,19 @@ a {
   text-decoration: none;
 }
 
+.Main {
+  padding-top: var(--header-height);
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    font-weight: 600;
+  }
+}
+
 .Wrap {
   margin: 40px 80px;
   max-width: 770px;
@@ -34,6 +47,7 @@ a {
 
 .Content a {
   color: var(--accent-color);
+
   &:hover {
     text-decoration: undeline;
   }
