@@ -33,6 +33,7 @@
     "eslint-config-prettier": "^3.3.0",
     "eslint-config-rem": "^4.0.0",
     "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-vue": "^5.2.3",
     "husky": "^1.0.0-rc.13",
     "lint-staged": "^7.2.0",
     "poi": "^12.7.0",
@@ -45,7 +46,8 @@
   "xo": {
     "extends": [
       "rem",
-      "plugin:prettier/recommended"
+      "plugin:prettier/recommended",
+      "plugin:vue/essential"
     ],
     "prettier": true,
     "envs": [
@@ -53,6 +55,9 @@
     ],
     "globals": [
       "__SAIKA_VERSION__"
+    ],
+    "extensions": [
+      "vue"
     ],
     "rules": {
       "unicorn/no-abusive-eslint-disable": "off",

@@ -1,11 +1,9 @@
 <template functional>
   <div class="header-nav">
-    <div
-      v-for="(item, k) in props.nav"
-      :key="k"
-      class="header-nav-item"
-    >
-      <SaikaLink :to="item.link">{{ item.title }}</SaikaLink>
+    <div v-for="(item, k) in props.nav" :key="k" class="header-nav-item">
+      <SaikaLink :to="item.link">
+        {{ item.title }}
+      </SaikaLink>
     </div>
   </div>
 </template>
@@ -25,7 +23,7 @@ export default {
 .header-nav {
   display: flex;
   align-items: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .header-nav-item {

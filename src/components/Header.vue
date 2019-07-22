@@ -29,13 +29,13 @@ export default {
     Logo() {
       const { title, logo } = this.$store.getters.config
 
-      if (typeof logo ==='string') {
+      if (typeof logo === 'string') {
         return {
           template: logo
         }
       }
 
-      if (typeof logo ==='object') {
+      if (typeof logo === 'object') {
         return logo
       }
 
