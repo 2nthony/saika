@@ -36,6 +36,6 @@ export default {
 .with-border {
   border: 1px solid var(--border-color);
   padding: 10px;
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 </style>

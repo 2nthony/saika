@@ -16,5 +16,6 @@ export default {
   inlineCodeColor: 'var(--purple)',
   gap: '20px',
   tableHeaderBackground: '#fafafa',
-  tableHeaderColor: '#666'
+  tableHeaderColor: '#666',
+  radius: '5px'
 }

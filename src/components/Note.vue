@@ -32,7 +32,7 @@ export default {
 .Note {
   line-height: 1.8;
   margin: 20px 0;
-  border-radius: 4px;
+  border-radius: var(--radius);
   border: 1px solid var(--border-color);
   padding: 10px 20px;
 

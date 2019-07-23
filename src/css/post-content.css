@@ -99,12 +99,12 @@
 
     &:first-child {
       border-left: 1px solid var(--border-color);
-      border-radius: 4px 0px 0px 4px;
+      border-radius: var(--radius) 0px 0px var(--radius);
     }
 
     &:last-child {
       border-right: 1px solid var(--border-color);
-      border-radius: 0 4px 4px 0;
+      border-radius: 0 var(--radius) var(--radius) 0;
     }
   }
 
