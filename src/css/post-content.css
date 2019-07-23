@@ -35,7 +35,6 @@
     font-family: var(--code-font);
     color: var(--inline-code-color);
     font-size: 0.9rem;
-    white-space: pre-wrap;
 
     &.inline-code::before {
       content: '\`';
@@ -62,6 +61,7 @@
   }
 
   & pre {
+    font-family: var(--code-font);
     border: 1px solid #eaeaea;
     padding: 20px;
     position: relative;
