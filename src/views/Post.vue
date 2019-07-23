@@ -33,9 +33,11 @@ export default {
 
     PostContent() {
       const { post } = this.$store.state
+      const { postMixins } = this.$store.getters.config
 
       const component = {
         name: 'PostContent',
+        mixins: [...postMixins],
         components: {
           NotFound
         },

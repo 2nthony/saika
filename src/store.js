@@ -63,6 +63,7 @@ const store = new Vuex.Store({
       return {
         target: 'Saika',
         sourcePath: '.',
+        postMixins: [],
         ...originConfig
       }
     },
