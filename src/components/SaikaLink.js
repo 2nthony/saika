@@ -22,8 +22,8 @@ export default {
         },
         [
           ...children,
-          h('external-link-icon', {
-            class: 'ExternalLinkIcon'
+          h('ExternalLinkIcon', {
+            class: 'external-link-icon'
           })
         ]
       )
