@@ -25,25 +25,25 @@
     "now-build": "npm run website:build"
   },
   "dependencies": {
-    "prismjs": "^1.16.0",
+    "prismjs": "^1.17.1",
     "vue": "^2.6.10",
     "vue-content-loader": "^0.2.2",
     "vue-router": "^3.0.7",
     "vuex": "^3.1.1"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-config-rem": "^4.0.0",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-vue": "^5.2.3",
-    "husky": "^1.0.0-rc.13",
-    "lint-staged": "^7.2.0",
+    "husky": "^3.0.1",
+    "lint-staged": "^9.2.0",
     "poi": "^12.7.0",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.17.0",
     "vue-template-compiler": "^2.6.10",
-    "xo": "^0.23.0"
+    "xo": "^0.24.0"
   },
   "xo": {
     "extends": [
@@ -76,11 +76,9 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "*.{js,vue,css,md,json}": [
-        "xo --fix",
-        "git add"
-      ]
-    }
+    "*.{js,vue,css,md,json}": [
+      "xo --fix",
+      "git add"
+    ]
   }
 }
