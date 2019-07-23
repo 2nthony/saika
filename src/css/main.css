@@ -34,7 +34,7 @@ a {
   max-width: 770px;
 
   @media screen and (max-width: 768px) {
-    margin: 0 var(--gap);
+    margin: var(--gap);
     max-width: 100%;
   }
 }
