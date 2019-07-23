@@ -41,7 +41,6 @@ a {
 
 .external-link-icon {
   margin-left: 3px;
-  color: #aaa;
   display: inline-block;
 }
 
@@ -49,7 +48,7 @@ a {
   color: var(--accent-color);
 
   &:hover {
-    text-decoration: undeline;
+    text-decoration: underline;
   }
 }
 
