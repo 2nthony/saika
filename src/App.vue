@@ -46,8 +46,8 @@ export default {
 
   methods: {
     insertStyle() {
-      const ID = 'saika-inserted-style'
-      let style = document.getElementById(ID)
+      const ID = '#saika-inserted-style'
+      let style = document.querySelector(ID)
 
       if (style) {
         style.innerHTML = this.css
