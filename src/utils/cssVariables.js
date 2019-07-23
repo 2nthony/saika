@@ -7,7 +7,7 @@ export default {
   selection: 'var(--cyan)',
   textColor: '#333',
   linkColor: '#333',
-  accentColor: '#0076FF',
+  accentColor: 'var(--success-color)',
   borderColor: '#eaeaea',
   successColor: '#0076FF',
   dangerColor: '#F04',
