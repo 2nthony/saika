@@ -34,7 +34,6 @@
   & code {
     font-family: var(--code-font);
     color: var(--inline-code-color);
-    font-size: 0.9rem;
 
     &.inline-code::before {
       content: '\`';
