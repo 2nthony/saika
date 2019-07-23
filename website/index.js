@@ -3,6 +3,15 @@ import Saika from '../src'
 new Saika({
   target: 'app',
   title: 'Saika',
+  postMixins: [
+    {
+      data() {
+        return {
+          deps: __DEPS__
+        }
+      }
+    }
+  ],
   nav: [
     {
       title: 'GitHub',
@@ -12,7 +21,10 @@ new Saika({
   posts: [
     {
       title: 'Introduction',
-      link: '/introduction'
+      link: '/introduction',
+      tags: [
+        'introduction'
+      ]
     },
     {
       title: 'Credits',
