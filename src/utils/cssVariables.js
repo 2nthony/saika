@@ -9,6 +9,9 @@ export default {
   linkColor: '#333',
   accentColor: '#0076FF',
   borderColor: '#eaeaea',
+  successColor: '#0076FF',
+  dangerColor: '#F04',
+  warningColor: '#F5A623',
   inlineCodeColor: 'var(--purple)',
   gap: '20px',
   pageFont:
