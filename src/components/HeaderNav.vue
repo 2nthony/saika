@@ -1,9 +1,7 @@
 <template functional>
   <div class="header-nav">
     <div v-for="(item, k) in props.nav" :key="k" class="header-nav-item">
-      <SaikaLink :to="item.link">
-        {{ item.title }}
-      </SaikaLink>
+      <SaikaLink :to="item.link">{{ item.title }}</SaikaLink>
     </div>
   </div>
 </template>
