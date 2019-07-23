@@ -5,9 +5,11 @@ import createRouter from './router'
 import store from './store'
 import { inBrowser } from './utils'
 import SaikaLink from './components/SaikaLink'
+import ImageZoom from './components/ImageZoom.vue'
 import ExternalLinkIcon from './components/icons/ExternalLinkIcon.vue'
 
 Vue.component(SaikaLink.name, SaikaLink)
+Vue.component(ImageZoom.name, ImageZoom)
 Vue.component(ExternalLinkIcon.name, ExternalLinkIcon)
 
 class Saika {
