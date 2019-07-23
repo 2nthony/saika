@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import marked from './utils/marked'
 import createRouter from './router'
 import store from './store'
 import { inBrowser } from './utils'
@@ -42,6 +43,7 @@ class Saika {
 }
 
 Saika.version = __SAIKA_VERSION__
+Saika.marked = marked
 
 export default Saika
 
