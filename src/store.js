@@ -3,8 +3,10 @@ import Vuex from 'vuex'
 import marked from './utils/marked'
 import markedRenderer from './utils/markedRenderer'
 import highlight from './utils/highlight'
+import load from './utils/load'
 import { getFileUrl, getFilenameByPath } from './utils'
 import cssVariables from './utils/cssVariables'
+import prismLanguages from './utils/prismLanguages'
 
 Vue.use(Vuex)
 
@@ -32,7 +34,7 @@ const store = new Vuex.Store({
   },
 
   actions: {
-    async fetchFile({ commit, getters }, path) {
+    async fetchFile({ commit, getters, dispatch }, path) {
       commit('SET_FETCHING', true)
 
       const post = {}
@@ -40,14 +42,17 @@ const store = new Vuex.Store({
       const filename = getFilenameByPath(path)
       post.file = getFileUrl(getters.config.sourcePath, filename)
 
-      const content = await fetch(post.file).then(res => {
-        if (res.ok) {
-          return res.text()
-        }
-      })
+      await Promise.all([
+        fetch(post.file)
+          .then(res => res.ok && res.text())
+          .then(res => {
+            post.content = res
+          }),
+        dispatch('fetchPrismLanguages')
+      ])
 
-      if (content) {
-        post.content = marked(content, {
+      if (post.content) {
+        post.content = marked(post.content, {
           renderer: markedRenderer(),
           highlight
         })
@@ -55,6 +60,36 @@ const store = new Vuex.Store({
 
       commit('SET_POST', post)
       commit('SET_FETCHING', false)
+    },
+
+    fetchPrismLanguages({ getters }) {
+      const { highlight: langs } = getters.config
+
+      if (!langs || langs.length === 0) {
+        return Promise.resolve()
+      }
+
+      return load(
+        langs
+          .reduce((res, lang) => {
+            if (prismLanguages[lang]) {
+              res = res.concat(prismLanguages[lang])
+            }
+
+            res.push(lang)
+            return res
+          }, [])
+          .filter((lang, i, arr) => {
+            return (
+              arr.indexOf(lang) === i &&
+              prismLanguages.builtin.indexOf(lang) === -1
+            )
+          })
+          .map(lang => {
+            return `https://unpkg.com/prismjs@${__PRISM_VERSION__}/components/prism-${lang}.min.js`
+          }),
+        'prism-languages'
+      )
     }
   },
 
