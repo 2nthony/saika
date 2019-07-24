@@ -66,8 +66,10 @@ Then you can serve this folder as a static website on your machine using:
 
 ## Credits
 
-- [docute](https://github.com/egoist/docute)
-- [zeit/design](https://zeit.co/design)
+- [**Docute**](https://docute.org)
+- [Vue.js](https://vuejs.org)
+- [ZEIT Design](https://zeit.co/design)
+- [ZEIT Docs](https://zeit.co/docs)
 
 ## Author
 
