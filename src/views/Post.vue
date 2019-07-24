@@ -11,19 +11,22 @@
     </div>
     <div v-else class="Content">
       <component :is="PostContent" />
+      <PrevNextLinks />
     </div>
   </div>
 </template>
 
 <script>
 import { ContentLoader } from 'vue-content-loader'
+import PrevNextLinks from '../components/PrevNextLinks.vue'
 import NotFound from './NotFound.vue'
 
 export default {
   name: 'PostPage',
 
   components: {
-    ContentLoader
+    ContentLoader,
+    PrevNextLinks
   },
 
   computed: {
