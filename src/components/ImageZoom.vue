@@ -27,15 +27,20 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .ImageZoom {
   display: inline-block;
   font-size: 0;
+
+  &.with-border {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: var(--radius);
+  }
 }
 
-.with-border {
-  border: 1px solid var(--border-color);
-  padding: 10px;
-  border-radius: var(--radius);
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 99;
 }
 </style>

@@ -43,10 +43,6 @@ a {
   }
 }
 
-.medium-zoom-overlay, .medium-zoom-image--opened {
-  z-index: 99;
-}
-
 .external-link-icon {
   margin-left: 3px;
   display: inline-block;
