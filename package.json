@@ -9,7 +9,7 @@
   },
   "files": [
     "dist",
-    "lib",
+    "src",
     "!**/__test__/**"
   ],
   "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
