@@ -25,6 +25,7 @@
     "now-build": "npm run website:build"
   },
   "dependencies": {
+    "loadjs": "^3.6.1",
     "medium-zoom": "^1.0.4",
     "prismjs": "^1.17.1",
     "vue": "^2.6.10",
@@ -61,7 +62,8 @@
       "browser"
     ],
     "globals": [
-      "__SAIKA_VERSION__"
+      "__SAIKA_VERSION__",
+      "__PRISM_VERSION__"
     ],
     "extensions": [
       "vue"
