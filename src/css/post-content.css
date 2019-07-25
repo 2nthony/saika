@@ -156,4 +156,20 @@
       margin-top: 0;
     }
   }
+
+  & .header-anchor {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+
+      & .header-anchor-icon {
+        opacity: 1;
+      }
+    }
+
+    & .header-anchor-icon {
+      opacity: 0;
+    }
+  }
 }
