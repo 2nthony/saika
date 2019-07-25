@@ -25,6 +25,7 @@
     "now-build": "npm run website:build"
   },
   "dependencies": {
+    "jump.js": "^1.0.2",
     "loadjs": "^3.6.1",
     "medium-zoom": "^1.0.4",
     "prismjs": "^1.17.1",
