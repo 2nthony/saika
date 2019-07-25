@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import jump from 'jump.js'
 import { ContentLoader } from 'vue-content-loader'
 import PrevNextLinks from '../components/PrevNextLinks.vue'
 import NotFound from './NotFound.vue'
@@ -52,6 +53,14 @@ export default {
     }
   },
 
+  watch: {
+    '$route.hash'() {
+      this.$nextTick(() => {
+        this.jumpToHash()
+      })
+    }
+  },
+
   mounted() {
     this.fetchFile(this.$route.path)
   },
@@ -67,6 +76,22 @@ export default {
     async fetchFile(path) {
       await this.$store.dispatch('fetchFile', path)
       await this.$nextTick()
+      this.jumpToHash()
+    },
+
+    jumpToHash() {
+      const hash = decodeURI(this.$route.hash)
+
+      if (hash) {
+        const el = document.querySelector(hash)
+        if (el) {
+          const header = document.querySelector('.Header')
+          jump(el, {
+            duration: 0,
+            offset: -header.clientHeight - 80
+          })
+        }
+      }
     }
   }
 }

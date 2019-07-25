@@ -48,6 +48,11 @@ a {
   display: inline-block;
 }
 
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
 .Content a {
   color: var(--accent-color);
 
