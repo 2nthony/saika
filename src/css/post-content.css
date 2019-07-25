@@ -6,9 +6,7 @@
 
   & h2 {
     font-size: 2rem;
-    border-bottom: 1px solid var(--border-color);
     margin-top: 40px;
-    padding-bottom: 5px;
   }
 
   & h3 {
@@ -159,6 +157,7 @@
 
   & .header-anchor {
     color: inherit;
+    display: inline;
 
     &:hover {
       text-decoration: none;

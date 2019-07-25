@@ -51,6 +51,8 @@ a {
 a {
   color: var(--link-color);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
 
 .Content a {
