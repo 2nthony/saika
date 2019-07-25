@@ -3,7 +3,6 @@
     width="13px"
     height="13px"
     viewBox="0 0 13 13"
-    aria-label="external link"
     v-bind="data.attrs"
     :class="[data.staticClass, data.class]"
     v-on="data.on"
