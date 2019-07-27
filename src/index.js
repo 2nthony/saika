@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './App.vue'
+import Root from './components/Root'
 import marked from './utils/marked'
 import createRouter from './router'
 import store from './store'
@@ -30,7 +30,7 @@ class Saika {
     this.app = new Vue({
       router,
       store,
-      render: h => h(App)
+      render: h => h(Root)
     })
 
     if (config.mount !== false) {

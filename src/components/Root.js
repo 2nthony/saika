@@ -1,20 +1,29 @@
-<template>
-  <div :id="target" :class="target">
-    <Header />
-    <div class="Main">
-      <router-view />
-    </div>
-  </div>
-</template>
-
-<script>
-import Header from './components/Header.vue'
+import '../css/global.css'
 
 export default {
-  name: 'App',
+  name: 'Root',
 
-  components: {
-    Header
+  render(h) {
+    return h(
+      'div',
+      {
+        attrs: {
+          id: this.target,
+          class: this.target
+        }
+      },
+      [h('router-view')]
+    )
+  },
+
+  created() {
+    this.insertStyle()
+  },
+
+  watch: {
+    css() {
+      this.insertStyle()
+    }
   },
 
   computed: {
@@ -34,16 +43,6 @@ export default {
     }
   },
 
-  watch: {
-    css() {
-      this.insertStyle()
-    }
-  },
-
-  created() {
-    this.insertStyle()
-  },
-
   methods: {
     insertStyle() {
       const ID = '#saika-inserted-style'
@@ -60,6 +59,3 @@ export default {
     }
   }
 }
-</script>
-
-<style src="./css/global.css"></style>
