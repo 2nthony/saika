@@ -1,3 +1,5 @@
+import '../css/global.css'
+
 export default {
   name: 'Root',
 
@@ -8,7 +10,7 @@ export default {
         attrs: {
           id: this.target,
           class: this.target
-        },
+        }
       },
       [h('router-view')]
     )
@@ -57,5 +59,3 @@ export default {
     }
   }
 }
-
-import '../css/global.css'

@@ -3,7 +3,7 @@
     <Header />
     <div class="Main">
       <div class="Wrap">
-        <PostList v-if="isPostList" :posts="postList"/>
+        <PostList v-if="isPostList" :posts="postList" />
         <template v-else>
           <div v-if="isFetchingFile" class="Content">
             <content-loader :height="160" :width="400" :speed="2">

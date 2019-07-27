@@ -71,7 +71,8 @@
     ],
     "rules": {
       "unicorn/no-abusive-eslint-disable": "off",
-      "unicorn/filename-case": "off"
+      "unicorn/filename-case": "off",
+      "import/no-unassigned-import": "off"
     }
   },
   "husky": {
