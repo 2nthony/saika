@@ -29,10 +29,6 @@ new Saika({
     {
       title: 'Credits',
       link: '/credits'
-    },
-    {
-      title: 'Not Found',
-      link: '/hello-from-the-outside'
     }
   ]
 })
