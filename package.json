@@ -13,7 +13,6 @@
   ],
   "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
   "main": "dist/saika.js",
-  "module": "src/index.js",
   "scripts": {
     "lint": "xo",
     "test": "npm run lint && echo lol",
