@@ -105,6 +105,7 @@ const store: Store<any> = new Vuex.Store({
         target: 'Saika',
         sourcePath: '.',
         postMixins: [],
+        highlight: [],
         ...originConfig
       }
     },

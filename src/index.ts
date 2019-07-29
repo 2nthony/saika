@@ -33,6 +33,7 @@ export interface SaikaConfig {
   postMixins?: object[]
   nav?: NavItem[]
   posts?: PostItem[]
+  highlight?: string[]
 }
 
 export default class Saika {
