@@ -83,8 +83,12 @@
     }
   },
   "lint-staged": {
-    "*.{ts,js,vue,css,md,json}": [
+    "*.{js,vue,css,md,json}": [
       "xo --fix",
+      "git add"
+    ],
+    "*.ts": [
+      "prettier --write",
       "git add"
     ]
   }
