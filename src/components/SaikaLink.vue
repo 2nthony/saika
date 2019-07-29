@@ -1,3 +1,4 @@
+<script>
 import { isExternalLink } from '../utils'
 
 export default {
@@ -32,3 +33,4 @@ export default {
     return h('router-link', data, children)
   }
 }
+</script>

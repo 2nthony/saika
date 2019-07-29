@@ -1,5 +1,6 @@
-import '../css/global.css'
+<style src="../css/global.css"></style>
 
+<script>
 export default {
   name: 'Root',
 
@@ -59,3 +60,4 @@ export default {
     }
   }
 }
+</script>
