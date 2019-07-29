@@ -1,22 +1,25 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
+import Vuex, { Store } from 'vuex'
 import marked from './utils/marked'
 import markedRenderer from './utils/markedRenderer'
 import highlight from './utils/highlight'
 import load from './utils/load'
 import { getFileUrl, getFilenameByPath } from './utils'
 import cssVariables from './utils/cssVariables'
-import prismLanguages from './utils/prismLanguages'
+import prismLanguages from './utils/prismLanguages.json'
 
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
+type Post = {
+  file: string
+  content?: string
+}
+
+const store: Store<any> = new Vuex.Store({
   state: {
     originConfig: {},
     isFetchingFile: true,
-    post: {
-      content: ''
-    }
+    post: {}
   },
 
   mutations: {
@@ -37,14 +40,17 @@ const store = new Vuex.Store({
     async fetchFile({ commit, getters, dispatch }, path) {
       commit('SET_FETCHING', true)
 
-      const post = {}
+      const post: Post = {
+        file: '',
+        content: ''
+      }
 
       const filename = getFilenameByPath(path)
       post.file = getFileUrl(getters.config.sourcePath, filename)
 
       await Promise.all([
         fetch(post.file)
-          .then(res => res.ok && res.text())
+          .then(res => res.ok && res.text() || '')
           .then(res => {
             post.content = res
           }),
@@ -71,21 +77,21 @@ const store = new Vuex.Store({
 
       return load(
         langs
-          .reduce((res, lang) => {
-            if (prismLanguages[lang]) {
-              res = res.concat(prismLanguages[lang])
+          .reduce((res: string[], lang: string) => {
+            if ((<any>prismLanguages)[lang]) {
+              res = res.concat((<any>prismLanguages)[lang])
             }
 
             res.push(lang)
             return res
           }, [])
-          .filter((lang, i, arr) => {
+          .filter((lang: string, i: number, arr: string[]) => {
             return (
               arr.indexOf(lang) === i &&
               prismLanguages.builtin.indexOf(lang) === -1
             )
           })
-          .map(lang => {
+          .map((lang: string) => {
             return `https://unpkg.com/prismjs@${__PRISM_VERSION__}/components/prism-${lang}.min.js`
           }),
         'prism-languages'

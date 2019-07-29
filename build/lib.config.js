@@ -1,7 +1,7 @@
 const pkg = require('../package')
 
 module.exports = {
-  entry: 'src/index.js',
+  entry: 'src/index.ts',
   output: {
     format: 'umd',
     moduleName: 'Saika',
@@ -10,6 +10,7 @@ module.exports = {
       js: 'saika.js'
     }
   },
+  plugins: ['@poi/typescript'],
   constants: {
     __SAIKA_VERSION__: JSON.stringify(pkg.version),
     __PRISM_VERSION__: JSON.stringify(require('prismjs/package').version)

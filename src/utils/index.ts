@@ -1,8 +1,8 @@
-export function isExternalLink(url) {
+export function isExternalLink(url: string) {
   return /^https?:\/\//.test(url)
 }
 
-export function slugify(str) {
+export function slugify(str: string) {
   const RE = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g
   const REPLACEMENT = '-'
   const WHITESPACE = /\s/g
@@ -14,7 +14,7 @@ export function slugify(str) {
     .toLowerCase()
 }
 
-export function getFileUrl(sourcePath, path) {
+export function getFileUrl(sourcePath: string, path: string) {
   sourcePath = sourcePath.replace(/\/$/, '')
 
   const res = sourcePath + path
@@ -22,7 +22,7 @@ export function getFileUrl(sourcePath, path) {
   return res.replace(/^\.\//, '')
 }
 
-export function getFilenameByPath(path) {
+export function getFilenameByPath(path: string) {
   path = path.replace(/^\/?/, '/')
 
   if (!/\.md$/.test(path)) {

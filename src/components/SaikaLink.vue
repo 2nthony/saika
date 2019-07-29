@@ -1,4 +1,5 @@
-import { isExternalLink } from '../utils'
+<script>
+import { isExternalLink } from '../utils/index.ts'
 
 export default {
   name: 'SaikaLink',
@@ -32,3 +33,4 @@ export default {
     return h('router-link', data, children)
   }
 }
+</script>
