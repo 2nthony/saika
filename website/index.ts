@@ -21,10 +21,7 @@ new Saika({
   posts: [
     {
       title: 'Introduction',
-      link: '/introduction',
-      tags: [
-        'introduction'
-      ]
+      link: '/introduction'
     },
     {
       title: 'Credits',

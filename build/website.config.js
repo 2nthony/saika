@@ -1,13 +1,14 @@
 const pkg = require('../package')
 
 module.exports = {
-  entry: 'website/index.js',
+  entry: 'website/index.ts',
   output: {
     dir: 'website/dist',
     html: {
       title: 'Saika'
     }
   },
+  plugins: ['@poi/typescript'],
   publicFolder: 'website/public',
   chainWebpack(config) {
     config.resolve.alias.set('vue$', 'vue/dist/vue.esm.js')
