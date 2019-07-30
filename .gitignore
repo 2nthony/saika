@@ -98,3 +98,5 @@ typings/
 
 # Universal output
 dist
+
+website/public/docs
