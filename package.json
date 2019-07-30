@@ -20,7 +20,8 @@
     "prepublishOnly": "npm run build",
     "website": "poi -s --config build/website.config.js",
     "website:build": "poi --prod --config build/website.config.js",
-    "now-build": "npm run website:build"
+    "docs": "typedoc src/index.ts",
+    "now-build": "npm run docs && npm run website:build"
   },
   "dependencies": {
     "jump.js": "^1.0.2",
@@ -46,6 +47,7 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.17.0",
     "register-service-worker-chain": "^1.1.0",
+    "typedoc": "^0.15.0",
     "typescript": "^3.5.3",
     "vue-template-compiler": "^2.6.10",
     "xo": "^0.24.0"
