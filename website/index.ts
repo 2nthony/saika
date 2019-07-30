@@ -14,6 +14,10 @@ new Saika({
   ],
   nav: [
     {
+      title: 'API',
+      link: 'https://saika.dev/docs/'
+    },
+    {
       title: 'GitHub',
       link: 'https://github.com/evillt/saika'
     }
