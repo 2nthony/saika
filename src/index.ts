@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue, { Component } from 'vue'
 import Root from './components/Root.vue'
 import marked from './utils/marked'
 import createRouter from './router'
@@ -30,7 +30,7 @@ export interface SaikaConfig {
   title?: string
   mount?: boolean
   router?: RouterOptions
-  postMixins?: object[]
+  postMixins?: Component[]
   nav?: NavItem[]
   posts?: PostItem[]
   highlight?: string[]
@@ -68,7 +68,7 @@ export default class Saika {
     }
   }
 
-  mount() {
+  mount(): Saika {
     const { target } = store.getters
     this.app.$mount(`#${target}`)
 

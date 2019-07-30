@@ -1,0 +1,10 @@
+{
+  "mode": "file",
+  "out": "website/public/docs",
+  "readme": "none",
+  "theme": "minimal",
+  "excludeNotExported": true,
+  "excludeExternals": true,
+  "ignoreCompilerErrors": true,
+  "includeDeclarations": true
+}
