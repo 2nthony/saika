@@ -20,7 +20,7 @@
     "prepublishOnly": "npm run build",
     "website": "poi -s --config build/website.config.js",
     "website:build": "poi --prod --config build/website.config.js",
-    "docs": "typedoc src/index.ts",
+    "docs": "typedoc src",
     "now-build": "npm run docs && npm run website:build"
   },
   "dependencies": {

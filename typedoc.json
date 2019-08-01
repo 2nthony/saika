@@ -3,8 +3,11 @@
   "out": "website/public/docs",
   "readme": "none",
   "theme": "minimal",
+  "exclude": [
+    "src/utils"
+  ],
   "excludeNotExported": true,
   "excludeExternals": true,
-  "ignoreCompilerErrors": true,
+  "excludePrivate": true,
   "includeDeclarations": true
 }
