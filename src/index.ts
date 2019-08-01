@@ -89,5 +89,4 @@ export default class Saika {
 
 if (typeof window !== 'undefined') {
   window.Vue = Vue
-  window.__SAIKA_VERSION__ = __SAIKA_VERSION__
 }
