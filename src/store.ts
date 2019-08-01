@@ -7,6 +7,8 @@ import load from './utils/load'
 import { getFileUrl, getFilenameByPath } from './utils'
 import cssVariables from './utils/cssVariables'
 import prismLanguages from './utils/prismLanguages.json'
+import { SaikaConfig } from '.'
+import hooks from './hooks'
 
 Vue.use(Vuex)
 
@@ -50,12 +52,14 @@ const store: Store<any> = new Vuex.Store({
 
       await Promise.all([
         fetch(post.file)
-          .then(res => res.ok && res.text() || '')
+          .then(res => (res.ok && res.text()) || '')
           .then(res => {
             post.content = res
           }),
         dispatch('fetchPrismLanguages')
       ])
+
+      post.content = await hooks.processPromise('processMarkdown', post.content)
 
       if (post.content) {
         post.content = marked(post.content, {
@@ -63,6 +67,8 @@ const store: Store<any> = new Vuex.Store({
           highlight
         })
       }
+
+      post.content = await hooks.processPromise('processHTML', post.content)
 
       commit('SET_POST', post)
       commit('SET_FETCHING', false)
@@ -100,22 +106,18 @@ const store: Store<any> = new Vuex.Store({
   },
 
   getters: {
-    config({ originConfig }) {
+    config({ originConfig }): SaikaConfig {
       return {
         target: 'Saika',
         sourcePath: '.',
         postMixins: [],
         highlight: [],
+        plugins: [],
         ...originConfig
       }
     },
 
-    target(
-      _,
-      {
-        config: { target }
-      }
-    ) {
+    target(_, { config: { target } }) {
       if (target[0] === '#') return target.slice(1)
       return target
     },

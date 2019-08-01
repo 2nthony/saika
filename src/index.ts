@@ -10,11 +10,23 @@ import ImageZoom from './components/ImageZoom.vue'
 import ExternalLinkIcon from './components/icons/ExternalLinkIcon.vue'
 import VueRouter, { RouterOptions } from 'vue-router'
 import { Store } from 'vuex'
+import PluginApi, { PluginOptions } from './PluginApi'
 
 Vue.component(SaikaLink.name, SaikaLink)
 Vue.component(Note.name, Note)
 Vue.component(ImageZoom.name, ImageZoom)
 Vue.component(ExternalLinkIcon.name, ExternalLinkIcon)
+
+Vue.mixin({
+  created() {
+    // @ts-ignore
+    const pluginApi = this.$options.pluginApi || this.$root.$pluginApi
+    if (pluginApi) {
+      // @ts-ignore
+      this.$pluginApi = pluginApi
+    }
+  }
+})
 
 interface LinkItem {
   title: string
@@ -27,6 +39,7 @@ export interface PostItem extends LinkItem {}
 
 export interface SaikaConfig {
   target?: string
+  sourcePath?: string
   title?: string
   mount?: boolean
   router?: RouterOptions
@@ -34,13 +47,15 @@ export interface SaikaConfig {
   nav?: NavItem[]
   posts?: PostItem[]
   highlight?: string[]
+  plugins?: PluginOptions[]
 }
 
 export default class Saika {
   app: Vue
   router: VueRouter
   store: Store<any>
-  config?: SaikaConfig
+  config: SaikaConfig
+  pluginApi: PluginApi
 
   static version: string = __SAIKA_VERSION__
   static marked = marked
@@ -57,9 +72,15 @@ export default class Saika {
       ...config
     })
 
+    const plugins = [...store.getters.config.plugins]
+    this.pluginApi = new PluginApi({ plugins, store, router })
+    this.applyPlugins()
+
     this.app = new Vue({
       router,
       store,
+      // @ts-ignore
+      pluginApi: this.pluginApi,
       render: h => h(Root)
     })
 
@@ -73,6 +94,17 @@ export default class Saika {
     this.app.$mount(`#${target}`)
 
     return this
+  }
+
+  /**
+   * @private
+   */
+  applyPlugins(): void {
+    for (const plugin of this.pluginApi.plugins) {
+      if (!plugin.when || plugin.when(this.config)) {
+        plugin.extend(this.pluginApi)
+      }
+    }
   }
 }
 
