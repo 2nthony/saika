@@ -13,7 +13,10 @@ export interface SaikaConfig {
   posts?: PostItem[]
   highlight?: string[]
   plugins?: PluginOptions[]
+  theme?: Theme
 }
+
+type Theme = 'blog' | 'readme' | 'docs(WIP)'
 
 interface LinkItem {
   title: string
@@ -27,11 +30,14 @@ export interface PostItem extends LinkItem {}
 export interface PluginOptions {
   name: string
   extend: (api: PluginApi) => void
-  when?: (config: SaikaConfig) => boolean
+  when?: (api: PluginApi) => boolean
 }
 
 export type Position =
+  | 'page:start'
+  | 'page:end'
   | 'main:start'
+  | 'main'
   | 'main:end'
   | 'content:start'
   | 'content:end'

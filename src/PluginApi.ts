@@ -1,5 +1,5 @@
-import Vue, { PropOptions, Component } from 'vue'
-import { RouterOptions } from 'vue-router'
+import Vue, { Component } from 'vue'
+import Router from 'vue-router'
 import { Store } from 'vuex'
 import hooks, { Hooks } from './hooks'
 import InjectedComponents from './components/InjectedComponents.vue'
@@ -27,9 +27,11 @@ export class PluginHooks {
 
 export default class PluginApi extends PluginHooks {
   store: Store<any>
-  router: RouterOptions
+  router: Router
   plugins: PluginOptions[]
-  components: { [k: string]: { component: Component; props: PropOptions }[] }
+  components: {
+    [k: string]: { component: Component; props: { [k: string]: any } }[]
+  }
 
   constructor({
     plugins,
@@ -38,7 +40,7 @@ export default class PluginApi extends PluginHooks {
   }: {
     plugins: PluginOptions[]
     store: Store<any>
-    router: RouterOptions
+    router: Router
   }) {
     super()
     this.plugins = plugins
@@ -58,7 +60,7 @@ export default class PluginApi extends PluginHooks {
   registerComponent(
     position: Position,
     component: Component = {},
-    props: PropOptions = {}
+    props: { [k: string]: any } = {}
   ): PluginApi {
     this.components[position] = this.components[position] || []
     this.components[position].push({ component, props })
