@@ -1,4 +1,4 @@
-import Vue, { Component } from 'vue'
+import Vue from 'vue'
 import Root from './components/Root.vue'
 import marked from './utils/marked'
 import createRouter from './router'
@@ -12,6 +12,9 @@ import VueRouter from 'vue-router'
 import { Store } from 'vuex'
 import PluginApi from './PluginApi'
 import { SaikaConfig } from './types'
+
+// built-in plugins
+import Theme from './plugins/theme'
 
 Vue.component(SaikaLink.name, SaikaLink)
 Vue.component(Note.name, Note)
@@ -51,7 +54,7 @@ export default class Saika {
       ...config
     })
 
-    const plugins = [...store.getters.config.plugins]
+    const plugins = [Theme, ...store.getters.config.plugins]
     this.pluginApi = new PluginApi({ plugins, store, router })
     this.applyPlugins()
 
@@ -75,12 +78,9 @@ export default class Saika {
     return this
   }
 
-  /**
-   * @private
-   */
-  applyPlugins(): void {
+  private applyPlugins(): void {
     for (const plugin of this.pluginApi.plugins) {
-      if (!plugin.when || plugin.when(this.config)) {
+      if (!plugin.when || plugin.when(this.pluginApi)) {
         plugin.extend(this.pluginApi)
       }
     }
