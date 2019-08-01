@@ -3,6 +3,7 @@
     <Header />
     <div class="Main">
       <div class="Wrap">
+        <InjectedComponents position="main:start" />
         <PostList v-if="isPostList" :posts="postList" />
         <template v-else>
           <div v-if="isFetchingFile" class="Content">
@@ -15,10 +16,13 @@
             </ContentLoader>
           </div>
           <div v-else class="Content">
+            <InjectedComponents position="content:start" />
             <component :is="PostContent" />
             <PrevNextLinks />
+            <InjectedComponents position="content:end" />
           </div>
         </template>
+        <InjectedComponents position="main:end" />
       </div>
     </div>
   </div>
@@ -31,6 +35,7 @@ import Header from '../components/Header.vue'
 import PrevNextLinks from '../components/PrevNextLinks.vue'
 import NotFound from '../components/NotFound.vue'
 import PostList from '../components/PostList.vue'
+import hooks from '../hooks.ts'
 
 export default {
   name: 'PostPage',
@@ -68,6 +73,8 @@ export default {
         template: `<div class="post-content">${post.content ||
           '<NotFound />'}</div>`
       }
+
+      hooks.process('extendMarkdownComponent', component)
 
       return component
     }
