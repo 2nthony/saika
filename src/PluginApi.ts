@@ -3,21 +3,9 @@ import { RouterOptions } from 'vue-router'
 import { Store } from 'vuex'
 import hooks, { Hooks } from './hooks'
 import InjectedComponents from './components/InjectedComponents.vue'
-import { SaikaConfig } from '.'
+import { PluginOptions, Position } from './types'
 
 Vue.component(InjectedComponents.name, InjectedComponents)
-
-export interface PluginOptions {
-  name: string
-  extend: (api: PluginApi) => void
-  when?: (config: SaikaConfig) => boolean
-}
-
-export type Position =
-  | 'main:start'
-  | 'main:end'
-  | 'content:start'
-  | 'content:end'
 
 export class PluginHooks {
   private hooks: Hooks

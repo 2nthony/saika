@@ -1,5 +1,4 @@
-type HookFn = (...args: any[]) => any
-
+import { HookFn } from './types'
 import { PluginHooks } from './PluginApi'
 
 export class Hooks {

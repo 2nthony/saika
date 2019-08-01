@@ -7,15 +7,10 @@ import load from './utils/load'
 import { getFileUrl, getFilenameByPath } from './utils'
 import cssVariables from './utils/cssVariables'
 import prismLanguages from './utils/prismLanguages.json'
-import { SaikaConfig } from '.'
+import { SaikaConfig, PostOptions } from './types'
 import hooks from './hooks'
 
 Vue.use(Vuex)
-
-type Post = {
-  file: string
-  content?: string
-}
 
 const store: Store<any> = new Vuex.Store({
   state: {
@@ -42,7 +37,7 @@ const store: Store<any> = new Vuex.Store({
     async fetchFile({ commit, getters, dispatch }, path) {
       commit('SET_FETCHING', true)
 
-      const post: Post = {
+      const post: PostOptions = {
         file: '',
         content: ''
       }

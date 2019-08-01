@@ -8,9 +8,10 @@ import SaikaLink from './components/SaikaLink.vue'
 import Note from './components/Note.vue'
 import ImageZoom from './components/ImageZoom.vue'
 import ExternalLinkIcon from './components/icons/ExternalLinkIcon.vue'
-import VueRouter, { RouterOptions } from 'vue-router'
+import VueRouter from 'vue-router'
 import { Store } from 'vuex'
-import PluginApi, { PluginOptions } from './PluginApi'
+import PluginApi from './PluginApi'
+import { SaikaConfig } from './types'
 
 Vue.component(SaikaLink.name, SaikaLink)
 Vue.component(Note.name, Note)
@@ -27,28 +28,6 @@ Vue.mixin({
     }
   }
 })
-
-interface LinkItem {
-  title: string
-  link: string
-}
-
-export interface NavItem extends LinkItem {}
-
-export interface PostItem extends LinkItem {}
-
-export interface SaikaConfig {
-  target?: string
-  sourcePath?: string
-  title?: string
-  mount?: boolean
-  router?: RouterOptions
-  postMixins?: Component[]
-  nav?: NavItem[]
-  posts?: PostItem[]
-  highlight?: string[]
-  plugins?: PluginOptions[]
-}
 
 export default class Saika {
   app: Vue
