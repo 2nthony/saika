@@ -13,5 +13,4 @@ declare const __PRISM_VERSION__: string
 
 declare interface Window {
   Vue: any
-  __SAIKA_VERSION__: string
 }
