@@ -34,11 +34,11 @@ a {
 }
 
 .Wrap {
-  margin: 40px 80px;
-  max-width: 770px;
+  padding: 0 var(--gap);
+  max-width: var(--page-max-width);
+  margin: 40px auto;
 
   @media screen and (max-width: 768px) {
-    margin: var(--gap);
     max-width: 100%;
   }
 }

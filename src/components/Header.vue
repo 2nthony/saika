@@ -70,11 +70,12 @@ export default {
   left: 0;
   right: 0;
   z-index: 33;
-  border-bottom: 1px solid var(--border-color);
   background: var(--header-background);
 }
 
 .header-inner {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
   height: 100%;
   padding: 0 var(--gap);
   position: relative;

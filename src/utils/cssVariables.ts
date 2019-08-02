@@ -14,8 +14,9 @@ export default {
   dangerColor: '#F04',
   warningColor: '#F5A623',
   inlineCodeColor: 'var(--purple)',
-  gap: '20px',
+  gap: '24px',
   tableHeaderBackground: '#fafafa',
   tableHeaderColor: '#666',
-  radius: '5px'
+  radius: '5px',
+  pageMaxWidth: '1048px'
 }
