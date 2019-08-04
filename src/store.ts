@@ -103,7 +103,7 @@ const store: Store<any> = new Vuex.Store({
   getters: {
     config({ originConfig }): SaikaConfig {
       return {
-        target: 'Saika',
+        target: 'saika',
         sourcePath: '.',
         postMixins: [],
         highlight: [],
