@@ -7,7 +7,7 @@ import load from './utils/load'
 import { getFileUrl, getFilenameByPath } from './utils'
 import cssVariables from './utils/cssVariables'
 import prismLanguages from './utils/prismLanguages.json'
-import { SaikaConfig, PostOptions } from './types'
+import { SaikaConfig, PostOptions, PostItem } from './types'
 import hooks from './hooks'
 
 Vue.use(Vuex)
@@ -121,6 +121,14 @@ const store: Store<any> = new Vuex.Store({
     posts(_, { config }) {
       const posts = config.posts || []
       return typeof posts === 'function' ? posts(store) : posts
+    },
+
+    postsLinks(_, { posts }) {
+      return posts.reduce((res: PostItem[], next: PostItem) => {
+        const item = next.link ? [next] : []
+        const children = next.children || next.links || []
+        return [...res, ...item, ...children]
+      }, [])
     },
 
     cssVariables(_, { config }) {

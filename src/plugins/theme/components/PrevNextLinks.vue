@@ -14,16 +14,16 @@ import { mapGetters } from 'vuex'
 
 export default {
   computed: {
-    ...mapGetters(['posts']),
+    ...mapGetters(['postsLinks']),
 
     currentLink() {
       return this.$route.path
     },
 
     currentLinkIndex() {
-      const { posts } = this
-      for (let i = 0; i < posts.length; i++) {
-        if (this.currentLink === posts[i].link) {
+      const { postsLinks } = this
+      for (let i = 0; i < postsLinks.length; i++) {
+        if (this.currentLink === postsLinks[i].link) {
           return i
         }
       }
@@ -33,13 +33,13 @@ export default {
 
     prevLinkItem() {
       return typeof this.currentLinkIndex === 'number'
-        ? this.posts[this.currentLinkIndex - 1]
+        ? this.postsLinks[this.currentLinkIndex - 1]
         : null
     },
 
     nextLinkItem() {
       return typeof this.currentLinkIndex === 'number'
-        ? this.posts[this.currentLinkIndex + 1]
+        ? this.postsLinks[this.currentLinkIndex + 1]
         : null
     }
   }
