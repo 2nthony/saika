@@ -14,7 +14,7 @@
   "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
   "main": "dist/saika.js",
   "scripts": {
-    "lint": "xo",
+    "lint": "xo --fix",
     "test": "npm run lint && echo lol",
     "build": "poi --prod --config build/lib.config.js",
     "prepublishOnly": "npm run build",
