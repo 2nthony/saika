@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import BlogPostList from '../components/BlogPostsList.vue'
+import BlogPostList from './BlogPostsList.vue'
 import PostContent from '../components/PostContent.vue'
 
 export default {

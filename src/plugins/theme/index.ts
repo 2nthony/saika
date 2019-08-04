@@ -2,8 +2,9 @@
  * TODO rewrite this
  */
 import { PluginOptions } from '../../types'
-import Blog from './views/Blog.vue'
-import Readme from './views/Readme.vue'
+import { Blog } from './blog'
+import { Readme } from './readme'
+import { Docs } from './docs'
 import PrevNextLinks from './components/PrevNextLinks.vue'
 
 export default {
@@ -15,6 +16,7 @@ export default {
     if (theme === 'blog') {
       api.registerComponent('main', Blog)
       api.registerComponent('content:end', PrevNextLinks)
+      return
     }
 
     if (theme === 'readme') {
@@ -28,6 +30,10 @@ export default {
         ]
       })
       api.registerComponent('main', Readme)
+      return
     }
+
+    api.registerComponent('main', Docs)
+    api.registerComponent('content:end', PrevNextLinks)
   }
 } as PluginOptions

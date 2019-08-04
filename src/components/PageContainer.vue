@@ -15,10 +15,10 @@
 
 <script>
 import jump from 'jump.js'
-import Header from '../components/Header.vue'
+import Header from './Header.vue'
 
 export default {
-  name: 'Home',
+  name: 'PageContainer',
 
   components: {
     Header

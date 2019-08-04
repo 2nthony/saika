@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router, { RouterOptions } from 'vue-router'
-import Home from './views/Home.vue'
+import PageContainer from './components/PageContainer.vue'
 
 Vue.use(Router)
 
@@ -17,7 +17,7 @@ export default (config?: RouterOptions) => {
     routes: [
       {
         path: '*',
-        component: Home
+        component: PageContainer
       }
     ]
   })
