@@ -16,16 +16,19 @@ export interface SaikaConfig {
   theme?: Theme
 }
 
-type Theme = 'blog' | 'readme' | 'docs(WIP)'
+type Theme = 'blog' | 'readme' | 'docs'
 
 interface LinkItem {
   title: string
-  link: string
+  link?: string
 }
 
 export interface NavItem extends LinkItem {}
 
-export interface PostItem extends LinkItem {}
+export interface PostItem extends LinkItem {
+  links?: LinkItem[]
+  children?: LinkItem[]
+}
 
 export interface PluginOptions {
   name: string
@@ -36,6 +39,8 @@ export interface PluginOptions {
 export type Position =
   | 'page:start'
   | 'page:end'
+  | 'wrap:start'
+  | 'wrap:end'
   | 'main:start'
   | 'main'
   | 'main:end'

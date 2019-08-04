@@ -18,5 +18,6 @@ export default {
   tableHeaderBackground: '#fafafa',
   tableHeaderColor: '#666',
   radius: '5px',
-  pageMaxWidth: '1048px'
+  pageMaxWidth: '1048px',
+  sidebarWidth: '280px'
 }

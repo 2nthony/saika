@@ -1,6 +1,6 @@
 # Introduction to Saika
 
-Saika is modified from docute to create a blog site, effortless and done right.
+Saika is modified from docute to create a information site, effortless and done right.
 
 ## What is Saika
 

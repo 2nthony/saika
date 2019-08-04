@@ -2,12 +2,14 @@
   <div class="Page" :class="`saika-${$store.getters.config.theme}`">
     <InjectedComponents position="page:start" />
     <Header />
-    <div class="Main">
-      <div class="Wrap">
+    <div class="Wrap">
+      <InjectedComponents position="wrap:start" />
+      <div class="Main">
         <InjectedComponents position="main:start" />
         <InjectedComponents position="main" />
         <InjectedComponents position="main:end" />
       </div>
+      <InjectedComponents position="wrap:end" />
     </div>
     <InjectedComponents position="page:end" />
   </div>

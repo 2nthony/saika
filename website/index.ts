@@ -3,6 +3,8 @@ import Saika from '../src'
 new Saika({
   target: 'app',
   title: 'Saika',
+  theme: 'docs',
+  highlight: ['bash', 'typescript', 'json'],
   postMixins: [
     {
       data() {
@@ -24,8 +26,35 @@ new Saika({
   ],
   posts: [
     {
-      title: 'Introduction',
-      link: '/introduction'
+      title: 'Guide',
+      children: [
+        {
+          title: 'Introduction',
+          link: '/'
+        }
+      ]
+    },
+    {
+      title: 'Advanced',
+      children: [
+        {
+          title: 'Use With Bundlers',
+          link: '/advanced/use-with-bundlers'
+        }
+      ]
+    },
+    {
+      title: 'Reference',
+      children: [
+        {
+          title: 'Options',
+          link: '/reference/options'
+        },
+        {
+          title: 'Built-in Components',
+          link: '/reference/built-in-components'
+        }
+      ]
     },
     {
       title: 'Credits',
