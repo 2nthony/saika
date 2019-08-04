@@ -4,7 +4,7 @@
 import { PluginOptions } from '../../types'
 import { Blog } from './blog'
 import { Readme } from './readme'
-import { Docs } from './docs'
+import { Docs, Sidebar } from './docs'
 import PrevNextLinks from './components/PrevNextLinks.vue'
 
 export default {
@@ -33,6 +33,7 @@ export default {
       return
     }
 
+    api.registerComponent('wrap:start', Sidebar)
     api.registerComponent('main', Docs)
     api.registerComponent('content:end', PrevNextLinks)
   }
