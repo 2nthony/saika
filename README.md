@@ -57,6 +57,11 @@ Then you can serve this folder as a static website on your machine using:
 - Golang: `caddy`
 - ...or whatever static web server
 
+## Who using Saika
+
+- [kms-docs/starter](https://kms-docs.now.sh) 🍄 KMS guide's documentation.
+- [evillt/toast](https://toast.evila.me) 💬 A lightweight toast.
+
 ## Contributing
 
 1. Fork it!
