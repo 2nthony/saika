@@ -22,7 +22,7 @@ export default {
 }
 </style>
 
-<style>
+<style scoped>
 .Content {
   padding-left: calc(var(--sidebar-width) + 40px);
   display: flex;
