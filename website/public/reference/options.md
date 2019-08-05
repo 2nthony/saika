@@ -21,3 +21,23 @@ The ID of the target element, similar to `Vue.el`, e.g. `app` or `#app`.
 - Default: `document.title`
 
 Website title.
+
+## posts
+
+- Type: `PostItem[] | (store: Vuex.Store) => PostItem[]`
+
+Navigation of posts item.
+
+```ts
+type PostItem = SingleItem | MultipleItem
+
+interface SingleItem {
+  title: string
+  link: PathLike
+}
+
+interface MultipleItem extends LinkItem {
+  title: string
+  children: SingleItem[]
+}
+```
