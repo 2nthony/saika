@@ -1,9 +1,9 @@
-import Saika from '../src'
+import Saika from '../core/saika/src'
+import saikaThemeDocs from '../packages/theme-docs'
 
 new Saika({
   target: 'app',
   title: 'Saika',
-  theme: 'docs',
   highlight: ['bash', 'typescript', 'json'],
   postMixins: [
     {
@@ -14,6 +14,7 @@ new Saika({
       }
     }
   ],
+  plugins: [saikaThemeDocs],
   nav: [
     {
       title: 'API',

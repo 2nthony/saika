@@ -1,0 +1,21 @@
+{
+  "name": "@saika/components",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.vue",
+    "*.js",
+    "*.css"
+  ],
+  "author": "evillt <ijoec123@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jump.js": "^1.0.2",
+    "medium-zoom": "^1.0.4",
+    "vue-content-loader": "^0.2.2",
+    "vuex": "^3.1.1"
+  },
+  "xo": false
+}

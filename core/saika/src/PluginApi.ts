@@ -2,13 +2,13 @@ import Vue, { Component } from 'vue'
 import Router from 'vue-router'
 import { Store } from 'vuex'
 import hooks, { Hooks } from './hooks'
-import InjectedComponents from './components/InjectedComponents.vue'
+import InjectedComponents from '@saika/components/InjectedComponents.vue'
 import { PluginOptions, Position } from './types'
 
 Vue.component(InjectedComponents.name, InjectedComponents)
 
 export class PluginHooks {
-  private hooks: Hooks
+  hooks: Hooks
 
   constructor() {
     this.hooks = hooks
@@ -64,6 +64,14 @@ export default class PluginApi extends PluginHooks {
   ): PluginApi {
     this.components[position] = this.components[position] || []
     this.components[position].push({ component, props })
+    return this
+  }
+
+  registerMainComponent(
+    component: Component = {},
+    props: object = {}
+  ): PluginApi {
+    this.components.main = [{ component, props }]
     return this
   }
 }

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router, { RouterOptions } from 'vue-router'
-import PageContainer from './components/PageContainer.vue'
+import Container from '@saika/components/Container.vue'
 
 Vue.use(Router)
 
@@ -17,7 +17,7 @@ export default (config?: RouterOptions) => {
     routes: [
       {
         path: '*',
-        component: PageContainer
+        component: Container
       }
     ]
   })

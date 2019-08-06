@@ -1,6 +1,6 @@
 # Saika
 
-> Effortlessly blogging, done right.
+> Effortlessly information site, done right.
 
 Please consider starring the project to show your ❤️ and support.
 
@@ -12,12 +12,11 @@ Please consider starring the project to show your ❤️ and support.
 
 ## Quick Start
 
-Let say you have following files in `./my-blog` folder:
+Let say you have following files in `./my-readme` folder:
 
 ```
 .
-├── posts
-│   └── my-post.md
+├── README.md
 └── index.html
 ```
 
@@ -28,7 +27,7 @@ The `index.html` looks like:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Blog</title>
+  <title>README</title>
   <link rel="stylesheet" href="https://unpkg.com/saika/dist/saika.css">
 </head>
 <body>
@@ -36,13 +35,7 @@ The `index.html` looks like:
   <script src="https://unpkg.com/saika"></script>
   <script>
     new Saika({
-      target: '#saika',
-      posts: [
-        {
-          title: 'MyPost',
-          link: '/posts/my-post'
-        }
-      ]
+      target: '#saika'
     })
   </script>
 </body>

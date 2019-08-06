@@ -1,7 +1,6 @@
 <template>
-  <div class="Page" :class="`saika-${$store.getters.config.theme}`">
+  <div class="Page">
     <InjectedComponents position="page:start" />
-    <Header />
     <div class="Wrap">
       <InjectedComponents position="wrap:start" />
       <div class="Main">
@@ -17,14 +16,9 @@
 
 <script>
 import jump from 'jump.js'
-import Header from './Header.vue'
 
 export default {
-  name: 'PageContainer',
-
-  components: {
-    Header
-  },
+  name: 'Container',
 
   mounted() {
     this.fetchFile(this.$route.path)
@@ -70,5 +64,5 @@ export default {
 }
 </script>
 
-<style src="../css/prism.css"></style>
-<style src="../css/post-content.css"></style>
+<style src="./css/prism.css"></style>
+<style src="./css/post-content.css"></style>

@@ -1,0 +1,27 @@
+{
+  "name": "saika",
+  "description": "Effortlessly blogging, done right.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "!**/__test__/**"
+  ],
+  "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
+  "main": "dist/saika.js",
+  "scripts": {
+    "build": "poi --prod"
+  },
+  "dependencies": {
+    "@saika/components": "^1.0.0",
+    "loadjs": "^3.6.1",
+    "prismjs": "^1.17.1",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.7",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "@poi/plugin-typescript": "^12.2.1",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

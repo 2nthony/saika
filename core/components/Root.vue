@@ -1,4 +1,4 @@
-<style src="../css/global.css"></style>
+<style src="./css/main.css"></style>
 
 <script>
 export default {

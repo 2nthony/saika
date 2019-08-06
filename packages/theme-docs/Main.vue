@@ -1,26 +1,22 @@
-<template>
-  <div class="Docs">
-    <PostContent />
-  </div>
-</template>
-
 <script>
-import PostContent from '../components/PostContent.vue'
+import PostContent from '@saika/components/PostContent.vue'
 
 export default {
-  name: 'Docs',
+  name: 'SaikaThemeDocs',
 
-  components: {
-    PostContent
+  functional: true,
+
+  render(h) {
+    return h(
+      'div',
+      {
+        class: 'saika-theme-docs'
+      },
+      [h(PostContent)]
+    )
   }
 }
 </script>
-
-<style scoped>
-.Docs {
-  display: flex;
-}
-</style>
 
 <style scoped>
 .Content {
