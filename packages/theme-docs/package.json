@@ -15,13 +15,11 @@
   "author": "evillt <ijoec123@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@saika/components": "^1.0.0",
     "bili": "^4.8.1",
     "rollup-plugin-typescript2": "^0.22.1",
     "rollup-plugin-vue": "^5.0.1",
     "typescript": "^3.5.3",
     "vue-template-compiler": "^2.6.10"
-  },
-  "dependencies": {
-    "@saika/components": "^1.0.0"
   }
 }
