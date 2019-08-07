@@ -17,7 +17,7 @@
     "release": "lerna version --conventional-commits",
     "website": "poi -s --config website/poi.config.js",
     "website:build": "poi --prod --config website/poi.config.js",
-    "docs": "typedoc core/saika/lib",
+    "docs": "typedoc core/saika",
     "now-build": "npm run docs && npm run website:build"
   },
   "devDependencies": {
