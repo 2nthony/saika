@@ -12,7 +12,6 @@ import VueRouter from 'vue-router'
 import { Store } from 'vuex'
 import PluginApi from './PluginApi'
 import { SaikaConfig } from './types'
-import hooks, { Hooks } from './hooks'
 
 // Default theme
 import ThemeDefault from './theme-default'
@@ -37,7 +36,6 @@ export default class Saika {
   app: Vue
   router: VueRouter
   store: Store<any>
-  hooks: Hooks
   config: SaikaConfig
   pluginApi: PluginApi
 
@@ -50,7 +48,6 @@ export default class Saika {
 
     this.router = router
     this.store = store
-    this.hooks = hooks
 
     store.commit('SET_CONFIG', {
       title: inBrowser && document.title,
