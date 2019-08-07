@@ -1,7 +1,7 @@
 const pkg = require('./package')
 
 module.exports = {
-  entry: 'src/index.ts',
+  entry: 'lib/index.ts',
   output: {
     format: 'umd',
     moduleName: 'Saika',
