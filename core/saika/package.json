@@ -1,7 +1,7 @@
 {
   "name": "saika",
   "description": "Effortlessly blogging, done right.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "files": [
     "dist",
