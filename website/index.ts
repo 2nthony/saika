@@ -1,5 +1,11 @@
 import Saika from '../core/saika/lib'
 import saikaThemeDocs from '../packages/theme-docs'
+import googleAnalytics from '../plugins/google-analytics'
+
+const plugins = [saikaThemeDocs]
+if (process.env.NODE_ENV === 'production') {
+  plugins.push(googleAnalytics('UA-145247644-2'))
+}
 
 new Saika({
   target: 'app',
@@ -14,7 +20,7 @@ new Saika({
       }
     }
   ],
-  plugins: [saikaThemeDocs],
+  plugins,
   nav: [
     {
       title: 'API',
