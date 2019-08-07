@@ -28,6 +28,7 @@ export interface PostItem extends LinkItem {
 }
 
 export interface PluginOptions {
+  default?: PluginOptions
   name: string
   extend: (api: PluginApi) => void
   when?: (api: PluginApi) => boolean

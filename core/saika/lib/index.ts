@@ -79,7 +79,8 @@ export default class Saika {
   }
 
   private applyPlugins(): void {
-    for (const plugin of this.pluginApi.plugins) {
+    for (const _plugin of this.pluginApi.plugins) {
+      const plugin = _plugin.default || _plugin
       if (!plugin.when || plugin.when(this.pluginApi)) {
         plugin.extend(this.pluginApi)
       }
