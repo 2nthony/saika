@@ -1,6 +1,7 @@
 import Saika from '../core/saika/lib'
 import saikaThemeDocs from '../packages/theme-docs'
-import googleAnalytics from '../plugins/google-analytics'
+// @ts-ignore
+import googleAnalytics from '../plugins/google-analytics/src'
 
 const plugins = [saikaThemeDocs]
 if (process.env.NODE_ENV === 'production') {
