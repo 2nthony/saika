@@ -2,7 +2,7 @@ import Vue, { Component } from 'vue'
 import Router from 'vue-router'
 import { Store } from 'vuex'
 import hooks, { Hooks } from './hooks'
-import InjectedComponents from '@saika/components/InjectedComponents.vue'
+import InjectedComponents from '../components/InjectedComponents.vue'
 import { PluginOptions, Position } from './types'
 
 Vue.component(InjectedComponents.name, InjectedComponents)

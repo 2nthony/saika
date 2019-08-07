@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router, { RouterOptions } from 'vue-router'
-import Container from '@saika/components/Container.vue'
+import Container from '../components/Container.vue'
 
 Vue.use(Router)
 

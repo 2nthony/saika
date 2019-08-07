@@ -1,6 +1,6 @@
-import { PluginOptions } from 'saika/src/types'
-import Header from '@saika/components/Header.vue'
-import Sidebar from '@saika/components/Sidebar.vue'
+import { PluginOptions } from 'saika/lib/types'
+import Header from 'saika/components/Header.vue'
+import Sidebar from 'saika/components/Sidebar.vue'
 import Main from './Main.vue'
 
 export default {

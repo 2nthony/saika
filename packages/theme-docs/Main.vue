@@ -1,5 +1,5 @@
 <script>
-import PostContent from '@saika/components/PostContent.vue'
+import PostContent from 'saika/components/PostContent.vue'
 
 export default {
   name: 'SaikaThemeDocs',

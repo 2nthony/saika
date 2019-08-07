@@ -1,17 +1,18 @@
 import Vue from 'vue'
-import Root from '@saika/components/Root.vue'
+import Root from '../components/Root.vue'
 import marked from './utils/marked'
 import createRouter from './router'
 import store from './store'
 import { inBrowser } from './utils'
-import SaikaLink from '@saika/components/SaikaLink.vue'
-import Note from '@saika/components/Note.vue'
-import ImageZoom from '@saika/components/ImageZoom.vue'
-import ExternalLinkIcon from '@saika/components/icons/ExternalLinkIcon.vue'
+import SaikaLink from '../components/SaikaLink.vue'
+import Note from '../components/Note.vue'
+import ImageZoom from '../components/ImageZoom.vue'
+import ExternalLinkIcon from '../components/icons/ExternalLinkIcon.vue'
 import VueRouter from 'vue-router'
 import { Store } from 'vuex'
 import PluginApi from './PluginApi'
 import { SaikaConfig } from './types'
+import hooks, { Hooks } from './hooks'
 
 // Default theme
 import ThemeDefault from './theme-default'
@@ -36,6 +37,7 @@ export default class Saika {
   app: Vue
   router: VueRouter
   store: Store<any>
+  hooks: Hooks
   config: SaikaConfig
   pluginApi: PluginApi
 
@@ -48,6 +50,7 @@ export default class Saika {
 
     this.router = router
     this.store = store
+    this.hooks = hooks
 
     store.commit('SET_CONFIG', {
       title: inBrowser && document.title,

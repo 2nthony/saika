@@ -1,5 +1,5 @@
 import marked from './marked'
-import { slugify } from '.'
+import { slugify } from '../utils'
 
 export default function() {
   const renderer = new marked.Renderer()

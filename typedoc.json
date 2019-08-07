@@ -4,7 +4,7 @@
   "readme": "none",
   "theme": "minimal",
   "exclude": [
-    "core/saika/src/utils"
+    "core/saika/lib/utils"
   ],
   "excludeNotExported": true,
   "excludeExternals": true,

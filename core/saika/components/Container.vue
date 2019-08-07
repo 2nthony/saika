@@ -64,5 +64,5 @@ export default {
 }
 </script>
 
-<style src="./css/prism.css"></style>
-<style src="./css/post-content.css"></style>
+<style src="../css/prism.css"></style>
+<style src="../css/post-content.css"></style>

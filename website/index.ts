@@ -1,4 +1,4 @@
-import Saika from '../core/saika/src'
+import Saika from '../core/saika/lib'
 import saikaThemeDocs from '../packages/theme-docs'
 
 new Saika({
