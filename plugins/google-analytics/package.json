@@ -8,6 +8,7 @@
     "build": "poi --prod",
     "prepublishOnly": "yarn build"
   },
+  "main": "dist/index.js",
   "files": [
     "dist/index.js"
   ],
