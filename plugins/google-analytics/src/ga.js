@@ -5,7 +5,7 @@ function appendScript() {
   const script = document.createElement('script')
   script.async = true
   script.src = 'https://www.google-analytics.com/analytics.js'
-  document.body.appendChild(script)
+  document.body.append(script)
 }
 
 function init(id) {
@@ -14,8 +14,10 @@ function init(id) {
     window.ga =
       window.ga ||
       function() {
+        // eslint-disable-next-line prefer-rest-params
         ;(window.ga.q = window.ga.q || []).push(arguments)
       }
+
     window.ga.l = Number(new Date())
     window.ga('create', id, 'auto')
   }
