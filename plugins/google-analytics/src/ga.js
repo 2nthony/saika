@@ -1,16 +1,14 @@
 /**
  * https://github.com/egoist/vue-ga/blob/master/src/index.js
  */
-import VueRouter from 'vue-router'
-
-function appendScript(): void {
+function appendScript() {
   const script = document.createElement('script')
   script.async = true
   script.src = 'https://www.google-analytics.com/analytics.js'
   document.body.appendChild(script)
 }
 
-function init(id: string): void {
+function init(id) {
   if (!window.ga) {
     appendScript()
     window.ga =
@@ -23,13 +21,13 @@ function init(id: string): void {
   }
 }
 
-function collect(url: string, id: string) {
+function collect(url, id) {
   init(id)
   window.ga('set', 'page', url)
   window.ga('send', 'pageview')
 }
 
-export default function(router: VueRouter, id: string): void {
+export default function(router, id) {
   router.afterEach(to => {
     collect(to.fullPath, id)
   })

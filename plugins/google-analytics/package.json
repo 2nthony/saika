@@ -5,7 +5,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "poi --prod",
+    "build": "bili",
     "prepublishOnly": "yarn build"
   },
   "main": "dist/index.js",
@@ -14,5 +14,8 @@
   ],
   "author": "evillt <ijoec123@gmail.com>",
   "homepage": "https://github.com/evillt/saika#readme",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "bili": "^4.8.1"
+  }
 }
