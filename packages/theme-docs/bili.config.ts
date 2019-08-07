@@ -3,7 +3,7 @@ import { Config } from 'bili'
 export default {
   input: 'index.ts',
   output: {
-    moduleName: 'saika-theme-docs',
+    moduleName: 'saikaThemeDocs',
     format: 'umd',
     fileName: '[name][ext]',
     minify: true
