@@ -1,6 +1,6 @@
 {
   "name": "@saika/theme-docs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publishConfig": {
     "access": "public"
   },
@@ -17,7 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "postcss-preset-env": "^6.7.0",
-    "saika": "^1.0.1",
+    "saika": "^1.0.2",
     "vue-template-compiler": "^2.6.10"
   }
 }
