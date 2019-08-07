@@ -13,7 +13,7 @@ import { Store } from 'vuex'
 import PluginApi from './PluginApi'
 import { SaikaConfig } from './types'
 
-// Default theme
+// Theme-Default
 import ThemeDefault from './theme-default'
 
 Vue.component(SaikaLink.name, SaikaLink)
