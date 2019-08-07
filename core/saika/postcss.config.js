@@ -1,7 +1,1 @@
-module.exports = {
-  plugins: [
-    require('postcss-preset-env')({
-      stage: 0
-    })
-  ]
-}
+module.exports = require('../../postcss.config')
