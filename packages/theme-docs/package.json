@@ -8,18 +8,16 @@
     "dist/index.js",
     "dist/index.css"
   ],
+  "main": "dist/index.js",
   "scripts": {
-    "build": "bili",
+    "build": "poi --prod",
     "prepublishOnly": "yarn build"
   },
   "author": "evillt <ijoec123@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "bili": "^4.8.1",
-    "rollup-plugin-typescript2": "^0.22.1",
-    "rollup-plugin-vue": "^5.0.1",
+    "postcss-preset-env": "^6.7.0",
     "saika": "^1.0.1",
-    "typescript": "^3.5.3",
     "vue-template-compiler": "^2.6.10"
   }
 }
