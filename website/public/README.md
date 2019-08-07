@@ -6,7 +6,7 @@ Saika is modified from docute to create a information site, effortless and done 
 
 Saika is basically a JavaScript file that fetches Markdown files and renders them as a single-page application.
 
-It's totally runtime-driven so there's no server-side components involved which also means there's no build process. You only need to create an HTML file and a bunch of Markdown and your blog-site is almost ready!
+It's totally runtime-driven so there's no server-side components involved which also means there's no build process. You only need to create an HTML file and a bunch of Markdown and your site is almost ready!
 
 ## How does it work
 

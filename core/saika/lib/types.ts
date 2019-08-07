@@ -13,10 +13,7 @@ export interface SaikaConfig {
   posts?: PostItem[]
   highlight?: string[]
   plugins?: PluginOptions[]
-  theme?: Theme
 }
-
-type Theme = 'blog' | 'readme' | 'docs'
 
 interface LinkItem {
   title: string

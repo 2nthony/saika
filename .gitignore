@@ -100,3 +100,6 @@ typings/
 dist
 
 website/public/docs
+
+# rollup-plugin-typescript2 cache
+.rpt2_cache

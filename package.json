@@ -1,55 +1,41 @@
 {
-  "name": "saika",
-  "description": "Effortlessly blogging, done right.",
-  "version": "0.9.1",
-  "license": "MIT",
+  "private": true,
+  "name": "saika-monorepo",
   "repository": {
     "type": "git",
     "url": "evillt/saika"
   },
-  "files": [
-    "dist",
-    "!**/__test__/**"
+  "workspaces": [
+    "core/*",
+    "plugins/*",
+    "packages/*"
   ],
   "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
-  "main": "dist/saika.js",
   "scripts": {
-    "lint": "xo --fix",
+    "lint": "xo",
     "test": "npm run lint && echo lol",
-    "build": "poi --prod --config build/lib.config.js",
-    "prepublishOnly": "npm run build",
-    "website": "poi -s --config build/website.config.js",
-    "website:build": "poi --prod --config build/website.config.js",
-    "docs": "typedoc src",
+    "release": "lerna version --conventional-commits",
+    "website": "poi -s --config website/poi.config.js",
+    "website:build": "poi --prod --config website/poi.config.js",
+    "docs": "typedoc core/saika/lib",
     "now-build": "npm run docs && npm run website:build"
   },
-  "dependencies": {
-    "jump.js": "^1.0.2",
-    "loadjs": "^3.6.1",
-    "medium-zoom": "^1.0.4",
-    "prismjs": "^1.17.1",
-    "vue": "^2.6.10",
-    "vue-content-loader": "^0.2.2",
-    "vue-router": "^3.0.7",
-    "vuex": "^3.1.1"
-  },
   "devDependencies": {
-    "@evillt/toast": "^1.1.0",
     "@poi/plugin-typescript": "^12.2.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-rem": "^4.0.0",
-    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.2.3",
-    "husky": "^3.0.1",
-    "lint-staged": "^9.2.0",
-    "poi": "^12.7.0",
+    "husky": "^3.0.2",
+    "lerna": "^3.16.4",
+    "lint-staged": "^9.2.1",
+    "poi": "^12.7.1",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^1.17.0",
-    "register-service-worker-chain": "^1.1.0",
+    "prettier": "^1.18.2",
+    "prismjs": "^1.17.1",
     "typedoc": "^0.15.0",
     "typescript": "^3.5.3",
-    "vue-template-compiler": "^2.6.10",
     "xo": "^0.24.0"
   },
   "xo": {
@@ -59,10 +45,6 @@
       "plugin:vue/essential"
     ],
     "prettier": true,
-    "ignores": [
-      "**/website/**",
-      "**/dist/**"
-    ],
     "envs": [
       "browser"
     ],

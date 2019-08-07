@@ -1,4 +1,4 @@
-const pkg = require('../package')
+const pkg = require('../core/saika/package')
 
 module.exports = {
   entry: 'website/index.ts',

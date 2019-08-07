@@ -1,6 +1,6 @@
 # Saika
 
-> Effortlessly blogging, done right.
+> Effortless info-site, done right. A docute alternative.
 
 Please consider starring the project to show your ❤️ and support.
 
@@ -10,52 +10,16 @@ Please consider starring the project to show your ❤️ and support.
 [![License](https://badgen.net/npm/license/saika)](./LICENSE)
 [![donate](https://badgen.net/badge/support%20me/donate/f2a)](https://donate.evila.me)
 
-## Quick Start
+## Features
 
-Let say you have following files in `./my-blog` folder:
+- No build process, 
+- An elegant UI inspired by zeit/design.
+- Extensible plugin system.
+- Customizable page.
 
-```
-.
-├── posts
-│   └── my-post.md
-└── index.html
-```
+## Documentation
 
-The `index.html` looks like:
-
-```html
-<!DOCTYPE html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Blog</title>
-  <link rel="stylesheet" href="https://unpkg.com/saika/dist/saika.css">
-</head>
-<body>
-  <div id="saika"></div>
-  <script src="https://unpkg.com/saika"></script>
-  <script>
-    new Saika({
-      target: '#saika',
-      posts: [
-        {
-          title: 'MyPost',
-          link: '/posts/my-post'
-        }
-      ]
-    })
-  </script>
-</body>
-```
-
-Then you can serve this folder as a static website on your machine using:
-
-- Node.js:
-  - `npm i -g serve && serve .`
-  - `npm i -g http-server && hs`
-- Python: `python -m SimpleHTTPServer`
-- Golang: `caddy`
-- ...or whatever static web server
+- https://saika.dev
 
 ## Who using Saika
 

@@ -1,0 +1,25 @@
+{
+  "name": "@saika/theme-docs",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/index.css"
+  ],
+  "scripts": {
+    "build": "bili",
+    "prepublishOnly": "yarn build"
+  },
+  "author": "evillt <ijoec123@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "bili": "^4.8.1",
+    "rollup-plugin-typescript2": "^0.22.1",
+    "rollup-plugin-vue": "^5.0.1",
+    "saika": "^1.0.0",
+    "typescript": "^3.5.3",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

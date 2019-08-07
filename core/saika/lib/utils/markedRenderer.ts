@@ -20,7 +20,8 @@ export default function() {
     `<SaikaLink to="${href}">${text}</SaikaLink>`
 
   // Disable template interpolation in code
-  renderer.codespan = (text: string) => `<code v-pre class="inline-code">${text}</code>`
+  renderer.codespan = (text: string) =>
+    `<code v-pre class="inline-code">${text}</code>`
   const origCode = renderer.code
   renderer.code = function(code: string, lang: string, escaped: boolean) {
     let res = origCode.call(this, code, lang, escaped)

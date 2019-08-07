@@ -17,8 +17,8 @@
 
 <script>
 import { ContentLoader } from 'vue-content-loader'
-import NotFound from '../../../components/NotFound.vue'
-import hooks from '../../../hooks.ts'
+import hooks from '../lib/hooks.ts'
+import NotFound from './NotFound.vue'
 
 export default {
   name: 'PostContent',
