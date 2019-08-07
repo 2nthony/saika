@@ -1,0 +1,17 @@
+{
+  "name": "@saika/google-analytics",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "poi --prod",
+    "prepublishOnly": "yarn build"
+  },
+  "files": [
+    "dist/index.js"
+  ],
+  "author": "evillt <ijoec123@gmail.com>",
+  "homepage": "https://github.com/evillt/saika#readme",
+  "license": "MIT"
+}
