@@ -1,6 +1,6 @@
 import Prism from 'prismjs'
 
-export default function highlight(str: string, lang: string) {
+export default function highlight(str, lang) {
   if (!lang) return str
 
   let resolvedLang = lang && Prism.languages[lang]

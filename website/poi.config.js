@@ -1,14 +1,13 @@
 const pkg = require('../core/saika/package')
 
 module.exports = {
-  entry: 'website/index.ts',
+  entry: 'website/index.js',
   output: {
     dir: 'website/dist',
     html: {
       title: 'Saika'
     }
   },
-  plugins: ['@poi/typescript'],
   publicFolder: 'website/public',
   chainWebpack(config) {
     config.resolve.alias.set('vue$', 'vue/dist/vue.esm.js')

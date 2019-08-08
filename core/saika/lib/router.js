@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import Router, { RouterOptions } from 'vue-router'
+import Router from 'vue-router'
 import Container from '../components/Container.vue'
 
 Vue.use(Router)
 
-export default (config?: RouterOptions) => {
+export default config => {
   return new Router({
     scrollBehavior(to, from, savedPosition) {
       if (savedPosition) {
