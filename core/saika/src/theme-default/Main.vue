@@ -17,3 +17,10 @@ export default {
   }
 }
 </script>
+
+<style>
+.saika-theme-default {
+  max-width: 770px;
+  margin: 0 auto;
+}
+</style>
