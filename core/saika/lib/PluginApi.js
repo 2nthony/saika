@@ -4,25 +4,9 @@ import hooks from './hooks'
 
 Vue.component(InjectedComponents.name, InjectedComponents)
 
-export class PluginHooks {
-  constructor() {
-    this.hooks = hooks
-  }
-
-  processMarkdown(fn) {
-    this.hooks.add('processMarkdown', fn)
-    return this
-  }
-
-  processHTML(fn) {
-    this.hooks.add('processHTML', fn)
-    return this
-  }
-}
-
-export default class PluginApi extends PluginHooks {
+export default class PluginApi {
   constructor({ plugins, store, router }) {
-    super()
+    this.hooks = hooks
     this.plugins = plugins
     this.store = store
     this.router = router
@@ -37,14 +21,24 @@ export default class PluginApi extends PluginHooks {
     return this.components[position] || []
   }
 
-  registerComponent(position, component = {}, props = {}) {
+  registerComponent(position, component, props) {
     this.components[position] = this.components[position] || []
     this.components[position].push({ component, props })
     return this
   }
 
-  registerMainComponent(component = {}, props = {}) {
+  registerMainComponent(component, props) {
     this.components.main = [{ component, props }]
+    return this
+  }
+
+  processMarkdown(fn) {
+    this.hooks.add('processMarkdown', fn)
+    return this
+  }
+
+  processHTML(fn) {
+    this.hooks.add('processHTML', fn)
     return this
   }
 }
