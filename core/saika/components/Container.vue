@@ -52,7 +52,9 @@ export default {
       if (hash) {
         const el = document.querySelector(hash)
         if (el) {
-          const header = document.querySelector('.Header')
+          const header = document.querySelector('.Header') || {
+            clientHeight: 55
+          }
           jump(el, {
             duration: 0,
             offset: -header.clientHeight - 80
