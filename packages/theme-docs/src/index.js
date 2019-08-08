@@ -1,4 +1,3 @@
-import { PluginOptions } from 'saika/lib/types'
 import Header from 'saika/components/Header.vue'
 import Sidebar from 'saika/components/Sidebar.vue'
 import Main from './Main.vue'
@@ -10,4 +9,4 @@ export default {
     api.registerComponent('wrap:start', Sidebar)
     api.registerMainComponent(Main)
   }
-} as PluginOptions
+}

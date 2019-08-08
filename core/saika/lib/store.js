@@ -1,18 +1,17 @@
 import Vue from 'vue'
-import Vuex, { Store } from 'vuex'
+import Vuex from 'vuex'
 import marked from './utils/marked'
 import markedRenderer from './utils/markedRenderer'
 import highlight from './utils/highlight'
 import load from './utils/load'
 import { getFileUrl, getFilenameByPath } from './utils'
 import cssVariables from './utils/cssVariables'
-import prismLanguages from './utils/prismLanguages.json'
-import { SaikaConfig, PostOptions, PostItem } from './types'
+import prismLanguages from './utils/prismLanguages'
 import hooks from './hooks'
 
 Vue.use(Vuex)
 
-const store: Store<any> = new Vuex.Store({
+const store = new Vuex.Store({
   state: {
     originConfig: {},
     isFetchingFile: true,
@@ -37,7 +36,7 @@ const store: Store<any> = new Vuex.Store({
     async fetchFile({ commit, getters, dispatch }, path) {
       commit('SET_FETCHING', true)
 
-      const post: PostOptions = {
+      const post = {
         file: '',
         content: ''
       }
@@ -78,21 +77,21 @@ const store: Store<any> = new Vuex.Store({
 
       return load(
         langs
-          .reduce((res: string[], lang: string) => {
-            if ((<any>prismLanguages)[lang]) {
-              res = res.concat((<any>prismLanguages)[lang])
+          .reduce((res, lang) => {
+            if (prismLanguages[lang]) {
+              res = res.concat(prismLanguages[lang])
             }
 
             res.push(lang)
             return res
           }, [])
-          .filter((lang: string, i: number, arr: string[]) => {
+          .filter((lang, i, arr) => {
             return (
               arr.indexOf(lang) === i &&
               prismLanguages.builtin.indexOf(lang) === -1
             )
           })
-          .map((lang: string) => {
+          .map(lang => {
             return `https://unpkg.com/prismjs@${__PRISM_VERSION__}/components/prism-${lang}.min.js`
           }),
         'prism-languages'
@@ -101,7 +100,7 @@ const store: Store<any> = new Vuex.Store({
   },
 
   getters: {
-    config({ originConfig }): SaikaConfig {
+    config({ originConfig }) {
       return {
         target: 'saika',
         sourcePath: '.',
@@ -112,7 +111,12 @@ const store: Store<any> = new Vuex.Store({
       }
     },
 
-    target(_, { config: { target } }) {
+    target(
+      _,
+      {
+        config: { target }
+      }
+    ) {
       if (target[0] === '#') return target.slice(1)
       return target
     },
@@ -123,7 +127,7 @@ const store: Store<any> = new Vuex.Store({
     },
 
     postsLinks(_, { posts }) {
-      return posts.reduce((res: PostItem[], next: PostItem) => {
+      return posts.reduce((res, next) => {
         const item = next.link ? [next] : []
         const children = next.children || next.links || []
         return [...res, ...item, ...children]

@@ -10,13 +10,15 @@
   ],
   "main": "dist/index.js",
   "scripts": {
-    "build": "poi --prod",
+    "build": "bili",
     "prepublishOnly": "yarn build"
   },
   "author": "evillt <ijoec123@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "bili": "^4.8.1",
     "postcss-preset-env": "^6.7.0",
+    "rollup-plugin-vue": "^5.0.1",
     "saika": "^1.0.3",
     "vue-template-compiler": "^2.6.10"
   }
