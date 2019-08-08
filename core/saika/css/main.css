@@ -21,8 +21,6 @@ a {
 }
 
 .Main {
-  padding-top: var(--header-height);
-
   & h1,
   & h2,
   & h3,

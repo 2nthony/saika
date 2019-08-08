@@ -109,3 +109,9 @@ export default {
   height: calc(var(--header-height) - 1px);
 }
 </style>
+
+<style>
+.Main {
+  padding-top: var(--header-height);
+}
+</style>
