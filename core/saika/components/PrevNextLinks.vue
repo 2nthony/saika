@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
   computed: {
-    ...mapGetters(['postsLinks']),
+    postsLinks() {
+      return this.$store.getters.postsLinks
+    },
 
     currentLink() {
       return this.$route.path
