@@ -1,5 +1,5 @@
 <script>
-import { isExternalLink } from '../lib/utils'
+import { isExternalLink } from '../src/utils'
 
 export default {
   name: 'SaikaLink',

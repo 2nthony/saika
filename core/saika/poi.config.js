@@ -1,7 +1,7 @@
 const pkg = require('./package')
 
 module.exports = {
-  entry: 'lib/index.js',
+  entry: 'src/index.js',
   output: {
     format: 'umd',
     moduleName: 'Saika',
