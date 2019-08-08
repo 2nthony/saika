@@ -23,12 +23,11 @@ We fetch and render corresponding markdown file for the URL you visit:
 
 ## Quick Start
 
-Let say you have following files in `./my-blog` folder:
+Let say you have following files in `./my-site` folder:
 
 ```
 .
-├── posts
-│   └── my-post.md
+├── README.md
 └── index.html
 ```
 
@@ -39,7 +38,7 @@ The `index.html` looks like:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Blog</title>
+  <title>My Site</title>
   <link rel="stylesheet" href="https://unpkg.com/saika/dist/saika.css">
 </head>
 <body>
@@ -51,7 +50,7 @@ The `index.html` looks like:
       posts: [
         {
           title: 'MyPost',
-          link: '/posts/my-post'
+          link: '/'
         }
       ]
     })

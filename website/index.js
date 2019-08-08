@@ -36,6 +36,10 @@ new Saika({
       ]
     },
     {
+      title: 'Recipes',
+      link: '/recipes/'
+    },
+    {
       title: 'Advanced',
       children: [
         {
@@ -54,6 +58,10 @@ new Saika({
         {
           title: 'Built-in Components',
           link: '/reference/built-in-components'
+        },
+        {
+          title: 'Plugin API',
+          link: '/reference/plugin-api'
         }
       ]
     },
