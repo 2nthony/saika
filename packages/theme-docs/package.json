@@ -1,6 +1,6 @@
 {
   "name": "@saika/theme-docs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publishConfig": {
     "access": "public"
   },
@@ -19,7 +19,7 @@
     "bili": "^4.8.1",
     "postcss-preset-env": "^6.7.0",
     "rollup-plugin-vue": "^5.0.1",
-    "saika": "^1.0.3",
+    "saika": "^1.0.4",
     "vue-template-compiler": "^2.6.10"
   }
 }
