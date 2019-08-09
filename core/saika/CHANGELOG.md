@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/evillt/saika/compare/saika@1.1.1...saika@1.2.0) (2019-08-09)
+
+
+### Features
+
+* **ui:** `sidebar` support toggle in mobile side ([9c6adc2](https://github.com/evillt/saika/commit/9c6adc2))
+
+
+
+
+
 ## [1.1.1](https://github.com/evillt/saika/compare/saika@1.1.0...saika@1.1.1) (2019-08-09)
 
 
