@@ -22,6 +22,14 @@
     font-size: 1.1rem;
   }
 
+  & hr {
+    height: 1px;
+    background-color: #e1e4e8;
+    border: 0;
+    margin: 3rem 0;
+    padding: 0;
+  }
+
   & p {
     font-weight: 400;
     font-size: var(--text-size);
