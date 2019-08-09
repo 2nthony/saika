@@ -3,6 +3,7 @@
 }
 
 body {
+  word-break: break-word;
   margin: 0;
   color: var(--text-color);
   background: var(--page-background);
