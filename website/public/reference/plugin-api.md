@@ -6,7 +6,7 @@ A plugin is an object which has following properties:
 - `extend: (api: PluginAPI) => void` Extending core features.
 - `when?: (api: PluginAPI) => boolean` Condition to enable plugin.
 
-## api.processMarkedown(fn)
+## api.processMarkdown(fn)
 
 - `fn: (markdown: string) => string | Promise<string>`
 
