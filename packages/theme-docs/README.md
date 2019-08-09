@@ -40,3 +40,7 @@ The header navigation item.
 ### posts
 
 The posts item is your sidebar item.
+
+# License
+
+MIT © [evillt](https://github.com/evillt)
