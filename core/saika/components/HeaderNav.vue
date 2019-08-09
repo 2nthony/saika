@@ -1,6 +1,6 @@
-<template functional>
+<template>
   <div class="header-nav">
-    <div v-for="(item, k) in props.nav" :key="k" class="header-nav-item">
+    <div v-for="(item, k) in nav" :key="k" class="header-nav-item">
       <SaikaLink :to="item.link">{{ item.title }}</SaikaLink>
     </div>
   </div>
@@ -22,11 +22,30 @@ export default {
   display: flex;
   align-items: center;
   font-size: 0.9rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .header-nav-item {
   &:not(:first-child) {
     margin-left: 25px;
+  }
+}
+
+.mobile-header-nav {
+  display: block;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+
+  & .header-nav-item {
+    margin: 18px 0;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 }
 </style>

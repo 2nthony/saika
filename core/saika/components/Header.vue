@@ -3,14 +3,13 @@
     <div class="header-inner">
       <div class="header-left">
         <h1 class="site-title">
-          <SaikaLink to="/">
-            <component :is="Logo" />
-          </SaikaLink>
+          <SaikaLink to="/"><component :is="Logo"/></SaikaLink>
         </h1>
         <HeaderNav v-if="leftNav" :nav="leftNav" />
       </div>
       <div class="header-right">
         <HeaderNav v-if="rightNav" :nav="rightNav" />
+        <SidebarToggle />
       </div>
     </div>
   </header>
@@ -18,12 +17,14 @@
 
 <script>
 import HeaderNav from './HeaderNav.vue'
+import SidebarToggle from './SidebarToggle.vue'
 
 export default {
   name: 'Header',
 
   components: {
-    HeaderNav
+    HeaderNav,
+    SidebarToggle
   },
 
   computed: {
@@ -81,6 +82,10 @@ export default {
   position: relative;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    border-bottom: 1px solid var(--border-color);
+  }
 }
 
 .site-title {
@@ -104,7 +109,7 @@ export default {
 .header-right {
   display: flex;
   position: absolute;
-  right: 20px;
+  right: var(--gap);
   top: 0;
   height: calc(var(--header-height) - 1px);
 }

@@ -15,7 +15,8 @@ const store = new Vuex.Store({
   state: {
     originConfig: {},
     isFetchingFile: true,
-    post: {}
+    post: {},
+    showSidebar: false
   },
 
   mutations: {
@@ -29,11 +30,16 @@ const store = new Vuex.Store({
 
     SET_POST(state, post) {
       state.post = post
+    },
+
+    TOGGLE_SIDEBAR(state, show) {
+      state.showSidebar = typeof show === 'boolean' ? show : !state.showSidebar
     }
   },
 
   actions: {
     async fetchFile({ commit, getters, dispatch }, path) {
+      commit('TOGGLE_SIDEBAR', false)
       commit('SET_FETCHING', true)
 
       const post = {
