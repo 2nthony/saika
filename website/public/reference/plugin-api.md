@@ -1,6 +1,6 @@
 # Plugin API
 
-Plugin properties:
+A plugin is an object which has following properties:
 
 - `name: string` Plugin name.
 - `extend: (api: PluginAPI) => void` Extending core features.

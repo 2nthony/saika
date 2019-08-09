@@ -1,11 +1,13 @@
 import Saika from '../core/saika/src'
-import saikaThemeDocs from '../packages/theme-docs/src'
+import saikaThemeDocs from '../themes/docs/src'
 import googleAnalytics from '../plugins/google-analytics/src'
+
+import footerPlugin from './plugins/footer'
 
 new Saika({
   target: 'app',
   title: 'Saika',
-  highlight: ['bash', 'typescript', 'json'],
+  highlight: ['bash', 'typescript', 'json', 'markdown'],
   postMixins: [
     {
       data() {
@@ -17,7 +19,8 @@ new Saika({
   ],
   plugins: [
     saikaThemeDocs,
-    process.env.NODE_ENV === 'production' && googleAnalytics('UA-145247644-2')
+    process.env.NODE_ENV === 'production' && googleAnalytics('UA-145247644-2'),
+    footerPlugin
   ].filter(Boolean),
   nav: [
     {
@@ -32,12 +35,16 @@ new Saika({
         {
           title: 'Introduction',
           link: '/'
-        }
+        },
+        {
+          title: 'Plugin',
+          link: '/guide/plugin'
+        },
+        {
+          title: 'Theme',
+          link: '/guide/theme'
+        },
       ]
-    },
-    {
-      title: 'Recipes',
-      link: '/recipes/'
     },
     {
       title: 'Advanced',
