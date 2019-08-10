@@ -4,14 +4,12 @@ import SaikaLink from '../components/SaikaLink.vue'
 import Note from '../components/Note.vue'
 import ImageZoom from '../components/ImageZoom.vue'
 import ExternalLinkIcon from '../components/icons/ExternalLinkIcon.vue'
+import ThemeDefault from '../plugins/theme-default'
 import marked from './utils/marked'
 import createRouter from './router'
 import store from './store'
 import { inBrowser } from './utils'
 import PluginApi from './PluginApi'
-
-// Theme-Default
-import ThemeDefault from './theme-default'
 
 Vue.component(SaikaLink.name, SaikaLink)
 Vue.component(Note.name, Note)
