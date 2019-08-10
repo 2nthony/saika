@@ -51,7 +51,7 @@ const store = new Vuex.Store({
       post.file = getFileUrl(getters.config.sourcePath, filename)
 
       await Promise.all([
-        fetch(post.file)
+        fetch(post.file, getters.config.fetchOptions)
           .then(res => (res.ok && res.text()) || '')
           .then(res => {
             post.content = res
@@ -121,6 +121,7 @@ const store = new Vuex.Store({
         footer: '',
         // router: {},
         // cssVariables: {},
+        // fetchOptions: {},
         ...originConfig
       }
     },
