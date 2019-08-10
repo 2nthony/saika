@@ -2,7 +2,6 @@ import Vue from 'vue'
 import marked from './utils/marked'
 import createRouter from './router'
 import store from './store'
-import { inBrowser } from './utils'
 import hooks from './hooks'
 
 // Core Components
@@ -40,10 +39,7 @@ Vue.mixin({
 class Saika {
   constructor(config = {}) {
     const router = createRouter(config.router)
-    store.commit('SET_CONFIG', {
-      title: inBrowser && document.title,
-      ...config
-    })
+    store.commit('SET_CONFIG', config)
 
     this.config = config
     this.router = router
