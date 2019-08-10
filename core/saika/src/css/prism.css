@@ -3,45 +3,44 @@
  * Inspired by Github syntax coloring
  */
 
-code[class*="language-"],
-pre[class*="language-"] {
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
+code[class*='language-'],
+pre[class*='language-'] {
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
 
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
 
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
-
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #999988;
-    font-style: italic;
+  color: #999988;
+  font-style: italic;
 }
 
 .token.namespace {
-    opacity: .7;
+  opacity: 0.7;
 }
 
-.token.string,
-.token.attr-value {
-    color: #028265;
+.token.string {
+  color: #028265;
 }
 
+.token.attr-value,
 .token.punctuation,
 .token.operator {
-    color: #393A34; /* no highlight */
+  color: #000;
 }
 
 .token.entity,
@@ -51,31 +50,43 @@ pre[class*="language-"] {
 .token.boolean,
 .token.variable,
 .token.constant,
-.token.property,
 .token.regex,
 .token.inserted {
-    color: #36acaa;
+  color: #36acaa;
+}
+
+.token.property {
+  color: #000;
+  font-weight: bolder;
 }
 
 .token.atrule,
 .token.keyword,
 .token.attr-name,
 .language-autohotkey .token.selector {
-    color: #0076ff;
+  color: #ff0078;
+  font-weight: bolder;
 }
 
-.token.function,
 .token.deleted,
 .language-autohotkey .token.tag {
-    color: #0076ff;
+  color: #0076ff;
 }
 
 .token.tag,
 .token.selector,
 .language-autohotkey .token.keyword {
-    color: #0076ff;
+  color: #0076ff;
 }
 
 .token.italic {
-    font-style: italic;
+  font-style: italic;
+}
+
+.token.function,
+.token.tag,
+.token.class-name,
+.token.number,
+.token.boolean {
+  color: #0076ff;
 }
