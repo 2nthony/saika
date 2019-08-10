@@ -1,4 +1,3 @@
-<script>
 export default {
   name: 'InjectedComponents',
 
@@ -12,7 +11,7 @@ export default {
   },
 
   render(h, { props, parent }) {
-    const components = parent.$pluginApi.getComponents(props.position)
+    const components = parent.$saika.getRegisteredComponents(props.position)
 
     if (components.length === 0) return
 
@@ -28,4 +27,3 @@ export default {
     )
   }
 }
-</script>

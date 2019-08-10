@@ -17,7 +17,7 @@
 
 <script>
 import { ContentLoader } from 'vue-content-loader'
-import hooks from '../src/hooks'
+import hooks from '../hooks'
 import NotFound from './NotFound.vue'
 
 export default {

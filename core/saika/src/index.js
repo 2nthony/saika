@@ -1,56 +1,74 @@
 import Vue from 'vue'
-import Root from '../components/Root.vue'
-import SaikaLink from '../components/SaikaLink.vue'
-import Note from '../components/Note.vue'
-import ImageZoom from '../components/ImageZoom.vue'
-import ExternalLinkIcon from '../components/icons/ExternalLinkIcon.vue'
-import ThemeDefault from '../plugins/theme-default'
-import BannerFooter from '../plugins/banner-footer'
 import marked from './utils/marked'
 import createRouter from './router'
 import store from './store'
 import { inBrowser } from './utils'
-import PluginApi from './PluginApi'
+import hooks from './hooks'
+
+// Core Components
+import Root from './components/Root.vue'
+import PostContent from './components/PostContent.vue'
+
+// Saika Components
+import Header from './components/Header.vue'
+import Sidebar from './components/Sidebar.vue'
+import PrevNextLinks from './components/PrevNextLinks.vue'
+import InjectedComponents from './components/InjectedComponents'
+import Note from './components/Note.vue'
+import ImageZoom from './components/ImageZoom.vue'
+import SaikaLink from './components/SaikaLink.vue'
+
+// Built-in Plugins
+import ThemeDefault from './plugins/theme-default'
+import { Banner, Footer } from './plugins/banner-footer'
 
 Vue.component(SaikaLink.name, SaikaLink)
 Vue.component(Note.name, Note)
 Vue.component(ImageZoom.name, ImageZoom)
-Vue.component(ExternalLinkIcon.name, ExternalLinkIcon)
+Vue.component(PostContent.name, PostContent)
+Vue.component(InjectedComponents.name, InjectedComponents)
 
 Vue.mixin({
   created() {
-    const pluginApi = this.$options.pluginApi || this.$root.$pluginApi
-    if (pluginApi) {
-      this.$pluginApi = pluginApi
+    const saika = this.$options.saika || this.$root.$saika
+    if (saika) {
+      this.$saika = saika
     }
   }
 })
 
 class Saika {
   constructor(config = {}) {
-    this.config = config
     const router = createRouter(config.router)
-
-    this.router = router
-    this.store = store
-
     store.commit('SET_CONFIG', {
       title: inBrowser && document.title,
       ...config
     })
 
-    const plugins = [
+    this.config = config
+    this.router = router
+    this.store = store
+    this.hooks = hooks
+    this.components = {
+      Header,
+      Sidebar,
+      PrevNextLinks
+    }
+    this.registeredComponents = {}
+
+    this.plugins = [
+      Banner,
       ThemeDefault,
       ...store.getters.config.plugins,
-      BannerFooter
+      Footer
     ]
-    this.pluginApi = new PluginApi({ plugins, store, router })
+
     this.applyPlugins()
 
     this.app = new Vue({
       router,
       store,
-      pluginApi: this.pluginApi,
+      saika: this,
       render: h => h(Root)
     })
 
@@ -70,11 +88,46 @@ class Saika {
    * @private
    */
   applyPlugins() {
-    for (const plugin of this.pluginApi.plugins) {
-      if (!plugin.when || plugin.when(this.pluginApi)) {
-        plugin.extend(this.pluginApi)
+    for (const plugin of this.plugins) {
+      if (!plugin.when || plugin.when(this)) {
+        plugin.extend(this)
       }
     }
+  }
+
+  hasPlugin(name) {
+    return this.plugins.some(plugin => plugin.name === name)
+  }
+
+  getRegisteredComponents(position) {
+    return this.registeredComponents[position] || []
+  }
+
+  registerComponent(position, component, props) {
+    this.registeredComponents[position] =
+      this.registeredComponents[position] || []
+    this.registeredComponents[position].push({ component, props })
+    return this
+  }
+
+  registerMainComponent(...args) {
+    delete this.registeredComponents.main
+    this.registerComponent('main', ...args)
+    return this
+  }
+
+  processMarkdown(fn) {
+    this.hooks.add('processMarkdown', fn)
+    return this
+  }
+
+  processHTML(fn) {
+    this.hooks.add('processHTML', fn)
+    return this
+  }
+
+  extendMarkedRenderer(fn) {
+    this.hooks.add('extendMarkedRenderer', fn)
   }
 }
 

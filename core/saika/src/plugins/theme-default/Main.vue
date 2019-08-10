@@ -1,6 +1,4 @@
 <script>
-import PostContent from '../../components/PostContent.vue'
-
 export default {
   name: 'SaikaThemeDefault',
 
@@ -12,7 +10,7 @@ export default {
       {
         class: 'saika-theme-default'
       },
-      [h(PostContent)]
+      [h('PostContent')]
     )
   }
 }
