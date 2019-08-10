@@ -2,8 +2,6 @@ import Saika from '../core/saika/src'
 import saikaThemeDocs from '../themes/docs/src'
 import googleAnalytics from '../plugins/google-analytics/src'
 
-import footerPlugin from './plugins/footer'
-
 new Saika({
   target: 'app',
   title: 'Saika',
@@ -19,9 +17,12 @@ new Saika({
   ],
   plugins: [
     saikaThemeDocs,
-    process.env.NODE_ENV === 'production' && googleAnalytics('UA-145247644-2'),
-    footerPlugin
+    process.env.NODE_ENV === 'production' && googleAnalytics('UA-145247644-2')
   ].filter(Boolean),
+
+  footer: `© {{ new Date().getFullYear() }} Made with <font color="red">❤</font> by
+  <a href="https://github.com/evillt">EVILLT</a>.`,
+
   nav: [
     {
       title: 'GitHub',
