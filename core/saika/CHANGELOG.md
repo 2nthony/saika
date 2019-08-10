@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/evillt/saika/compare/saika@1.4.1...saika@1.4.2) (2019-08-10)
+
+
+### Bug Fixes
+
+* **ui:** only break heading ([7c91348](https://github.com/evillt/saika/commit/7c91348))
+
+
+
+
+
 ## [1.4.1](https://github.com/evillt/saika/compare/saika@1.4.0...saika@1.4.1) (2019-08-10)
 
 
