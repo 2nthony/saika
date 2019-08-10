@@ -4,7 +4,7 @@ import marked from './utils/marked'
 import markedRenderer from './utils/markedRenderer'
 import highlight from './utils/highlight'
 import load from './utils/load'
-import { getFileUrl, getFilenameByPath } from './utils'
+import { getFileUrl, getFilenameByPath, inBrowser } from './utils'
 import cssVariables from './utils/cssVariables'
 import prismLanguages from './utils/prismLanguages'
 import hooks from './hooks'
@@ -109,12 +109,18 @@ const store = new Vuex.Store({
     config({ originConfig }) {
       return {
         target: 'saika',
+        title: inBrowser && document.title,
+        // logo: '',
+        posts: [],
+        // nav: [],
         sourcePath: '.',
         postMixins: [],
         highlight: [],
         plugins: [],
         banner: '',
         footer: '',
+        // router: {},
+        // cssVariables: {},
         ...originConfig
       }
     },
