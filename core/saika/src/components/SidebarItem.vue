@@ -18,7 +18,7 @@
       </div>
       <div class="link-posts">
         <div
-          class="link link-children"
+          class="link link-item"
           v-for="(link, index) in children"
           :key="index"
         >
