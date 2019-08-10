@@ -1,7 +1,7 @@
 import marked from './marked'
 import { slugify } from '.'
 
-export default function() {
+export default function(hooks) {
   const renderer = new marked.Renderer()
 
   renderer.heading = function(text, level, raw) {
@@ -28,5 +28,5 @@ export default function() {
     return `<div data-lang="${lang || ''}" class="pre-wrapper">${res}</div>`
   }
 
-  return renderer
+  return hooks.process('extendMarkedRenderer', renderer)
 }

@@ -63,7 +63,7 @@ const store = new Vuex.Store({
 
       if (post.content) {
         post.content = marked(post.content, {
-          renderer: markedRenderer(),
+          renderer: markedRenderer(hooks),
           highlight
         })
       }
