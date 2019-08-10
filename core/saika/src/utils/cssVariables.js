@@ -3,7 +3,7 @@ export default {
   headerBackground: 'white',
   headerHeight: '55px',
   cyan: '#79FFE1',
-  purple: '#F81CE5',
+  purple: '#bd10e0',
   selection: 'var(--cyan)',
   textColor: '#333',
   textSize: '14px',
