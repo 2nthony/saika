@@ -48,28 +48,19 @@ export default {
     margin-bottom: 0;
   }
 
-  &.is-danger {
-    border-color: var(--danger-color);
-
-    & .note-label {
-      color: var(--danger-color);
-    }
+  &.is-error {
+    border-color: var(--error-color);
+    color: var(--error-color);
   }
 
   &.is-warning {
     border-color: var(--warning-color);
-
-    & .note-label {
-      color: var(--warning-color);
-    }
+    color: var(--warning-color);
   }
 
   &.is-success {
     border-color: var(--success-color);
-
-    & .note-label {
-      color: var(--success-color);
-    }
+    color: var(--success-color);
   }
 
   &.is-fill {
@@ -77,8 +68,8 @@ export default {
       background-color: #333;
     }
 
-    &.is-danger {
-      background-color: var(--danger-color);
+    &.is-error {
+      background-color: var(--error-color);
     }
 
     &.is-warning {

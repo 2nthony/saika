@@ -12,6 +12,7 @@ export default {
   borderColor: '#eaeaea',
   successColor: '#0076FF',
   dangerColor: '#F04',
+  errorColor: 'var(--danger-color)',
   warningColor: '#F5A623',
   inlineCodeColor: 'var(--purple)',
   gap: '24px',
