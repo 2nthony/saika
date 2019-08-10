@@ -20,7 +20,7 @@ new Saika({
     process.env.NODE_ENV === 'production' && googleAnalytics('UA-145247644-2')
   ].filter(Boolean),
 
-  footer: `© {{ new Date().getFullYear() }} Made with <font color="red">❤</font> by
+  footer: `© {{ new Date().getFullYear() }} Made with <font color="#f04">❤</font> by
   <a href="https://github.com/evillt">EVILLT</a>.`,
 
   nav: [
