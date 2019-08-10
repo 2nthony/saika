@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/evillt/saika/compare/saika@1.3.0...saika@1.4.0) (2019-08-10)
+
+
+### Features
+
+* support `fetchOptions` for fetch markdown files ([7a66ac7](https://github.com/evillt/saika/commit/7a66ac7))
+
+
+
+
+
 # [1.3.0](https://github.com/evillt/saika/compare/saika@1.2.0...saika@1.3.0) (2019-08-10)
 
 
