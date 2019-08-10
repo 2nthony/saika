@@ -5,6 +5,7 @@ import Note from '../components/Note.vue'
 import ImageZoom from '../components/ImageZoom.vue'
 import ExternalLinkIcon from '../components/icons/ExternalLinkIcon.vue'
 import ThemeDefault from '../plugins/theme-default'
+import BannerFooter from '../plugins/banner-footer'
 import marked from './utils/marked'
 import createRouter from './router'
 import store from './store'
@@ -38,7 +39,11 @@ class Saika {
       ...config
     })
 
-    const plugins = [ThemeDefault, ...store.getters.config.plugins]
+    const plugins = [
+      ThemeDefault,
+      ...store.getters.config.plugins,
+      BannerFooter
+    ]
     this.pluginApi = new PluginApi({ plugins, store, router })
     this.applyPlugins()
 

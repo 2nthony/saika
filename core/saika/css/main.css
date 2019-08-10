@@ -2,6 +2,11 @@
   --code-font: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
+::selection {
+  background: var(--selection);
+  color: #000;
+}
+
 body {
   word-break: break-word;
   margin: 0;
@@ -63,7 +68,18 @@ a {
   }
 }
 
-::selection {
-  background: var(--selection);
-  color: #000;
+.saika-banner {
+  margin-bottom: 10px;
+
+  &>*:first-child {
+    margin-top: 0;
+  }
+
+  &>*:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.saika-footer {
+  margin-top: 5rem;
 }

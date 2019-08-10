@@ -113,6 +113,8 @@ const store = new Vuex.Store({
         postMixins: [],
         highlight: [],
         plugins: [],
+        banner: '',
+        footer: '',
         ...originConfig
       }
     },
