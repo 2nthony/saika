@@ -1,6 +1,6 @@
 # Options
 
-Options for `Saika` constructor
+Options for `Saika` constructor.
 
 ```js
 new Saika(options)
@@ -97,7 +97,7 @@ Display banner. A string will wrapped inside `<div class="saika-banner">` and us
 
 ## footer
 
-Reference to [banner](#banner).
+Reference to [banner](#banner) but with class `saika-footer`.
 
 ## cssVariables
 
