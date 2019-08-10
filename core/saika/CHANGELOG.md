@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/evillt/saika/compare/saika@1.2.0...saika@1.3.0) (2019-08-10)
+
+
+### Features
+
+* **api:** support `extendMarkedRenderer` ([9fa6510](https://github.com/evillt/saika/commit/9fa6510))
+* **ui:** support banner, footer ([ec14d4e](https://github.com/evillt/saika/commit/ec14d4e))
+
+
+
+
+
 # [1.2.0](https://github.com/evillt/saika/compare/saika@1.1.1...saika@1.2.0) (2019-08-09)
 
 
