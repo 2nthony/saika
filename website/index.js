@@ -70,7 +70,11 @@ new Saika({
         {
           title: 'Plugin API',
           link: '/reference/plugin-api'
-        }
+        },
+        {
+          title: 'Saika Instance',
+          link: '/reference/saika-instance'
+        },
       ]
     },
     {
