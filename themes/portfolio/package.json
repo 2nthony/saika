@@ -6,6 +6,10 @@
   "version": "1.0.0",
   "author": "evillt <ijoec123@gmail.com>",
   "license": "MIT",
+  "files": [
+    "dist/index.css",
+    "dist/index.js"
+  ],
   "scripts": {
     "build": "bili",
     "prepublishOnly": "yarn build"
