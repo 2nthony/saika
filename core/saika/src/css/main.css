@@ -41,7 +41,7 @@ a {
 .Wrap {
   padding: 0 var(--gap);
   max-width: var(--page-max-width);
-  margin: 40px auto;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     max-width: 100%;
