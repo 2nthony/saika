@@ -1,0 +1,33 @@
+.content {
+  display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.sticky {
+  position: sticky;
+  height: fit-content;
+}
+
+.card {
+  display: block;
+  padding: 20px;
+  border-radius: var(--radius);
+  background-color: #f9f9f9;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px var(--border-color);
+  }
+}
+
+.main {
+  width: calc(100% - 200px);
+  padding-left: 30px;
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+    width: 100%;
+  }
+}

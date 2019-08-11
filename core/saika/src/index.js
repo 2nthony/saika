@@ -32,6 +32,7 @@ Vue.mixin({
     const saika = this.$options.saika || this.$root.$saika
     if (saika) {
       this.$saika = saika
+      this.$config = saika.config
     }
   }
 })

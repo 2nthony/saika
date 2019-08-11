@@ -1,0 +1,24 @@
+{
+  "name": "@saika/theme-portfolio",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "1.0.0",
+  "author": "evillt <ijoec123@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist/index.css",
+    "dist/index.js"
+  ],
+  "scripts": {
+    "build": "bili",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "vue-feather-icons": "^5.0.0"
+  },
+  "devDependencies": {
+    "bili": "^4.8.1",
+    "postcss-preset-env": "^6.7.0"
+  }
+}
