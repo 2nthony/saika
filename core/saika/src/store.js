@@ -16,7 +16,8 @@ const store = new Vuex.Store({
     originConfig: {},
     isFetchingFile: true,
     post: {},
-    showSidebar: false
+    showSidebar: false,
+    fetchHomeReadme: true
   },
 
   mutations: {
@@ -34,11 +35,19 @@ const store = new Vuex.Store({
 
     TOGGLE_SIDEBAR(state, show) {
       state.showSidebar = typeof show === 'boolean' ? show : !state.showSidebar
+    },
+
+    FETCH_HOME_README(state, isDisable) {
+      state.fetchHomeReadme = isDisable
     }
   },
 
   actions: {
-    async fetchFile({ commit, getters, dispatch }, path) {
+    async fetchFile({ state, commit, getters, dispatch }, path) {
+      if (!state.fetchHomeReadme && path === '/') {
+        return
+      }
+
       commit('TOGGLE_SIDEBAR', false)
       commit('SET_FETCHING', true)
 
