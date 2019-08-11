@@ -1,6 +1,6 @@
 # Saika
 
-> Effortless info-site, done right. A docute alternative.
+> Effortless misc-site, done right.
 
 Please consider starring the project to show your ❤️ and support.
 
@@ -12,10 +12,10 @@ Please consider starring the project to show your ❤️ and support.
 
 ## Features
 
-- No build process, 
+- No build process, website generated on the fly.
 - An elegant UI inspired by zeit/design.
-- Extensible plugin system.
-- Customizable page.
+- Extensible plugin system, plenty of official and community themes and plugins.
+- Powered by Markdown and Vue.
 
 ## Documentation
 
