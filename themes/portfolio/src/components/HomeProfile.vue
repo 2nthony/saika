@@ -140,8 +140,11 @@ export default {
 .profile-name {
   font-weight: 4;
   font-size: 2rem;
-  margin-top: 0;
   line-height: 1;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 .profile-avatar {
