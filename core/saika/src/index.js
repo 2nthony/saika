@@ -24,8 +24,12 @@ import { Banner, Footer } from './plugins/banner-footer'
 Vue.component(SaikaLink.name, SaikaLink)
 Vue.component(Note.name, Note)
 Vue.component(ImageZoom.name, ImageZoom)
-Vue.component(PostContent.name, PostContent)
 Vue.component(InjectedComponents.name, InjectedComponents)
+
+Vue.component(Header.name, Header)
+Vue.component(Sidebar.name, Sidebar)
+Vue.component(PostContent.name, PostContent)
+Vue.component(PrevNextLinks.name, PrevNextLinks)
 
 Vue.mixin({
   created() {
@@ -46,19 +50,10 @@ class Saika {
     this.router = router
     this.store = store
     this.hooks = hooks
-    this.components = {
-      Header,
-      Sidebar,
-      PrevNextLinks
-    }
-    this.registeredComponents = {}
 
-    this.plugins = [
-      Banner,
-      ThemeDefault,
-      ...store.getters.config.plugins,
-      Footer
-    ]
+    this.components = {}
+
+    this.plugins = [Banner, ...store.getters.config.plugins, Footer]
 
     this.applyPlugins()
 
@@ -92,24 +87,22 @@ class Saika {
     }
   }
 
+  addRoutes(routes) {
+    this.router.addRoutes(routes)
+    return this
+  }
+
   hasPlugin(name) {
     return this.plugins.some(plugin => plugin.name === name)
   }
 
-  getRegisteredComponents(position) {
-    return this.registeredComponents[position] || []
+  getComponents(position) {
+    return this.components[position] || []
   }
 
   registerComponent(position, component, props) {
-    this.registeredComponents[position] =
-      this.registeredComponents[position] || []
-    this.registeredComponents[position].push({ component, props })
-    return this
-  }
-
-  registerMainComponent(...args) {
-    delete this.registeredComponents.main
-    this.registerComponent('main', ...args)
+    this.components[position] = this.components[position] || []
+    this.components[position].push({ component, props })
     return this
   }
 
@@ -130,6 +123,7 @@ class Saika {
 
 Saika.version = __SAIKA_VERSION__
 Saika.marked = marked
+Saika.theme = ThemeDefault
 
 export default Saika
 

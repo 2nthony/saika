@@ -10,10 +10,14 @@
 </template>
 
 <script>
+import { parellelLinks } from '../utils'
+
 export default {
+  name: 'PrevNextLinks',
+
   computed: {
     postsLinks() {
-      return this.$store.getters.postsLinks
+      return parellelLinks(this.$store.getters.posts)
     },
 
     currentLink() {

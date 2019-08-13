@@ -26,7 +26,7 @@ a {
   text-decoration: none;
 }
 
-.Main {
+.Page {
   & h1,
   & h2,
   & h3,
@@ -39,7 +39,7 @@ a {
 }
 
 .Wrap {
-  padding: 0 var(--gap);
+  /* padding: var(--gap); */
   max-width: var(--page-max-width);
   margin: 0 auto;
 

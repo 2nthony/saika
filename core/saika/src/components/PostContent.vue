@@ -9,13 +9,16 @@
     </ContentLoader>
   </div>
   <div v-else class="Content">
+    <slot name="start" />
     <InjectedComponents position="content:start" />
     <component :is="PostContent" />
+    <slot name="end" />
     <InjectedComponents position="content:end" />
   </div>
 </template>
 
 <script>
+import jump from 'jump.js'
 import { ContentLoader } from 'vue-content-loader'
 import hooks from '../hooks'
 import NotFound from './NotFound.vue'
@@ -50,6 +53,51 @@ export default {
 
       return component
     }
+  },
+
+  mounted() {
+    this.fetchFile(this.$route.path)
+  },
+
+  watch: {
+    '$route.hash'() {
+      this.$nextTick(() => {
+        this.jumpToHash()
+      })
+    },
+    $route(to, from) {
+      if (to.path !== from.path) {
+        this.fetchFile(to.path)
+      }
+    }
+  },
+
+  methods: {
+    async fetchFile(path) {
+      await this.$store.dispatch('fetchFile', path)
+      await this.$nextTick()
+      this.jumpToHash()
+    },
+
+    jumpToHash() {
+      const hash = decodeURI(this.$route.hash)
+
+      if (hash) {
+        const el = document.querySelector(hash)
+        if (el) {
+          const header = document.querySelector('.Header') || {
+            clientHeight: 55
+          }
+          jump(el, {
+            duration: 0,
+            offset: -header.clientHeight - 80
+          })
+        }
+      }
+    }
   }
 }
 </script>
+
+<style src="../css/prism.css"></style>
+<style src="../css/post-content.css"></style>

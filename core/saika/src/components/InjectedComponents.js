@@ -11,7 +11,7 @@ export default {
   },
 
   render(h, { props, parent }) {
-    const components = parent.$saika.getRegisteredComponents(props.position)
+    const components = parent.$saika.getComponents(props.position)
 
     if (components.length === 0) return
 

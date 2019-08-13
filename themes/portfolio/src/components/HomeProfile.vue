@@ -120,8 +120,8 @@ export default {
 
 <style scoped>
 .profile {
-  width: 200px;
-  top: var(--header-height);
+  width: var(--profile-width);
+  top: var(--portfolio-gap);
 
   @media (max-width: 768px) {
     display: flex;

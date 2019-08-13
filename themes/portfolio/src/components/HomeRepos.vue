@@ -1,6 +1,6 @@
 <template>
   <HomeSection>
-    <template slot="title">
+    <template #title>
       <LayersIcon />Repositories
     </template>
 

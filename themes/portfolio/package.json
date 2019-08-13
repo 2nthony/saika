@@ -10,6 +10,7 @@
     "dist/index.css",
     "dist/index.js"
   ],
+  "main": "dist/index.js",
   "scripts": {
     "build": "bili",
     "prepublishOnly": "yarn build"
@@ -19,6 +20,8 @@
   },
   "devDependencies": {
     "bili": "^4.8.1",
-    "postcss-preset-env": "^6.7.0"
+    "postcss-preset-env": "^6.7.0",
+    "rollup-plugin-vue": "^5.0.1",
+    "vue-template-compiler": "^2.6.10"
   }
 }
