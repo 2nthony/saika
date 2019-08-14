@@ -34,7 +34,7 @@ export function getFilenameByPath(path) {
 
 export const inBrowser = typeof window !== 'undefined'
 
-export function parellelLinks(items) {
+export function parallelLinks(items) {
   return items.reduce((res, next) => {
     const item = next.link ? [next] : []
     const children = next.children || next.links || []
