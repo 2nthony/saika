@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/evillt/saika/compare/saika@1.5.0...saika@2.0.0) (2019-08-14)
+
+
+* refactor($core)!: tweak plugin system (#16) ([b9a2471](https://github.com/evillt/saika/commit/b9a2471)), closes [#16](https://github.com/evillt/saika/issues/16)
+
+
+### BREAKING CHANGES
+
+* tweak SaikaInstance, drop some methods
+
+* chore: clean up
+
+* feat($core): tweak plugin system
+
+* chore!: drop `api.addRoutes`
+
+* style($theme-portfolio): tweak post page
+
+* chore: update
+
+* chore: clean up
+
+* chore: typo
+
+* chore(ui): sidebar toggle should always at right
+
+* docs: tweak
+
+* chore: no `posts` by default
+
+* docs: tweak `router`
+
+
+
+
+
 # [1.5.0](https://github.com/evillt/saika/compare/saika@1.4.3...saika@1.5.0) (2019-08-11)
 
 
