@@ -2,7 +2,7 @@
   <div class="wrap">
     <SaikaLink to="/" class="back-home"><CornerUpLeftIcon />Home</SaikaLink>
     <div class="columns">
-      <PostContent class="column is-6 is-offset-3" />
+      <PostContent class="column is-8 is-offset-2" />
     </div>
   </div>
 </template>
@@ -42,10 +42,10 @@ export default {
 }
 
 .wrap {
-  padding: 30px;
+  padding: 50px 0;
 
   @media (max-width: 768px) {
-    padding: 0;
+    padding: 20px;
   }
 }
 </style>
