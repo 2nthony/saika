@@ -5,9 +5,11 @@
     </template>
 
     <div class="columns is-multiline">
-      <div v-for="post in $config.posts" :key="post.link" class="column is-8">
-        <PostCard :post="post" />
-      </div>
+      <template v-if="$config.posts">
+        <div v-for="post in $config.posts" :key="post.link" class="column is-8">
+          <PostCard :post="post" />
+        </div>
+      </template>
     </div>
   </HomeSection>
 </template>

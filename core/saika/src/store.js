@@ -107,7 +107,7 @@ const store = new Vuex.Store({
         target: 'saika',
         title: inBrowser && document.title,
         // logo: '',
-        posts: [],
+        // posts: [],
         // nav: [],
         sourcePath: '.',
         postMixins: [],
