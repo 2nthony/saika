@@ -1,8 +1,16 @@
+.saika-theme-portfolio {
+  --profile-width: 200px;
+  --portfolio-gap: 30px;
+}
+
 .content {
   display: flex;
+  width: 100%;
+  padding: var(--portfolio-gap);
 
   @media (max-width: 768px) {
     flex-direction: column;
+    padding: 20px;
   }
 }
 
@@ -23,8 +31,8 @@
 }
 
 .main {
-  width: calc(100% - 200px);
-  padding-left: 30px;
+  width: calc(100% - var(--profile-width));
+  padding-left: 200px;
 
   @media (max-width: 768px) {
     padding-left: 0;

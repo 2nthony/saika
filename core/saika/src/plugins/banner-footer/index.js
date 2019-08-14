@@ -4,23 +4,17 @@ const getComponent = (component, className) => {
     : component
 }
 
-export const Banner = {
-  name: 'saika-banner',
+export default {
+  name: 'saika-banner-footer',
   extend: api => {
-    const { banner } = api.store.getters.config
+    const { banner, footer } = api.store.getters.config
     if (banner) {
       api.registerComponent(
         'content:start',
         getComponent(banner, 'saika-banner')
       )
     }
-  }
-}
 
-export const Footer = {
-  name: 'saika-footer',
-  extend: api => {
-    const { footer } = api.store.getters.config
     if (footer) {
       api.registerComponent('content:end', getComponent(footer, 'saika-footer'))
     }

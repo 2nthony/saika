@@ -1,6 +1,18 @@
-import Main from './Main.vue'
+import Home from './views/Home.vue'
 
 export default {
-  name: 'theme-default',
-  extend: api => api.registerMainComponent(Main)
+  name: 'saika-theme-default',
+  extend: api => {
+    api.router.addRoutes([
+      {
+        path: '*',
+        component: Home
+      }
+    ])
+  },
+  when: api => {
+    return !api.userPlugins.some(plugin =>
+      plugin.name.startsWith('saika-theme-')
+    )
+  }
 }

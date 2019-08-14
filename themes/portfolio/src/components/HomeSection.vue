@@ -1,10 +1,13 @@
 <template>
   <section class="home-section">
-    <div class="section-title">
+    <div v-if="title" class="section-title">
+      {{ title }}
+    </div>
+    <div v-else class="section-title">
       <slot name="title" />
     </div>
     <div class="section-body">
-      <slot />
+      <slot name="default" />
     </div>
   </section>
 </template>
@@ -12,6 +15,7 @@
 <script>
 export default {
   name: 'HomeSection',
+
   props: ['title']
 }
 </script>

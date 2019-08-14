@@ -3,29 +3,25 @@ import marked from './utils/marked'
 import createRouter from './router'
 import store from './store'
 import hooks from './hooks'
+import builtInPlugins from './plugins'
 
 // Core Components
 import Root from './components/Root.vue'
 import PostContent from './components/PostContent.vue'
 
 // Saika Components
-import Header from './components/Header.vue'
-import Sidebar from './components/Sidebar.vue'
 import PrevNextLinks from './components/PrevNextLinks.vue'
 import InjectedComponents from './components/InjectedComponents'
 import Note from './components/Note.vue'
 import ImageZoom from './components/ImageZoom.vue'
 import SaikaLink from './components/SaikaLink.vue'
 
-// Built-in Plugins
-import ThemeDefault from './plugins/theme-default'
-import { Banner, Footer } from './plugins/banner-footer'
-
 Vue.component(SaikaLink.name, SaikaLink)
 Vue.component(Note.name, Note)
 Vue.component(ImageZoom.name, ImageZoom)
-Vue.component(PostContent.name, PostContent)
 Vue.component(InjectedComponents.name, InjectedComponents)
+Vue.component(PostContent.name, PostContent)
+Vue.component(PrevNextLinks.name, PrevNextLinks)
 
 Vue.mixin({
   created() {
@@ -42,25 +38,14 @@ class Saika {
     const router = createRouter(config.router)
     store.commit('SET_CONFIG', config)
 
-    this.config = config
+    this.config = store.getters.config
     this.router = router
     this.store = store
     this.hooks = hooks
-    this.components = {
-      Header,
-      Sidebar,
-      PrevNextLinks
-    }
-    this.registeredComponents = {}
 
-    this.plugins = [
-      Banner,
-      ThemeDefault,
-      ...store.getters.config.plugins,
-      Footer
-    ]
+    this.components = {}
 
-    this.applyPlugins()
+    this.prepare()
 
     this.app = new Vue({
       router,
@@ -81,35 +66,21 @@ class Saika {
     return this
   }
 
-  /**
-   * @private
-   */
-  applyPlugins() {
-    for (const plugin of this.plugins) {
-      if (!plugin.when || plugin.when(this)) {
-        plugin.extend(this)
-      }
-    }
+  get userPlugins() {
+    return store.getters.config.plugins
   }
 
   hasPlugin(name) {
-    return this.plugins.some(plugin => plugin.name === name)
+    return this.userPlugins.some(plugin => plugin.name === name)
   }
 
-  getRegisteredComponents(position) {
-    return this.registeredComponents[position] || []
+  getComponents(position) {
+    return this.components[position] || []
   }
 
   registerComponent(position, component, props) {
-    this.registeredComponents[position] =
-      this.registeredComponents[position] || []
-    this.registeredComponents[position].push({ component, props })
-    return this
-  }
-
-  registerMainComponent(...args) {
-    delete this.registeredComponents.main
-    this.registerComponent('main', ...args)
+    this.components[position] = this.components[position] || []
+    this.components[position].push({ component, props })
     return this
   }
 
@@ -125,6 +96,30 @@ class Saika {
 
   extendMarkedRenderer(fn) {
     this.hooks.add('extendMarkedRenderer', fn)
+  }
+
+  /**
+   * @private
+   */
+  applyPlugin(plugin) {
+    if (!plugin.when || plugin.when(this)) {
+      plugin.extend(this)
+    }
+  }
+
+  /**
+   * @private
+   */
+  prepare() {
+    // Apply user plugins
+    for (const plugin of this.userPlugins) {
+      this.applyPlugin(plugin)
+    }
+
+    // Apply built-in plugins
+    for (const plugin of builtInPlugins) {
+      this.applyPlugin(plugin)
+    }
   }
 }
 

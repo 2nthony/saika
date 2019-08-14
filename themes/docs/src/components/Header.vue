@@ -8,7 +8,9 @@
         <HeaderNav v-if="leftNav" :nav="leftNav" />
       </div>
       <div class="header-right">
+        <InjectedComponents position="header-right:start" />
         <HeaderNav v-if="rightNav" :nav="rightNav" />
+        <InjectedComponents position="header-right:end" />
         <SidebarToggle />
       </div>
     </div>
@@ -66,7 +68,7 @@ export default {
 <style scoped>
 .Header {
   height: var(--header-height);
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -112,11 +114,5 @@ export default {
   right: var(--gap);
   top: 0;
   height: calc(var(--header-height) - 1px);
-}
-</style>
-
-<style>
-.Main {
-  padding-top: var(--header-height);
 }
 </style>

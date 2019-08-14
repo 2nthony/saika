@@ -1,10 +1,14 @@
 <template>
-  <div class="Sidebar" :class="{ isShown: $store.state.showSidebar }">
+  <div class="Sidebar" :class="{ isShown: $store.state.docsStore.showSidebar }">
+    <InjectedComponents position="sidebar:start" />
+
     <HeaderNav class="mobile-header-nav" v-if="nav" :nav="nav" />
 
     <div class="SidebarItems">
       <SidebarItem v-for="(item, index) in posts" :key="index" :item="item" />
     </div>
+
+    <InjectedComponents position="sidebar:end" />
   </div>
 </template>
 
@@ -35,19 +39,21 @@ export default {
 <style scoped>
 .Sidebar {
   width: var(--sidebar-width);
-  position: fixed;
-  bottom: 0;
   overflow-y: scroll;
-  top: 80px;
-  padding: 40px var(--gap) 40px 0;
   background-color: white;
   z-index: 8;
+  position: fixed;
+  padding: 40px var(--gap);
+  padding-left: 0;
+  bottom: 0;
+  top: 80px;
 
   @media (max-width: 768px) {
     display: none;
-    top: var(--header-height);
     right: 0;
+    left: 0;
     width: 100vw;
+    top: var(--header-height);
     padding-left: var(--gap);
 
     &.isShown {

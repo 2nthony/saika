@@ -1,6 +1,6 @@
 <template>
   <HomeSection>
-    <template slot="title">
+    <template #title>
       <Edit3Icon />Posts
     </template>
 
@@ -9,17 +9,22 @@
         <PostCard :post="post" />
       </div>
     </div>
+
+    <SaikaLink to="/posts" class="view-all"
+      >View all <ChevronRightIcon
+    /></SaikaLink>
   </HomeSection>
 </template>
 
 <script>
-import { Edit3Icon } from 'vue-feather-icons'
+import { Edit3Icon, ChevronRightIcon } from 'vue-feather-icons'
 import PostCard from './PostCard.vue'
 import HomeSection from './HomeSection.vue'
 
 export default {
   components: {
     Edit3Icon,
+    ChevronRightIcon,
     PostCard,
     HomeSection
   },
@@ -32,3 +37,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.view-all {
+  display: inline-flex;
+  align-items: center;
+
+  & svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+</style>

@@ -42,23 +42,11 @@ Add function hook to hooks.
 
 Invoke hooks with matched name.
 
-## components
-
-- Type: `{ [name: string]: VueComponent }`
-
-Saika features components. E.g.: Header, Sidebar, ...
-
 ## hasPlugin
 
 - Type: `(name: string) => boolean`
 
 To check a plugin is exists.
-
-## getRegisteredComponents
-
-- Type: `(position: Position) => Array<{ [name: string]: VueComponent }>`
-
-Get the components list with specific position.
 
 ## processMarkdown
 
@@ -78,27 +66,30 @@ Process HTML string.
 
 You can use this to modify the [marked.renderer](https://marked.js.org/#/USING_PRO.md#renderer) we use.
 
-## registerComponent(position, component, props)
+## registerComponent
 
-- `position: Position`
-- `component: VueComponent`
-- `props: object`
+- Type: `RegisterComponent`
 
-Register components at specific position. You can checkout the [container.vue](https://github.com/evillt/saika/blob/master/core/saika/components/Container.vue) for details.
+Register components at specific position.
 
 ```ts
+interface RegisterComponent {
+  (
+    position: Position,
+    component: VueComponent,
+    props: object
+  ) => SaikaInstance
+}
+
 type Position =
-  | 'page:start'
-  | 'page:end'
-  | 'wrap:start'
-  | 'wrap:end'
-  | 'main:start'
-  | 'main' // Single recommended
-  | 'main:end'
+  // The start of post content
   | 'content:start'
+  // The end of post content
   | 'content:end'
 ```
 
-## registerMainComponent(component, props)
+## getComponents
 
-Alias for `registerComponent('main', component, props)`, but only can set single component for `main` position.
+- Type: `(position: Position) => Array<{ [name: string]: VueComponent }>`
+
+Get the components list with specific position.

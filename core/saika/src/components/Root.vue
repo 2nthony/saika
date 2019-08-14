@@ -1,21 +1,18 @@
 <style src="../css/main.css"></style>
 
+<template>
+  <div :id="target" :class="target">
+    <div class="Page">
+      <div class="Wrap">
+        <router-view />
+      </div>
+    </div>
+  </div>
+</template>
+
 <script>
 export default {
   name: 'Root',
-
-  render(h) {
-    return h(
-      'div',
-      {
-        attrs: {
-          id: this.target,
-          class: this.target
-        }
-      },
-      [h('router-view')]
-    )
-  },
 
   created() {
     this.insertStyle()

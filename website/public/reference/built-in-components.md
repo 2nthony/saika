@@ -69,3 +69,17 @@ Examples:
 <Note fill type="success">This note details a success.</Note>
 <Note fill type="warning">This note details a warning.</Note>
 <Note fill type="error">This note details an error.</Note>
+
+## SaikaLink
+
+Basically is `router-link`, but external link will open a new tab.
+
+```markdown
+<SaikaLink to="/">Home</SaikaLink>
+
+<SaikaLink to="https://github.com">GitHub</SaikaLink>
+```
+
+<SaikaLink to="/">Home</SaikaLink>
+
+<SaikaLink to="https://github.com">GitHub</SaikaLink>

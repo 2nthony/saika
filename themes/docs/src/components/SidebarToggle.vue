@@ -1,6 +1,9 @@
 <template functional>
   <div class="SidebarToggle" @click="parent.$store.commit('TOGGLE_SIDEBAR')">
-    <div class="menu-arrow" :class="{ open: parent.$store.state.showSidebar }">
+    <div
+      class="menu-arrow"
+      :class="{ open: parent.$store.state.docsStore.showSidebar }"
+    >
       <div class="line top"></div>
       <div class="line bottom"></div>
     </div>
@@ -13,7 +16,7 @@
   align-items: center;
   justify-content: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     display: none;
   }
 }

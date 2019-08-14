@@ -1,6 +1,6 @@
 # Introduction to Saika
 
-Saika is modified from docute to create a information site, effortless and done right.
+To create a elegant website to display markdown content.
 
 ## What is Saika
 

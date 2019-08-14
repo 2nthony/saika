@@ -4,7 +4,7 @@ export default {
 
   functional: true,
 
-  render: h => {
+  render(h) {
     return h(
       'div',
       {
@@ -16,9 +16,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .saika-theme-default {
   max-width: 770px;
   margin: 0 auto;
+}
+
+.Content {
+  margin: 40px 0 30px;
 }
 </style>
