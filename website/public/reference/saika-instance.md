@@ -42,12 +42,6 @@ Add function hook to hooks.
 
 Invoke hooks with matched name.
 
-## addRoutes
-
-- Type: `(routes: Array<RouteConfig>) => void`
-
-Alias for `api.router.addRoutes`.
-
 ## hasPlugin
 
 - Type: `(name: string) => boolean`

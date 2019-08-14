@@ -3,7 +3,7 @@ import Home from './views/Home.vue'
 export default {
   name: 'saika-theme-default',
   extend: api => {
-    api.addRoutes([
+    api.router.addRoutes([
       {
         path: '*',
         component: Home

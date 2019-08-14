@@ -10,7 +10,7 @@ Vue.component(Sidebar.name, Sidebar)
 export default {
   name: 'saika-theme-docs',
   extend: api => {
-    api.addRoutes([
+    api.router.addRoutes([
       {
         path: '*',
         component: Home,

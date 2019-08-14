@@ -70,11 +70,6 @@ class Saika {
     return store.getters.config.plugins
   }
 
-  addRoutes(routes) {
-    this.router.addRoutes(routes)
-    return this
-  }
-
   hasPlugin(name) {
     return this.userPlugins.some(plugin => plugin.name === name)
   }
