@@ -10,8 +10,8 @@
       <div class="header-right">
         <InjectedComponents position="header-right:start" />
         <HeaderNav v-if="rightNav" :nav="rightNav" />
-        <SidebarToggle />
         <InjectedComponents position="header-right:end" />
+        <SidebarToggle />
       </div>
     </div>
   </header>
