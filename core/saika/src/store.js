@@ -15,8 +15,7 @@ const store = new Vuex.Store({
   state: {
     originConfig: {},
     isFetchingFile: true,
-    post: {},
-    showSidebar: false
+    post: {}
   },
 
   mutations: {
@@ -30,16 +29,13 @@ const store = new Vuex.Store({
 
     SET_POST(state, post) {
       state.post = post
-    },
-
-    TOGGLE_SIDEBAR(state, show) {
-      state.showSidebar = typeof show === 'boolean' ? show : !state.showSidebar
     }
   },
 
   actions: {
     async fetchFile({ commit, getters, dispatch }, path) {
-      commit('TOGGLE_SIDEBAR', false)
+      hooks.invoke('beforeFetch')
+
       commit('SET_FETCHING', true)
 
       const post = {
@@ -117,8 +113,8 @@ const store = new Vuex.Store({
         postMixins: [],
         highlight: [],
         plugins: [],
-        banner: '',
-        footer: '',
+        // banner: '',
+        // footer: '',
         // router: {},
         // cssVariables: {},
         // fetchOptions: {},

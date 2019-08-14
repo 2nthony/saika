@@ -1,7 +1,7 @@
 import Home from './views/Home.vue'
 
 export default {
-  name: 'theme-default',
+  name: 'saika-theme-default',
   extend: api => {
     api.addRoutes([
       {
@@ -9,5 +9,10 @@ export default {
         component: Home
       }
     ])
+  },
+  when: api => {
+    return !api.userPlugins.some(plugin =>
+      plugin.name.startsWith('saika-theme-')
+    )
   }
 }

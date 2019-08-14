@@ -1,5 +1,5 @@
 <template>
-  <div class="Sidebar" :class="{ isShown: $store.state.showSidebar }">
+  <div class="Sidebar" :class="{ isShown: $store.state.docsStore.showSidebar }">
     <InjectedComponents position="sidebar:start" />
 
     <HeaderNav class="mobile-header-nav" v-if="nav" :nav="nav" />
@@ -42,12 +42,19 @@ export default {
   overflow-y: scroll;
   background-color: white;
   z-index: 8;
+  position: fixed;
+  padding: 40px var(--gap);
+  padding-left: 0;
+  bottom: 0;
+  top: 80px;
 
   @media (max-width: 768px) {
     display: none;
     right: 0;
     left: 0;
     width: 100vw;
+    top: var(--header-height);
+    padding-left: var(--gap);
 
     &.isShown {
       display: block;

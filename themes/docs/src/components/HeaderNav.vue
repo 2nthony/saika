@@ -44,7 +44,7 @@ export default {
     margin: 18px 0;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     display: none;
   }
 }
