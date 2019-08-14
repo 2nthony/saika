@@ -4,11 +4,11 @@ import Post from './views/Post.vue'
 import Posts from './views/Posts.vue'
 
 export default {
-  name: 'theme-portfolio',
+  name: 'saika-theme-portfolio',
   extend: api => {
     const { nav } = api.config
 
-    api.addRoutes([
+    api.router.addRoutes([
       {
         path: '/',
         component: Home,
