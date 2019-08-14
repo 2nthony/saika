@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-export default (config = {}) => {
+export default config => {
   return new Router({
     scrollBehavior(to, from, savedPosition) {
       if (savedPosition) {

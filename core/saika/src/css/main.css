@@ -39,7 +39,6 @@ a {
 }
 
 .Wrap {
-  /* padding: var(--gap); */
   max-width: var(--page-max-width);
   margin: 0 auto;
 
