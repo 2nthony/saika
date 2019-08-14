@@ -109,7 +109,7 @@ Override CSS variables. Check out [cssVariables.js](https://github.com/evillt/sa
 
 - Type: `RouterOptions`
 
-All [RouterOptions](https://router.vuejs.org/api/#router-construction-options) are accepted here but except for `routes`.
+All [RouterOptions](https://router.vuejs.org/api/#router-construction-options) are accepted here.
 
 ## fetchOptions
 
