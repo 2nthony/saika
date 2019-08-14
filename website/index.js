@@ -17,7 +17,6 @@ new Saika({
   ],
   plugins: [
     saikaThemeDocs,
-    // Saika.theme,
     process.env.NODE_ENV === 'production' && googleAnalytics('UA-145247644-2')
   ].filter(Boolean),
 
