@@ -47,7 +47,6 @@ The `index.html` looks like:
   <script>
     new Saika({
       target: '#saika',
-      plugins: [Saika.theme],
       posts: [
         {
           title: 'MyPost',
