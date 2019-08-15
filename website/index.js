@@ -51,6 +51,10 @@ new Saika({
       title: 'Theme',
       children: [
         {
+          title: 'Default',
+          link: '/theme/default'
+        },
+        {
           title: 'Docs',
           link: '/theme/docs'
         },
