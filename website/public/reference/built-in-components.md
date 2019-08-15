@@ -59,6 +59,9 @@ Examples:
 <Note fill type="success">This note details a success.</Note>
 <Note fill type="warning">This note details a warning.</Note>
 <Note fill type="error">This note details an error.</Note>
+
+<!-- Without label -->
+<Note fill :label="false">This note details something important without label.</Note>
 ```
 
 <Note>This note details something important.</Note>
@@ -69,6 +72,7 @@ Examples:
 <Note fill type="success">This note details a success.</Note>
 <Note fill type="warning">This note details a warning.</Note>
 <Note fill type="error">This note details an error.</Note>
+<Note fill :label="false">This note details something important without label.</Note>
 
 ## SaikaLink
 

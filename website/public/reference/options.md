@@ -54,21 +54,6 @@ interface MultipleItem extends LinkItem {
 }
 ```
 
-## nav
-
-- Type: `Array<NavItem>`
-
-An array of navigation items at header.
-
-```ts
-interface NavItem {
-  title: string
-  link?: PathLike
-  // right default
-  position?: 'left' | 'right'
-}
-```
-
 ## postMixins
 
 - Type: `Array<object>`
