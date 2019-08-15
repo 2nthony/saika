@@ -48,6 +48,19 @@ new Saika({
       ]
     },
     {
+      title: 'Theme',
+      children: [
+        {
+          title: 'Docs',
+          link: '/theme/docs'
+        },
+        {
+          title: 'Portfolio',
+          link: '/theme/portfolio'
+        }
+      ]
+    },
+    {
       title: 'Advanced',
       children: [
         {
