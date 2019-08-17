@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/evillt/saika/compare/saika@2.0.0...saika@2.0.1) (2019-08-17)
+
+
+### Performance Improvements
+
+* **$markedRenderer:** supporting chrome 75's native image lazy-l… ([#17](https://github.com/evillt/saika/issues/17)) ([9e2ff52](https://github.com/evillt/saika/commit/9e2ff52))
+
+
+
+
+
 # [2.0.0](https://github.com/evillt/saika/compare/saika@1.5.0...saika@2.0.0) (2019-08-14)
 
 
