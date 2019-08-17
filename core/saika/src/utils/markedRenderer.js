@@ -16,6 +16,10 @@ export default function(hooks) {
     </${tag}>`
   }
 
+  renderer.image = (href, title, text) => {
+    return `<img src="${href}" title="${title}" alt="${text}" loading="lazy">`
+  }
+
   renderer.link = (href, _, text) =>
     `<SaikaLink to="${href}">${text}</SaikaLink>`
 
