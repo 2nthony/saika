@@ -17,7 +17,8 @@ export default function(hooks) {
   }
 
   renderer.image = (href, title, text) => {
-    return `<img src="${href}" title="${title}" alt="${text}" loading="lazy">`
+    return `<img src="${href}" title="${title ||
+      ''}" alt="${text}" loading="lazy">`
   }
 
   renderer.link = (href, _, text) =>
