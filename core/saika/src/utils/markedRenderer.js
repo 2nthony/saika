@@ -21,8 +21,9 @@ export default function(hooks) {
       ''}" alt="${text}" loading="lazy">`
   }
 
-  renderer.link = (href, _, text) =>
-    `<SaikaLink to="${href}">${text}</SaikaLink>`
+  renderer.link = (href, _, text) => {
+    return `<SaikaLink to="${href}">${text}</SaikaLink>`
+  }
 
   // Disable template interpolation in code
   renderer.codespan = text => `<code v-pre class="inline-code">${text}</code>`
