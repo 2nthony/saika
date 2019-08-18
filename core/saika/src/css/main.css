@@ -35,12 +35,6 @@ a {
   & h6 {
     font-weight: 400;
     word-break: break-word;
-
-    & .header-anchor .header-anchor-icon {
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
   }
 }
 

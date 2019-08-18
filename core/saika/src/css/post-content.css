@@ -203,17 +203,28 @@
   & .header-anchor {
     color: inherit;
     display: inline;
+    position: relative;
 
     &:hover {
       text-decoration: none;
 
-      & .header-anchor-icon {
-        opacity: 1;
+      &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: var(--text-color);
+        position: absolute;
+        bottom: -1px;
+      }
+
+      & ~ .header-anchor-icon {
+        visibility: visible;
       }
     }
+  }
 
-    & .header-anchor-icon {
-      opacity: 0;
-    }
+  & .header-anchor-icon {
+    visibility: hidden;
   }
 }
