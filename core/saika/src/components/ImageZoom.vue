@@ -1,6 +1,13 @@
 <template>
   <div class="ImageZoom" :class="{ 'with-border': border }">
-    <img :src="src || url" :alt="alt" ref="img" :width="width" :title="title" />
+    <img
+      :src="src || url"
+      :alt="alt"
+      ref="img"
+      :width="width"
+      :title="title"
+      loading="lazy"
+    />
   </div>
 </template>
 
