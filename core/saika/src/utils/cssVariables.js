@@ -20,5 +20,7 @@ export default {
   tableHeaderColor: '#666',
   radius: '5px',
   pageMaxWidth: '1048px',
-  sidebarWidth: '280px'
+  sidebarWidth: '280px',
+  highlightBackgroundColor: '#eee',
+  highlightLineBorderColor: '#9e9e9e'
 }

@@ -65,13 +65,14 @@
     }
   }
 
-  & pre {
+  & pre,
+  & .code-mask {
     font-family: var(--code-font);
     border: 1px solid #eaeaea;
-    padding: 20px;
     position: relative;
     white-space: pre;
     overflow: auto;
+    z-index: 2;
     -webkit-overflow-scrolling: touch;
 
     & code {
@@ -79,6 +80,42 @@
       font-size: 13px;
       line-height: 20px;
     }
+  }
+
+
+  & .code-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding-top: 20px;
+    border: none;
+    color: transparent;
+  }
+
+  & .code-line {
+    display: block;
+    padding: 0 20px;
+
+    &.highlight {
+      background-color: var(--highlight-background-color);
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background-color: var(--highlight-line-border-color);
+      }
+    }
+  }
+
+  & pre {
+    padding: 20px;
   }
 
   & table {

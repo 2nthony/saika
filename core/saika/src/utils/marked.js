@@ -1695,6 +1695,10 @@
 
   marked.parse = marked;
 
+  // @modified
+  marked.escape = escape
+  marked.unescape = unescape
+
   if (typeof module !== 'undefined' && typeof exports === 'object') {
     module.exports = marked;
   } else if (typeof define === 'function' && define.amd) {
