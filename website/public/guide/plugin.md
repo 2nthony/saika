@@ -2,7 +2,7 @@
 
 A plugin is essentially a pure object:
 
-```js
+```js {highlight:[4, 10]}
 const showAuthor = {
   name: 'showAuthor',
   extend: api => {

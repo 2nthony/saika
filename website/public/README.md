@@ -33,7 +33,7 @@ Let say you have following files in `./my-site` folder:
 
 The `index.html` looks like:
 
-```html
+```html {highlight: [6, '9-21']}
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
