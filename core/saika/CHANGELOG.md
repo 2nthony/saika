@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/evillt/saika/compare/saika@2.0.1...saika@2.1.0) (2019-08-18)
+
+
+### Bug Fixes
+
+* **$markedRenderer:** set up image default title ([b931edd](https://github.com/evillt/saika/commit/b931edd))
+
+
+### Features
+
+* **markdown:** support code highlight ([4f75d50](https://github.com/evillt/saika/commit/4f75d50))
+
+
+### Performance Improvements
+
+* **$ImageZoom:** support chrome 75's native lazy loading ([2afb989](https://github.com/evillt/saika/commit/2afb989))
+
+
+
+
+
 ## [2.0.1](https://github.com/evillt/saika/compare/saika@2.0.0...saika@2.0.1) (2019-08-17)
 
 
