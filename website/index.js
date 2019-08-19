@@ -68,8 +68,8 @@ new Saika({
       title: 'Advanced',
       children: [
         {
-          title: 'Use With Bundlers',
-          link: '/advanced/use-with-bundlers'
+          title: 'Use With Bundler',
+          link: '/advanced/use-with-bundler'
         }
       ]
     },
