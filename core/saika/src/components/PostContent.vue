@@ -65,9 +65,9 @@ export default {
         this.jumpToHash()
       })
     },
-    $route(to, from) {
-      if (to.path !== from.path) {
-        this.fetchFile(to.path)
+    '$route.path'(to, from) {
+      if (to !== from) {
+        this.fetchFile(to)
       }
     }
   },
