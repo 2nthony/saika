@@ -45,6 +45,10 @@ new Saika({
           title: 'Theme',
           link: '/guide/theme'
         },
+        {
+          title: 'Markdown Features',
+          link: '/guide/markdown-features'
+        }
       ]
     },
     {
