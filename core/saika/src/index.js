@@ -100,6 +100,7 @@ class Saika {
 
   /**
    * @private
+   * @arg {Object} plugin pluginApi
    */
   applyPlugin(plugin) {
     if (!plugin.when || plugin.when(this)) {
