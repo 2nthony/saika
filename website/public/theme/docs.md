@@ -38,6 +38,18 @@ interface NavItem {
 
 ## posts
 
-- Type: [Options.posts](/reference/options#posts)
+- Type: `Array<DocsPostItem> | (store: Vuex.Store) => Array<DocsPostItem>`
 
 The post items is your sidebar items.
+
+```ts
+interface DocsPostItem extends PostItem {
+  /**
+   * Whether to show Table of Content
+   * Default to `true`
+   */
+  toc?: boolean
+}
+```
+
+Check out the [posts](/reference/options#posts) options for type declaration.
