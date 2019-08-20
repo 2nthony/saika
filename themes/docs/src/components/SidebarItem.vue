@@ -86,7 +86,7 @@ export default {
 </style>
 
 <style scoped>
-.router-link-active {
+.router-link-exact-active {
   font-weight: 600;
 }
 </style>
