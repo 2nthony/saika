@@ -15,7 +15,8 @@ const store = new Vuex.Store({
   state: {
     originConfig: {},
     isFetchingFile: true,
-    post: {}
+    post: {},
+    env: {}
   },
 
   mutations: {
@@ -29,6 +30,10 @@ const store = new Vuex.Store({
 
     SET_POST(state, post) {
       state.post = post
+    },
+
+    SET_ENV(state, env) {
+      state.env = env
     }
   },
 
@@ -41,6 +46,9 @@ const store = new Vuex.Store({
       const post = {
         file: '',
         content: ''
+      }
+      const env = {
+        headings: []
       }
 
       const filename = getFilenameByPath(path)
@@ -60,13 +68,15 @@ const store = new Vuex.Store({
       if (post.content) {
         post.content = marked(post.content, {
           renderer: markedRenderer(hooks),
-          highlight
+          highlight,
+          env
         })
       }
 
       post.content = await hooks.processPromise('processHTML', post.content)
 
       commit('SET_POST', post)
+      commit('SET_ENV', env)
       commit('SET_FETCHING', false)
     },
 
