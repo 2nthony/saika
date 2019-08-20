@@ -19,7 +19,8 @@ export default {
           attrs: {
             ...attrs,
             href: to,
-            target: '_blank'
+            target: '_blank',
+            rel: 'noopener noreferrer'
           }
         },
         [
