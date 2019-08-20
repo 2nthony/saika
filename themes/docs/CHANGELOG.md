@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/evillt/saika/compare/@saika/theme-docs@2.0.0...@saika/theme-docs@2.1.0) (2019-08-20)
+
+
+### Bug Fixes
+
+* **$theme-docs:** sidebar link active ([ca4ec4b](https://github.com/evillt/saika/commit/ca4ec4b))
+
+
+### Features
+
+* **$theme-docs:** sidebar support toc ([6bcd168](https://github.com/evillt/saika/commit/6bcd168))
+
+
+
+
+
 # [2.0.0](https://github.com/evillt/saika/compare/@saika/theme-docs@1.1.7...@saika/theme-docs@2.0.0) (2019-08-14)
 
 

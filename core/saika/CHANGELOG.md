@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/evillt/saika/compare/saika@2.1.2...saika@2.2.0) (2019-08-20)
+
+
+### Features
+
+* **$core:** set up env for post content outline ([bff8923](https://github.com/evillt/saika/commit/bff8923))
+
+
+
+
+
 ## [2.1.2](https://github.com/evillt/saika/compare/saika@2.1.1...saika@2.1.2) (2019-08-20)
 
 **Note:** Version bump only for package saika
