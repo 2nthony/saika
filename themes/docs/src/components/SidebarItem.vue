@@ -17,23 +17,29 @@
         >{{ item.title }}
       </div>
       <div class="link-posts">
-        <div
-          class="link link-item"
-          v-for="(link, index) in children"
-          :key="index"
-        >
-          <SaikaLink :to="link.link">{{ link.title }}</SaikaLink>
+        <div class="link" v-for="(link, index) in children" :key="index">
+          <SaikaLink class="link-item" :to="link.link">{{
+            link.title
+          }}</SaikaLink>
+          <ContentToc :link="link" />
         </div>
       </div>
     </div>
-    <div class="link link-item" v-if="item.title && item.link">
-      <SaikaLink :to="item.link">{{ item.title }}</SaikaLink>
+    <div class="link" v-if="item.title && item.link">
+      <SaikaLink class="link-item" :to="item.link">{{ item.title }}</SaikaLink>
+      <ContentToc :link="item" />
     </div>
   </div>
 </template>
 
 <script>
+import ContentToc from './ContentToc.vue'
+
 export default {
+  components: {
+    ContentToc
+  },
+
   props: {
     item: {
       type: Object,
