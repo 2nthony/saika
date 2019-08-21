@@ -207,16 +207,7 @@
 
     &:hover {
       text-decoration: none;
-
-      &:before {
-        content: '';
-        display: block;
-        height: 1px;
-        width: 100%;
-        background-color: var(--text-color);
-        position: absolute;
-        bottom: -1px;
-      }
+      border-bottom: 1px solid var(--text-color);
 
       & ~ .header-anchor-icon {
         visibility: visible;
