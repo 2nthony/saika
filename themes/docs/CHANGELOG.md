@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/evillt/saika/compare/@saika/theme-docs@2.1.0...@saika/theme-docs@2.1.1) (2019-08-21)
+
+
+### Bug Fixes
+
+* **$theme-docs[sidebar]:** remove trailing HTML ([d8981cd](https://github.com/evillt/saika/commit/d8981cd))
+
+
+
+
+
 # [2.1.0](https://github.com/evillt/saika/compare/@saika/theme-docs@2.0.0...@saika/theme-docs@2.1.0) (2019-08-20)
 
 
