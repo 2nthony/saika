@@ -37,7 +37,7 @@ export default {
               },
               key: heading.slug
             },
-            heading.text
+            heading.raw.replace(/<.*>\s*$/g, '')
           )
         })
       )
