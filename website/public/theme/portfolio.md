@@ -19,29 +19,29 @@ new Saika({
 })
 ```
 
-# Options
+## Options
 
-## github
+### github
 
 - Type: `string`
 - Required: `true`
 
 The GitHub username, we use this to fetch GitHub's API for populating your website with content.
 
-## repos
+### repos
 
 - Type: `'pinned-repos' | false`
 - Default: `undefined`
 
 List github user repos.
 
-## twitter
+### twitter
 
 - Type: `string`
 
 The twitter username.
 
-## skills
+### skills
 
 - Type: `Array<SkillItem>`
 
@@ -58,7 +58,7 @@ interface SkillItem {
 
 Check out https://cdn.jsdelivr.net/gh/github/explore@latest/topics/ for all supported tpoics.
 
-## nav
+### nav
 
 - Type: `Array<NavItem>`
 
@@ -73,31 +73,31 @@ interface NavItem {
 }
 ```
 
-## posts
+### posts
 
 - Type: [Options.posts](/reference/options#posts)
 
 The post items is your blog post items.
 
-## sponsorLink
+### sponsorLink
 
 - Type: `stirng`
 
 The sponsor button link.
 
-## sponsorTip
+### sponsorTip
 
 - Type: `string`
 
 The sponsor button tip.
 
-## hirable
+### hirable
 
 - Type: `boolean`
 
 Hirable status.
 
-## follow
+### follow
 
 - Type: `boolean`
 

@@ -19,9 +19,9 @@ new Saika({
 })
 ```
 
-# Options
+## Options
 
-## nav
+### nav
 
 - Type: `Array<NavItem>`
 
@@ -36,20 +36,38 @@ interface NavItem {
 }
 ```
 
-## posts
+### posts
 
-- Type: `Array<DocsPostItem> | (store: Vuex.Store) => Array<DocsPostItem>`
+- Type: `Array<PostItem> | (store: Vuex.Store) => Array<PostItem>`
 
 The post items is your sidebar items.
 
 ```ts
-interface DocsPostItem extends PostItem {
+type PostItem = SingleItem | MultipleItem
+
+interface SingleItem {
+  title: string
+  link?: PathLike
   /**
    * Whether to show Table of Content
    * Default to `true`
    */
   toc?: boolean
 }
+
+interface MultipleItem extends LinkItem {
+  title: string
+  children: SingleItem[]
+}
+
 ```
 
-Check out the [posts](/reference/options#posts) options for type declaration.
+## Comparisons
+
+### VuePress / GitBook / Hexo
+
+They all generate static HTML files at build-time, which is good for SEO.
+
+### Docute
+
+Saika + @saika/theme-docs and Docute are pretty much the same, but with different UI.

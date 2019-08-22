@@ -52,6 +52,27 @@ new Saika({
       ]
     },
     {
+      title: 'Reference',
+      children: [
+        {
+          title: 'Options',
+          link: '/reference/options'
+        },
+        {
+          title: 'Built-in Components',
+          link: '/reference/built-in-components'
+        },
+        {
+          title: 'Plugin API',
+          link: '/reference/plugin-api'
+        },
+        {
+          title: 'Saika Instance',
+          link: '/reference/saika-instance'
+        },
+      ]
+    },
+    {
       title: 'Theme',
       children: [
         {
@@ -75,27 +96,6 @@ new Saika({
           title: 'Use With Bundler',
           link: '/advanced/use-with-bundler'
         }
-      ]
-    },
-    {
-      title: 'Reference',
-      children: [
-        {
-          title: 'Options',
-          link: '/reference/options'
-        },
-        {
-          title: 'Built-in Components',
-          link: '/reference/built-in-components'
-        },
-        {
-          title: 'Plugin API',
-          link: '/reference/plugin-api'
-        },
-        {
-          title: 'Saika Instance',
-          link: '/reference/saika-instance'
-        },
       ]
     },
     {
