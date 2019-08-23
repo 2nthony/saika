@@ -1,7 +1,7 @@
 export default lang => {
   let opts = {}
 
-  if (lang.indexOf('{') > -1) {
+  if (lang && lang.indexOf('{') > -1) {
     const escaped = lang.split(' {')
     lang = escaped[0]
 
