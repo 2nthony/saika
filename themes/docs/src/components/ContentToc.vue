@@ -56,13 +56,17 @@ export default {
 }
 
 .content-toc-heading {
-  display: flex;
+  display: block;
   line-height: 1;
   margin: 18px 0;
-  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
   &::before {
     content: '';
+    display: inline-block;
+    vertical-align: middle;
     margin-left: 2px;
     margin-right: 18px;
     width: 4px;
