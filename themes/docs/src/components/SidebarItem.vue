@@ -1,7 +1,7 @@
 <template>
   <div class="SidebarItem">
     <div class="link-category" v-if="item.title && children">
-      <div class="link-title">
+      <div class="link-title text-overflow-ellipsis">
         <svg
           width="6"
           height="10"
@@ -26,7 +26,9 @@
       </div>
     </div>
     <div class="link" v-if="item.title && item.link">
-      <SaikaLink class="link-item" :to="item.link">{{ item.title }}</SaikaLink>
+      <SaikaLink class="link-item text-overflow-ellipsis" :to="item.link">{{
+        item.title
+      }}</SaikaLink>
       <ContentToc :link="item" />
     </div>
   </div>
@@ -76,11 +78,10 @@ export default {
 }
 
 .link-item {
-  display: flex;
-  align-items: center;
-
   &::before {
     content: '';
+    display: inline-block;
+    vertical-align: middle;
     margin-left: 2px;
     margin-right: 18px;
     width: 4px;

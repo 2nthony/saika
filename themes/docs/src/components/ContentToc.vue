@@ -31,7 +31,7 @@ export default {
           return h(
             'SaikaLink',
             {
-              class: 'content-toc-heading',
+              class: 'content-toc-heading text-overflow-ellipsis',
               props: {
                 to: { hash: heading.slug }
               },
@@ -56,12 +56,8 @@ export default {
 }
 
 .content-toc-heading {
-  display: block;
   line-height: 1;
   margin: 18px 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 
   &::before {
     content: '';

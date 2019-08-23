@@ -22,4 +22,11 @@
     padding: 0;
   }
 }
+
+.text-overflow-ellipsis {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 </style>
