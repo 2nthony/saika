@@ -1,6 +1,6 @@
 # Saika
 
-> Effortless misc-site, done right.
+> Effortless info-site, done right.
 
 Please consider starring the project to show your ❤️ and support.
 
