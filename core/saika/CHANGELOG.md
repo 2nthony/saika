@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2](https://github.com/evillt/saika/compare/saika@2.2.1...saika@2.2.2) (2019-08-23)
+
+
+### Bug Fixes
+
+* **$core:** parse code options ([a1d6f1e](https://github.com/evillt/saika/commit/a1d6f1e))
+
+
+
+
+
 ## [2.2.1](https://github.com/evillt/saika/compare/saika@2.2.0...saika@2.2.1) (2019-08-21)
 
 **Note:** Version bump only for package saika
