@@ -36,12 +36,19 @@ export default {
     },
 
     PostContent() {
-      const { post } = this.$store.state
+      const { post, env } = this.$store.state
       const { postMixins } = this.$store.getters.config
 
       const component = {
         name: 'PostContent',
-        mixins: [...postMixins],
+        mixins: [
+          ...postMixins,
+          ...env.mixins.map(mixin => {
+            // eslint-disable-next-line no-new-func
+            const fn = new Function(`return ${mixin}`)
+            return fn()
+          })
+        ],
         components: {
           NotFound
         },
