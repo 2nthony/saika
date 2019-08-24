@@ -40,9 +40,15 @@ export default function(hooks) {
   const origCode = renderer.code
   renderer.code = function(code, _lang, escaped) {
     const { lang, opts } = parseCodeOptions(_lang)
+    const { env } = this.options
 
     let res = origCode.call(this, code, lang, escaped)
     res = res.replace(/^<pre>/, `<pre v-pre>`)
+
+    if (opts.mixin) {
+      env.mixins.push(code.trim())
+      return ''
+    }
 
     if (opts.highlight) {
       const codeMask = code

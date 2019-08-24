@@ -48,7 +48,8 @@ const store = new Vuex.Store({
         content: ''
       }
       const env = {
-        headings: []
+        headings: [],
+        mixins: []
       }
 
       const filename = getFilenameByPath(path)
