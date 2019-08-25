@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import marked from './utils/marked'
-import markedRenderer from './utils/markedRenderer'
+import extendMarkedRenderer from './utils/extendMarkedRenderer'
 import highlight from './utils/highlight'
 import load from './utils/load'
 import { getFileUrl, getFilenameByPath, inBrowser } from './utils'
@@ -68,7 +68,7 @@ const store = new Vuex.Store({
 
       if (post.content) {
         post.content = marked(post.content, {
-          renderer: markedRenderer(hooks),
+          renderer: extendMarkedRenderer(),
           highlight,
           env
         })
