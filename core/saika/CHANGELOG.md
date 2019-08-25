@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/evillt/saika/compare/saika@2.2.2...saika@2.3.0) (2019-08-25)
+
+
+### Features
+
+* **$core:** support vue mixin via code block option ([#21](https://github.com/evillt/saika/issues/21)) ([811ef7e](https://github.com/evillt/saika/commit/811ef7e))
+* **$marked-renderer-hoist-tags:** support `script` and `style` tag in markdown ([#22](https://github.com/evillt/saika/issues/22)) ([fcb6b35](https://github.com/evillt/saika/commit/fcb6b35))
+
+
+
+
+
 ## [2.2.2](https://github.com/evillt/saika/compare/saika@2.2.1...saika@2.2.2) (2019-08-23)
 
 
