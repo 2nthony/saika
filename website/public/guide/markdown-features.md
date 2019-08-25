@@ -73,14 +73,14 @@ __Output__:
 __Input__:
 
 ````markdown
-```js {highlight: [3, '6-8']}
+```js { highlight: [3, '6-8'] }
 class Greet {
   constructor(name) {
     this.name = name
   }
 
   sayHi() {
-    alert('Hi there', name)
+    alert('Hi there', this.name)
   }
 }
 ```
@@ -95,7 +95,37 @@ class Greet {
   }
 
   sayHi() {
-    alert('Hi there', name)
+    alert('Hi there', this.name)
+  }
+}
+```
+
+## Vue Mixin
+
+Add a Vue mixin to the Markdown content component.
+
+````markdown
+~~Iron Man~~: He love Saika <button @click="count++">{{ count }}</button>
+
+```js { mixin: true }
+{
+  data() {
+    return {
+      count: 3000
+    }
+  }
+}
+```
+````
+
+~~Iron Man~~: He love Saika <button @click="count++">{{ count }}</button>
+
+```js { mixin: true }
+{
+  data() {
+    return {
+      count: 3000
+    }
   }
 }
 ```
