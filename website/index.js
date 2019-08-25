@@ -48,6 +48,10 @@ new Saika({
         {
           title: 'Markdown Features',
           link: '/guide/markdown-features'
+        },
+        {
+          title: 'Use Vue in Markdown',
+          link: '/guide/use-vue-in-markdown'
         }
       ]
     },
@@ -103,4 +107,18 @@ new Saika({
       link: '/credits'
     }
   ]
+})
+
+Vue.component('ReverseText', {
+  template: `
+    <div>
+      {{ reversedText }}
+    </div>
+  `,
+  props: ['text'],
+  computed: {
+    reversedText() {
+      return this.text.split('').reverse().join('')
+    }
+  }
 })
