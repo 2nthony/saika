@@ -98,6 +98,11 @@ class Saika {
     this.hooks.add('extendMarkedRenderer', fn)
   }
 
+  use(fn) {
+    fn({ Vue })
+    return this
+  }
+
   /**
    * @private
    * @arg {Object} plugin pluginApi

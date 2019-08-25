@@ -6,6 +6,7 @@ import markedRendererHeading from './marked-renderer-heading'
 import markedRendererImage from './marked-renderer-image'
 import markedRendererLink from './marked-renderer-link'
 import markedRendererCode from './marked-renderer-code'
+import markedRendererHoistTags from './marked-renderer-hoist-tags'
 
 export default [
   ThemeDefault,
@@ -13,5 +14,6 @@ export default [
   markedRendererHeading,
   markedRendererImage,
   markedRendererLink,
-  markedRendererCode
+  markedRendererCode,
+  markedRendererHoistTags
 ]
