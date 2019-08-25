@@ -56,8 +56,7 @@ export default {
 }
 
 .content-toc-heading {
-  line-height: 1;
-  margin: 18px 0;
+  margin: 10px 0;
 
   &::before {
     content: '';
