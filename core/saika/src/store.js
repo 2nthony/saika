@@ -158,3 +158,7 @@ const store = new Vuex.Store({
 })
 
 export default store
+
+if (typeof window !== 'undefined') {
+  window.store = store
+}
