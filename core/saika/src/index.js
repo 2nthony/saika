@@ -96,6 +96,7 @@ class Saika {
 
   extendMarkedRenderer(fn) {
     this.hooks.add('extendMarkedRenderer', fn)
+    return this
   }
 
   use(fn) {
