@@ -118,13 +118,13 @@ class Saika {
    * @private
    */
   prepare() {
-    // Apply user plugins
-    for (const plugin of this.userPlugins) {
+    // Apply built-in plugins
+    for (const plugin of builtInPlugins) {
       this.applyPlugin(plugin)
     }
 
-    // Apply built-in plugins
-    for (const plugin of builtInPlugins) {
+    // Apply user plugins
+    for (const plugin of this.userPlugins) {
       this.applyPlugin(plugin)
     }
   }
