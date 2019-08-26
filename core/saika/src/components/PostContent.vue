@@ -82,7 +82,9 @@ export default {
   methods: {
     async fetchFile(path) {
       await this.$store.dispatch('fetchFile', path)
+      hooks.invoke('onContentWillUpdate', this)
       await this.$nextTick()
+      hooks.invoke('onContentUpdated', this)
       this.jumpToHash()
     },
 
