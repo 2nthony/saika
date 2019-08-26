@@ -1,27 +1,9 @@
 # @saika/google-analytics
 
-Using Google Analytics in Saika.
+## Documentation
 
-# Usage
+https://saika.dev/#/plugin/google-analytics
 
-Load this plugin via `<script>` tag:
-
-```html
-<!-- Load this plugin after saika.js -->
-<script src="https://unpkg.com/@saika/google-analytics"></script>
-```
-
-This plugin is exposed as `window.saikaGoogleAnalytics`:
-
-```js
-new Saika({
-  plugins: [
-    // Your track ID
-    saikaGoogleAnalytics('UA-XXXXXX-X')
-  ]
-})
-```
-
-# License
+## License
 
 MIT © [evillt](https://github.com/evillt)
