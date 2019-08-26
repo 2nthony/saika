@@ -1,0 +1,21 @@
+{
+  "name": "@saika/mermaid",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "bili",
+    "prepublishOnly": "yarn build"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist/index.js"
+  ],
+  "author": "evillt <ijoec123@gmail.com>",
+  "homepage": "https://github.com/evillt/saika#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "bili": "^4.8.1"
+  }
+}
