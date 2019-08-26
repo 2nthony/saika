@@ -66,6 +66,11 @@ class Saika {
     return this
   }
 
+  hook(name, fn) {
+    this.hooks.add(name, fn)
+    return this
+  }
+
   get userPlugins() {
     return store.getters.config.plugins
   }
@@ -81,21 +86,6 @@ class Saika {
   registerComponent(position, component, props) {
     this.components[position] = this.components[position] || []
     this.components[position].push({ component, props })
-    return this
-  }
-
-  processMarkdown(fn) {
-    this.hooks.add('processMarkdown', fn)
-    return this
-  }
-
-  processHTML(fn) {
-    this.hooks.add('processHTML', fn)
-    return this
-  }
-
-  extendMarkedRenderer(fn) {
-    this.hooks.add('extendMarkedRenderer', fn)
     return this
   }
 
@@ -127,6 +117,24 @@ class Saika {
     for (const plugin of this.userPlugins) {
       this.applyPlugin(plugin)
     }
+  }
+
+  /**
+   * These `hooks` will remove in next major release
+   *
+   * Please use `api.hook` to instead
+   * e.g. `api.hook('extendMarkedRenderer', renderer => {})`
+   */
+  extendMarkedRenderer(fn) {
+    return this.hook('extendMarkedRenderer', fn)
+  }
+
+  processMarkdown(fn) {
+    return this.hook('processMarkdown', fn)
+  }
+
+  processHTML(fn) {
+    return this.hook('processHTML', fn)
   }
 }
 
