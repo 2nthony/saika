@@ -38,10 +38,6 @@ new Saika({
           link: '/'
         },
         {
-          title: 'Plugin',
-          link: '/guide/plugin'
-        },
-        {
           title: 'Theme',
           link: '/guide/theme'
         },
@@ -90,6 +86,23 @@ new Saika({
         {
           title: 'Portfolio',
           link: '/theme/portfolio'
+        }
+      ]
+    },
+    {
+      title: 'Plugin',
+      children: [
+        {
+          title: 'Introduction',
+          link: '/plugin/introduction'
+        },
+        {
+          title: 'Google Analytics',
+          link: '/plugin/google-analytics'
+        },
+        {
+          title: 'Mermaid',
+          link: '/plugin/mermaid'
         }
       ]
     },
