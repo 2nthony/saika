@@ -1,12 +1,12 @@
-# Plugin
+# Introduction to Plugin
 
 A plugin is essentially a pure object:
 
-```js {highlight:[4, 10]}
+```js { highlight: [4, 10] }
 const showAuthor = {
   name: 'showAuthor',
   extend: api => {
-    api.processMarkdown(text => text.replace(/{author}/g, 'EVILLT'))
+    api.hook('processMarkdown', text => text.replace(/{author}/g, 'EVILLT'))
   }
 }
 
