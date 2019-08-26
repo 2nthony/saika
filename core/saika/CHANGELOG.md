@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/evillt/saika/compare/saika@2.3.1...saika@2.4.0) (2019-08-26)
+
+
+### Bug Fixes
+
+* **$core:** should run builtin plugins first that user plugins can modify ([67e0445](https://github.com/evillt/saika/commit/67e0445))
+
+
+### Features
+
+* **$core:** add hooks to `PostContent.vue` ([e1bb54d](https://github.com/evillt/saika/commit/e1bb54d))
+* **$core:** new api `api.hook` ([2a775d7](https://github.com/evillt/saika/commit/2a775d7))
+
+
+
+
+
 ## [2.3.1](https://github.com/evillt/saika/compare/saika@2.3.0...saika@2.3.1) (2019-08-25)
 
 **Note:** Version bump only for package saika
