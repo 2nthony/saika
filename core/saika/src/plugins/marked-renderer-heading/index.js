@@ -3,7 +3,7 @@ import { slugify } from '../../utils'
 export default {
   name: 'marked-renderer-heading',
   extend: api => {
-    api.extendMarkedRenderer(renderer => {
+    api.hook('extendMarkedRenderer', renderer => {
       renderer.heading = function(text, level, raw) {
         const { env } = this.options
         const slug = slugify(raw)

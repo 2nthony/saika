@@ -4,7 +4,7 @@ import parseCodeOptions from '../../utils/parseCodeOptions'
 export default {
   name: 'marked-renderer-code',
   extend: api => {
-    api.extendMarkedRenderer(renderer => {
+    api.hook('extendMarkedRenderer', renderer => {
       // `v-pre` Disable template interpolation in code
       renderer.codespan = text =>
         `<code v-pre class="inline-code">${text}</code>`

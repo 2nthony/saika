@@ -5,7 +5,7 @@ export default {
   extend: api => {
     api.use(alternativeComponents)
 
-    api.extendMarkedRenderer(renderer => {
+    api.hook('extendMarkedRenderer', renderer => {
       const RE = /^<(script|style)(?=(\s|>|$))>/i
       renderer.html = html => {
         html = html.trim()
