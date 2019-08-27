@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/evillt/saika/compare/saika@2.4.0...saika@2.5.0) (2019-08-27)
+
+
+### Features
+
+* **$core:** new component `<Badge>` ([#26](https://github.com/evillt/saika/issues/26)) ([8e8467c](https://github.com/evillt/saika/commit/8e8467c)), closes [#24](https://github.com/evillt/saika/issues/24)
+
+
+
+
+
 # [2.4.0](https://github.com/evillt/saika/compare/saika@2.3.1...saika@2.4.0) (2019-08-26)
 
 
