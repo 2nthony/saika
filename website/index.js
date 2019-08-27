@@ -38,10 +38,6 @@ new Saika({
           link: '/'
         },
         {
-          title: 'Theme',
-          link: '/guide/theme'
-        },
-        {
           title: 'Markdown Features',
           link: '/guide/markdown-features'
         },
@@ -79,6 +75,10 @@ new Saika({
     {
       title: 'Theme',
       children: [
+        {
+          title: 'Introduction',
+          link: '/theme/introduction'
+        },
         {
           title: 'Default',
           link: '/theme/default'
