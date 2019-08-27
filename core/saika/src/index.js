@@ -4,26 +4,8 @@ import createRouter from './router'
 import store from './store'
 import hooks from './hooks'
 import builtInPlugins from './plugins'
-
-// Core Components
+import builtInComponents from './components'
 import Root from './components/Root.vue'
-import PostContent from './components/PostContent.vue'
-
-// Saika Components
-import PrevNextLinks from './components/PrevNextLinks.vue'
-import InjectedComponents from './components/InjectedComponents'
-import Note from './components/Note.vue'
-import ImageZoom from './components/ImageZoom.vue'
-import SaikaLink from './components/SaikaLink.vue'
-import Badge from './components/Badge.vue'
-
-Vue.component(SaikaLink.name, SaikaLink)
-Vue.component(Badge.name, Badge)
-Vue.component(Note.name, Note)
-Vue.component(ImageZoom.name, ImageZoom)
-Vue.component(InjectedComponents.name, InjectedComponents)
-Vue.component(PostContent.name, PostContent)
-Vue.component(PrevNextLinks.name, PrevNextLinks)
 
 Vue.mixin({
   created() {
@@ -110,6 +92,9 @@ class Saika {
    * @private
    */
   prepare() {
+    // Register built-in components
+    this.use(builtInComponents)
+
     // Apply built-in plugins
     for (const plugin of builtInPlugins) {
       this.applyPlugin(plugin)
