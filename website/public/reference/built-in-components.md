@@ -18,14 +18,14 @@ Example:
 
 ```markdown
 <ImageZoom
-  url="https://i.loli.net/2019/08/11/jD6umQkgAbTBNEx.jpg"
+  url="https://i.loli.net/2019/08/28/V3MNQ2L7tba4qKe.jpg"
   width="300"
   border
 />
 ```
 
 <ImageZoom
-  url="https://i.loli.net/2019/08/11/jD6umQkgAbTBNEx.jpg"
+  url="https://i.loli.net/2019/08/28/V3MNQ2L7tba4qKe.jpg"
   width="300"
   border
 />
@@ -34,11 +34,11 @@ Example:
 
 Display text that requires attention or provides additional information.
 
-| Prop  | Type                                           | Default  | Description                           |
-| ----- | ---------------------------------------------- | -------- | ------------------------------------- |
-| type  | `'note' \| 'success' \| 'warning' \| 'danger'` | `'note'` | Note type                             |
-| fill  | `boolean`                                      | `false`  | Filled variant                        |
-| label | `string \| boolean`                            | `true`   | Note label, use `false` to hide label |
+| Prop  | Type                                          | Default  | Description                           |
+| ----- | --------------------------------------------- | -------- | ------------------------------------- |
+| type  | `'note' \| 'success' \| 'warning' \| 'error'` | `'note'` | Note type                             |
+| fill  | `boolean`                                     | `false`  | Filled variant                        |
+| label | `string \| boolean`                           | `true`   | Note label, use `false` to hide label |
 
 Examples:
 
@@ -87,3 +87,29 @@ Basically is `router-link`, but external link will open a new tab.
 <SaikaLink to="/">Home</SaikaLink>
 
 <SaikaLink to="https://github.com">GitHub</SaikaLink>
+
+## Badge
+
+Display an indicator that requires attention.
+
+| Prop    | Type                                | Default | Description                   |
+| ------- | ----------------------------------- | ------- | ----------------------------- |
+| type    | `'success' \| 'warning' \| 'error'` |         | Badge type                    |
+| color   | `string`                            |         | Custom badge background color |
+| content | `string`                            |         | Badge text                    |
+
+Example:
+
+```markdown
+- Feature 1 <Badge>Badge</Badge>
+- Feature 2 <Badge type="success">Success</Badge>
+- Feature 3 <Badge type="warning">Warning</Badge>
+- Feature 4 <Badge type="error">Error</Badge>
+- Feature 5 <Badge color="magenta">Custom Color</Badge>
+```
+
+- Feature 1 <Badge>Badge</Badge>
+- Feature 2 <Badge type="success">Success</Badge>
+- Feature 3 <Badge type="warning">Warning</Badge>
+- Feature 4 <Badge type="error">Error</Badge>
+- Feature 5 <Badge color="magenta">Custom Color</Badge>

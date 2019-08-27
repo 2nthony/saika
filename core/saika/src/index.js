@@ -15,8 +15,10 @@ import InjectedComponents from './components/InjectedComponents'
 import Note from './components/Note.vue'
 import ImageZoom from './components/ImageZoom.vue'
 import SaikaLink from './components/SaikaLink.vue'
+import Badge from './components/Badge.vue'
 
 Vue.component(SaikaLink.name, SaikaLink)
+Vue.component(Badge.name, Badge)
 Vue.component(Note.name, Note)
 Vue.component(ImageZoom.name, ImageZoom)
 Vue.component(InjectedComponents.name, InjectedComponents)
