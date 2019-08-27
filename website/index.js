@@ -67,6 +67,10 @@ new Saika({
           link: '/reference/plugin-api'
         },
         {
+          title: 'Hooks',
+          link: '/reference/hooks'
+        },
+        {
           title: 'Saika Instance',
           link: '/reference/saika-instance'
         },

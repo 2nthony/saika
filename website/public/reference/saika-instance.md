@@ -20,51 +20,55 @@ The [Vuex](https://vuex.vuejs.org/api/#vuex-store-instance-properties) instance.
 
 ## hooks
 
-It pretty useful for developing a Saika plugin.
+Check out [hooks](/reference/hooks).
 
-```js
-api.hooks.add('SayHi', name => {
-  console.log('Hi', name)
-})
-api.hooks.invoke('SayHi', 'evillt')
-// Hi, evillt
-```
+## hook
 
-### hooks.add
+- Type: `(name: string, fn: (...args: any[]) => any) => SaikaInstance`
 
-- Type: `(name: string, fn: (...args: any[]) => void) => Hooks`
+Alias for `api.hooks.add`.
 
-Add function hook to hooks.
+### hook('extendMarkedRenderer', fn)
 
-### hooks.invoke
+- fn: `(renderer: marked.Renderer) => void`
 
-- Type: `(name: string, ...args: any[]) => Hooks`
+You can use this hook to modify the [marked.renderer](https://marked.js.org/#/USING_PRO.md#renderer) we use.
 
-Invoke hooks with matched name.
+### hook('extendMarkdedComponent', fn)
+
+- fn: `(component: VueComponentOptions) => void`
+
+You can use this hook to modify the compiled Markdown component.
+
+### hook('processMarkdown', fn)
+
+- fn: `(markdown: string) => string | Promise<string>`
+
+Process Markdown string.
+
+### hook('processHTML', fn)
+
+- fn: `(html: string) => string | Promise<string>`
+
+Process HTML string.
+
+### hook('onContentWillUpdate', fn)
+
+- fn: `(vm: Vue) => void`
+
+This hook will be called when the markdown content before update.
+
+### hook('onContentUpdated', fn)
+
+- fn: `(vm: Vue) => void`
+
+This hook will be called when the markdown content is updated.
 
 ## hasPlugin
 
 - Type: `(name: string) => boolean`
 
 To check a plugin is exists.
-
-## processMarkdown
-
-- Type: `(markdown: string) => string | Promise<string>`
-
-Process markdown string.
-
-## processHTML
-
-- Type: `(html: string) => string | Promise<string>`
-
-Process HTML string.
-
-## extendMarkedRenderer
-
-- Type: `(renderer: marked.Renderer) => void`
-
-You can use this to modify the [marked.renderer](https://marked.js.org/#/USING_PRO.md#renderer) we use.
 
 ## registerComponent
 
@@ -92,3 +96,29 @@ type Position =
 - Type: `(position: Position) => Array<{ [name: string]: VueComponent }>`
 
 Get the components list with specific position.
+
+## @deprecates
+
+These API will remove in next major release.
+
+Please use `api.hook` to instead.
+
+e.g. `api.hook('extendMarkedRenderer', renderer => {})`
+
+### extendMarkedRenderer
+
+- Type: `(renderer: marked.Renderer) => void`
+
+You can use this to modify the [marked.renderer](https://marked.js.org/#/USING_PRO.md#renderer) we use.
+
+### processMarkdown
+
+- Type: `(markdown: string) => string | Promise<string>`
+
+Process markdown string.
+
+### processHTML
+
+- Type: `(html: string) => string | Promise<string>`
+
+Process HTML string.
