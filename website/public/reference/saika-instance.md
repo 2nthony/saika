@@ -73,13 +73,12 @@ You can use this to modify the [marked.renderer](https://marked.js.org/#/USING_P
 Register components at specific position.
 
 ```ts
-interface RegisterComponent {
+type RegisterComponent =
   (
     position: Position,
     component: VueComponent,
     props: object
   ) => SaikaInstance
-}
 
 type Position =
   // The start of post content
