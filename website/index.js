@@ -107,6 +107,10 @@ new Saika({
         {
           title: 'Mermaid',
           link: '/plugin/mermaid'
+        },
+        {
+          title: 'PlantUML',
+          link: '/plugin/plantuml'
         }
       ]
     },
