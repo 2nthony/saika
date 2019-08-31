@@ -42,11 +42,11 @@
     color: var(--inline-code-color);
 
     &.inline-code::before {
-      content: '\`';
+      content: '`';
     }
 
     &.inline-code::after {
-      content: '\`';
+      content: '`';
     }
   }
 
