@@ -55,7 +55,7 @@ interface SingleItem {
   toc?: boolean
 }
 
-interface MultipleItem extends LinkItem {
+interface MultipleItem {
   title: string
   children: SingleItem[]
 }
