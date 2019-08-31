@@ -105,7 +105,7 @@ class Greet {
 Add a Vue mixin to the Markdown content component.
 
 ````markdown
-~~Iron Man~~: He love Saika <button @click="count++">{{ count }}</button>
+~~Iron Man~~: I love Saika <button @click="count++">{{ count }}</button>
 
 ```js { mixin: true }
 {
@@ -118,7 +118,7 @@ Add a Vue mixin to the Markdown content component.
 ```
 ````
 
-~~Iron Man~~: He love Saika <button @click="count++">{{ count }}</button>
+~~Iron Man~~: I love Saika <button @click="count++">{{ count }}</button>
 
 ```js { mixin: true }
 {
