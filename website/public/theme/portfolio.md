@@ -1,4 +1,4 @@
-# @saika/theme-portfolio
+# Saika Theme Portfolio
 
 ## Usage
 

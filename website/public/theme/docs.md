@@ -1,4 +1,4 @@
-# @saika/theme-docs
+# Saika Theme Docs
 
 ## Usage
 
