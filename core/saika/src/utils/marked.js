@@ -986,10 +986,11 @@
     return this.options.xhtml ? '<hr/>\n' : '<hr>\n';
   };
 
-  Renderer.prototype.list = function(body, ordered, start) {
+  Renderer.prototype.list = function(body, ordered, start, containsTaskList) {
     var type = ordered ? 'ol' : 'ul',
-        startatt = (ordered && start !== 1) ? (' start="' + start + '"') : '';
-    return '<' + type + startatt + '>\n' + body + '</' + type + '>\n';
+        startatt = (ordered && start !== 1) ? (' start="' + start + '"') : '',
+        className = containsTaskList ? ' class="contains-task-list"' : '';
+    return '<' + type + startatt + className + '>\n' + body + '</' + type + '>\n';
   };
 
   Renderer.prototype.listitem = function(text) {
@@ -1250,16 +1251,21 @@
 
         return this.renderer.blockquote(body);
       }
+      // @modified
       case 'list_start': {
         body = '';
         var ordered = this.token.ordered,
-            start = this.token.start;
+            start = this.token.start,
+            containsTaskList = false;
 
         while (this.next().type !== 'list_end') {
+          if (this.token.task) {
+            containsTaskList = true;
+          }
           body += this.tok();
         }
 
-        return this.renderer.list(body, ordered, start);
+        return this.renderer.list(body, ordered, start, containsTaskList);
       }
       case 'list_item_start': {
         body = '';

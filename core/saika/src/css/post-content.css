@@ -161,13 +161,21 @@
     & > li {
       font-size: var(--text-size);
       line-height: 24px;
+    }
 
-      &::before {
-        content: '-';
-        display: inline-block;
-        color: #999;
-        position: absolute;
-        margin-left: -15px;
+    &.contains-task-list {
+      margin-left: -2px;
+    }
+
+    &:not(.contains-task-list) {
+      & > li {
+        &::before {
+          content: '-';
+          display: inline-block;
+          color: #999;
+          position: absolute;
+          margin-left: -15px;
+        }
       }
     }
   }
