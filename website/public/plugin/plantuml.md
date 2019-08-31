@@ -32,8 +32,10 @@ The image type.
 
 ## Example
 
+````markdown
 ```plantuml
 A -> B: Well Hello Gorgeous
 ```
+````
 
 <ImageZoom src="https://i.loli.net/2019/08/31/m8wMiAG4hr6Hbel.png" />

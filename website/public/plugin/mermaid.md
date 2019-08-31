@@ -28,6 +28,7 @@ Options for [mermaid.initialize](https://mermaidjs.github.io/#/usage?id=using-th
 
 ## Example
 
+````markdown
 ```mermaid
 graph LR
 
@@ -36,5 +37,6 @@ A-->C
 B-->D
 C-->D
 ```
+````
 
 <ImageZoom src="https://i.loli.net/2019/08/27/2oTB5K6pHz3OrIi.png" />
