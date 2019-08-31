@@ -152,13 +152,13 @@
     }
   }
 
-  & ol,
-  & ul {
+  & > ol,
+  & > ul {
     padding: 0;
     list-style-type: none;
     margin-left: 15px;
 
-    & > li {
+    & li {
       font-size: var(--text-size);
       line-height: 24px;
     }
@@ -168,7 +168,7 @@
     }
 
     &:not(.contains-task-list) {
-      & > li {
+      & li {
         &::before {
           content: '-';
           display: inline-block;
