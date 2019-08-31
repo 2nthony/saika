@@ -70,4 +70,4 @@ They all generate static HTML files at build-time, which is good for SEO.
 
 ### Docute
 
-Saika + @saika/theme-docs and Docute are pretty much the same, but with different UI.
+Saika + Saika Theme Docs and Docute are pretty much the same, but with different UI.
