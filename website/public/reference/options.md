@@ -88,7 +88,7 @@ Reference to [banner](#banner) but with class `saika-footer`.
 
 - Type: `object`
 
-Override CSS variables. Check out [cssVariables.js](https://github.com/evillt/saika/blob/master/core/saika/src/utils/cssVariables.js) for details.
+Override CSS variables. Check out [cssVariables.js](https://github.com/evillt/saika/blob/master/core/src/utils/cssVariables.js) for details.
 
 ## router
 

@@ -1,4 +1,4 @@
-import Saika from '../core/saika/src'
+import Saika from '../core/src'
 import saikaThemeDocs from '../themes/docs/src'
 import googleAnalytics from '../plugins/google-analytics/src'
 

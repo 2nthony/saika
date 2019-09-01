@@ -6,7 +6,7 @@
     "url": "evillt/saika"
   },
   "workspaces": [
-    "core/*",
+    "core",
     "plugins/*",
     "packages/*",
     "themes/*"
