@@ -85,6 +85,10 @@ type RegisterComponent =
   ) => SaikaInstance
 
 type Position =
+  // The start of root component
+  | 'root:start'
+  // The end of root component
+  | 'root:end'
   // The start of post content
   | 'content:start'
   // The end of post content
