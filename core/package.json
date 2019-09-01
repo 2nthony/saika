@@ -1,7 +1,7 @@
 {
   "name": "saika",
   "description": "Effortlessly info-site, done right.",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "license": "MIT",
   "files": [
     "dist",
