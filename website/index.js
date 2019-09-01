@@ -111,6 +111,10 @@ new Saika({
         {
           title: 'PlantUML',
           link: '/plugin/plantuml'
+        },
+        {
+          title: 'GitHub Corner',
+          link: '/plugin/github-corner'
         }
       ]
     },
