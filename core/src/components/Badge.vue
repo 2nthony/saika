@@ -7,7 +7,11 @@ export default {
   props: {
     type: String,
     color: String,
-    content: String
+    content: String,
+    align: {
+      type: String,
+      default: 'text-top'
+    }
   },
 
   render(h, { props, children }) {
@@ -16,7 +20,8 @@ export default {
       {
         class: ['badge', `is-${props.type}`],
         style: {
-          backgroundColor: props.color
+          backgroundColor: props.color,
+          verticalAlign: props.align
         }
       },
       props.content || children
@@ -31,7 +36,6 @@ export default {
   line-height: 18px;
   height: 18px;
   border-radius: 10px;
-  vertical-align: top;
   color: #fff;
   padding: 0px 6px;
   font-size: 12px;
