@@ -1,4 +1,4 @@
-# Saika GitHub Corner
+# Saika GitHub Corner <Badge content="2.6.0+" />
 
 Using GitHub Corner in Saika.
 
