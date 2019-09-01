@@ -1,25 +1,50 @@
 .post-content {
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    line-height: 1.5;
+    font-weight: 600;
+    margin-top: 40px;
+    word-break: break-word;
+  }
+
   & h1 {
     font-size: 3rem;
     margin: 0;
+    font-weight: 700;
+    letter-spacing: -.066875rem;
   }
 
   & h2 {
-    font-size: 2rem;
-    margin-top: 40px;
+    font-size: 2.25rem;
+    letter-spacing: -.049375rem;
   }
 
   & h3 {
-    font-size: 1.7rem;
-    margin: 40px 0 30px 0;
+    font-size: 1.5rem;
+    letter-spacing: -0.029375rem;
   }
 
   & h4 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
+    letter-spacing: -.020625rem;
   }
 
   & h5 {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    letter-spacing: -.01125rem;
+  }
+
+  & h6 {
+    font-size: .875rem;
+    letter-spacing: -.005625rem;
   }
 
   & hr {
@@ -33,13 +58,13 @@
   & p {
     font-weight: 400;
     font-size: var(--text-size);
-    line-height: 24px;
-    margin-bottom: 20px;
+    line-height: 1.6;
   }
 
   & code {
     font-family: var(--code-font);
     color: var(--inline-code-color);
+    font-size: .9rem;
 
     &.inline-code::before {
       content: '`';
@@ -60,7 +85,7 @@
       position: absolute;
       top: 5px;
       right: 5px;
-      font: 12px var(--code-font);
+      font: 13px var(--code-font);
       color: #cacaca;
     }
   }
@@ -73,6 +98,10 @@
     white-space: pre;
     overflow: auto;
     z-index: 2;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.575em;
+    font-size: .875em;
     -webkit-overflow-scrolling: touch;
 
     & code {

@@ -22,20 +22,8 @@ body {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--text-color);
   text-decoration: none;
-}
-
-.Page {
-  & h1,
-  & h2,
-  & h3,
-  & h4,
-  & h5,
-  & h6 {
-    font-weight: 400;
-    word-break: break-word;
-  }
 }
 
 .Wrap {
