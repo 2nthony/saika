@@ -65,7 +65,7 @@ export default {
 
   &.is-fill {
     &.is-note {
-      background-color: #333;
+      background-color: #000;
     }
 
     &.is-error {
