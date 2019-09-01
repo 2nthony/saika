@@ -46,21 +46,26 @@ Examples:
 <Note>This note details something important.</Note>
 
 <!-- Success note -->
+
 <Note type="success">This note details a success.</Note>
 
 <!-- Warning note -->
+
 <Note type="warning">This note details a warning.</Note>
 
 <!-- Error note -->
+
 <Note type="error">This note details an error.</Note>
 
 <!-- Filled variant -->
+
 <Note fill>This note details something important.</Note>
 <Note fill type="success">This note details a success.</Note>
 <Note fill type="warning">This note details a warning.</Note>
 <Note fill type="error">This note details an error.</Note>
 
 <!-- Without label -->
+
 <Note fill :label="false">This note details something important without label.</Note>
 ```
 
@@ -92,11 +97,12 @@ Basically is `router-link`, but external link will open a new tab.
 
 Display an indicator that requires attention.
 
-| Prop    | Type                                | Default | Description                   |
-| ------- | ----------------------------------- | ------- | ----------------------------- |
-| type    | `'success' \| 'warning' \| 'error'` |         | Badge type                    |
-| color   | `string`                            |         | Custom badge background color |
-| content | `string`                            |         | Badge text                    |
+| Prop    | Type                                | Default      | Description                   |
+| ------- | ----------------------------------- | ------------ | ----------------------------- |
+| type    | `'success' \| 'warning' \| 'error'` |              | Badge type                    |
+| color   | `string`                            |              | Custom badge background color |
+| content | `string`                            |              | Badge text                    |
+| align   | `string`                            | `'text-top'` | Alias for `vertical-align`    |
 
 Example:
 
