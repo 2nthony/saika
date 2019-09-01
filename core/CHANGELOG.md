@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/evillt/saika/compare/saika@2.5.3...saika@2.6.0) (2019-09-01)
+
+
+### Features
+
+* **$core:** new `registerComponent` position for Root component ([f4b0d90](https://github.com/evillt/saika/commit/f4b0d90))
+
+
+
+
+
 ## [2.5.3](https://github.com/evillt/saika/compare/saika@2.5.2...saika@2.5.3) (2019-09-01)
 
 **Note:** Version bump only for package saika
