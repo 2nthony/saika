@@ -2,11 +2,13 @@
 
 <template>
   <div :id="target" :class="target">
+    <InjectedComponents position="root:start" />
     <div class="Page">
       <div class="Wrap">
         <router-view />
       </div>
     </div>
+    <InjectedComponents position="root:end" />
   </div>
 </template>
 
