@@ -1,6 +1,6 @@
 # Built-in Components
 
-Saika comes with built-in Vue Components.
+Saika comes with a set of built-in Vue Components.
 
 ## ImageZoom
 
