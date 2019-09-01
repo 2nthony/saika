@@ -6,6 +6,7 @@ export default {
   purple: '#bd10e0',
   selection: 'var(--cyan)',
   textColor: '#000',
+  foreground: '#000',
   textSize: '1rem',
   accentColor: 'var(--success-color)',
   borderColor: '#eaeaea',

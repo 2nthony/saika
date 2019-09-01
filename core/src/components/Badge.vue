@@ -35,7 +35,7 @@ export default {
   color: #fff;
   padding: 0px 6px;
   font-size: 12px;
-  background-color: #333;
+  background-color: var(--foreground);
 
   &.is-error {
     background-color: var(--error-color);
