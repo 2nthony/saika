@@ -1,12 +1,10 @@
-import { slugify } from '../../utils'
-
 export default {
   name: 'marked-renderer-heading',
   extend: api => {
     api.hook('extendMarkedRenderer', renderer => {
-      renderer.heading = function(text, level, raw) {
+      renderer.heading = function(text, level, raw, slugger) {
         const { env } = this.options
-        const slug = slugify(raw)
+        const slug = slugger.slug(raw)
 
         if (level === 1 || level === 2) {
           env.headings.push({
