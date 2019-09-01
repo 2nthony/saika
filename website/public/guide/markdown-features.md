@@ -50,23 +50,59 @@ __Output__:
 - [Saika](https://saika.dev)
 - [Saika repo](https://github.com/evillt/saika)
 
-## Tasks Lists
+## Lists
 
-But I have to admit, tasks lists are my favorite:
+### Ordered Lists
+
+Sometimes you want numbered lists:
+
+__Input__:
+
+```markdown
+1. One
+2. Two
+3. Three
+```
+
+__Output__:
+
+1. One
+2. Two
+3. Three
+
+### Unordered Lists
+
+Sometimes you want bullet points:
+
+__Input__:
+
+```markdown
+- Start a line with a star
+- Profit!
+```
+
+__Output__:
+
+- Start a line with a star
+- Profit!
+
+### Task Lists
+
+But I have to admit, task lists are my favorite:
 
 __Input__:
 
 ```markdown
 - [x] This is a complete item
 - [ ] This is an incomplete item
-- [x] Use Saika
+- [x] Using Saika
 ```
 
 __Output__:
 
 - [x] This is a complete item
 - [ ] This is an incomplete item
-- [x] Use Saika
+- [x] Using Saika
 
 ## Code highlight
 
@@ -135,7 +171,7 @@ Add a Vue mixin to the Markdown content component.
 Write HTML in markdown.
 
 ```html
-<button>a button right here</button>
+<button>A button right here</button>
 ```
 
-<button>a button right here</button>
+<button>A button right here</button>
