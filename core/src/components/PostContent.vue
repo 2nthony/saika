@@ -13,6 +13,7 @@
     <slot name="start" />
     <InjectedComponents position="content:start" />
     <component :is="PostContent" />
+    <EditLink />
     <slot name="end" />
     <InjectedComponents position="content:end" />
     <InjectedComponents position="footer" />

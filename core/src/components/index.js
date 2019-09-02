@@ -5,6 +5,7 @@ import InjectedComponents from './InjectedComponents'
 import Note from './Note.vue'
 import ImageZoom from './ImageZoom.vue'
 import Badge from './Badge.vue'
+import EditLink from './EditLink.vue'
 
 export default ({ Vue }) => {
   Vue.component(PostContent.name, PostContent)
@@ -14,4 +15,5 @@ export default ({ Vue }) => {
   Vue.component(Note.name, Note)
   Vue.component(ImageZoom.name, ImageZoom)
   Vue.component(Badge.name, Badge)
+  Vue.component(EditLink.name, EditLink)
 }

@@ -54,6 +54,9 @@ const store = new Vuex.Store({
 
       const filename = getFilenameByPath(path)
       post.file = getFileUrl(getters.config.sourcePath, filename)
+      post.editLink =
+        getters.config.editLink.baseUrl &&
+        getFileUrl(getters.config.editLink.baseUrl, filename)
 
       await Promise.all([
         fetch(post.file, getters.config.fetchOptions)
@@ -129,6 +132,10 @@ const store = new Vuex.Store({
         // router: {},
         // cssVariables: {},
         // fetchOptions: {},
+        editLink: {
+          // baseUrl: '',
+          // text: 'Edit this page'
+        },
         ...originConfig
       }
     },
