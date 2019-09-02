@@ -35,7 +35,7 @@ export default {
       }
     })
 
-    api.hooks.add('beforeFetch', () => {
+    api.hook('beforeFetch', () => {
       api.store.commit('TOGGLE_SIDEBAR', false)
     })
   }
