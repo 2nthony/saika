@@ -60,6 +60,29 @@ interface MultipleItem extends LinkItem {
 
 An array of [Vue Mixin](https://vuejs.org/v2/api/#mixins) that are applied to all markdown components.
 
+## editLink <Badge content="2.8.0+" />
+
+<!-- - Type: `EditLink` -->
+
+### editLink.baseUrl
+
+- Type: `string`
+
+The base path for the URL of edit link.
+
+e.g. If you store the markdown files in `docs` folder in a GitHub repo, then it should be:
+
+```
+https://github.com/USER/REPO/blob/master/docs
+```
+
+### editLink.text
+
+- Type: `string`
+- Default: `'Edit this page'`
+
+The text of edit link.
+
 ## highlight
 
 - Type: `Array<string>`
