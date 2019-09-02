@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/evillt/saika/compare/saika@2.7.0...saika@2.8.0) (2019-09-02)
+
+### Bug Fixes
+
+- banner and footer position ([cf8dcb8](https://github.com/evillt/saika/commit/cf8dcb8))
+
+### Features
+
+- now can set up edit link ([0147907](https://github.com/evillt/saika/commit/0147907))
+
 # [2.7.0](https://github.com/evillt/saika/compare/saika@2.6.0...saika@2.7.0) (2019-09-01)
 
 ### Features
