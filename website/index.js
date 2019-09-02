@@ -6,6 +6,10 @@ new Saika({
   target: 'app',
   title: 'Saika',
   highlight: ['bash', 'typescript', 'json', 'markdown'],
+  editLink: {
+    baseUrl: 'https://github.com/evillt/saika/tree/master/website/public',
+    text: 'Edit this page on GitHub'
+  },
   postMixins: [
     {
       data() {
