@@ -9,14 +9,11 @@ export default {
   extend: api => {
     const { banner, footer } = api.store.getters.config
     if (banner) {
-      api.registerComponent(
-        'content:start',
-        getComponent(banner, 'saika-banner')
-      )
+      api.registerComponent('banner', getComponent(banner, 'saika-banner'))
     }
 
     if (footer) {
-      api.registerComponent('content:end', getComponent(footer, 'saika-footer'))
+      api.registerComponent('footer', getComponent(footer, 'saika-footer'))
     }
   }
 }

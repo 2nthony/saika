@@ -9,11 +9,13 @@
     </ContentLoader>
   </div>
   <div v-else class="Content">
+    <InjectedComponents position="banner" />
     <slot name="start" />
     <InjectedComponents position="content:start" />
     <component :is="PostContent" />
     <slot name="end" />
     <InjectedComponents position="content:end" />
+    <InjectedComponents position="footer" />
   </div>
 </template>
 
