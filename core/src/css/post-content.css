@@ -64,7 +64,7 @@
   & code {
     font-family: var(--code-font);
     color: var(--inline-code-color);
-    font-size: .9rem;
+    font-size: .9em;
 
     &.inline-code::before {
       content: '`';
