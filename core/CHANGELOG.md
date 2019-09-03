@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.1](https://github.com/evillt/saika/compare/saika@2.8.0...saika@2.8.1) (2019-09-03)
+
+### Bug Fixes
+
+- inline code font size ([7212ec8](https://github.com/evillt/saika/commit/7212ec8))
+
 # [2.8.0](https://github.com/evillt/saika/compare/saika@2.7.0...saika@2.8.0) (2019-09-02)
 
 ### Bug Fixes
