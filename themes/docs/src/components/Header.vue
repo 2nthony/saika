@@ -7,6 +7,7 @@
         </h1>
         <HeaderNav v-if="leftNav" :nav="leftNav" />
       </div>
+      <SearchBox v-if="$config.searchBox !== false" />
       <div class="header-right">
         <InjectedComponents position="header-right:start" />
         <HeaderNav v-if="rightNav" :nav="rightNav" />
@@ -20,13 +21,15 @@
 <script>
 import HeaderNav from './HeaderNav.vue'
 import SidebarToggle from './SidebarToggle.vue'
+import SearchBox from './SearchBox.vue'
 
 export default {
   name: 'Header',
 
   components: {
     HeaderNav,
-    SidebarToggle
+    SidebarToggle,
+    SearchBox
   },
 
   computed: {
@@ -106,13 +109,13 @@ export default {
 
 .header-left {
   display: flex;
+  flex: 1 1 100%;
 }
 
 .header-right {
   display: flex;
-  position: absolute;
-  right: var(--gap);
-  top: 0;
+  flex: 1 1 100%;
+  justify-content: flex-end;
   height: calc(var(--header-height) - 1px);
 }
 </style>
