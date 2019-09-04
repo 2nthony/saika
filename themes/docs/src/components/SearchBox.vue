@@ -130,6 +130,7 @@ export default {
   }
 }
 
+// TODO share this function
 function parallelLinks(items) {
   return items.reduce((res, next) => {
     const item = next.link ? [next] : []
