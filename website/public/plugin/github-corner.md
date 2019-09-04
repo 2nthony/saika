@@ -1,4 +1,4 @@
-# Saika GitHub Corner <Badge content="2.6.0+" />
+# Saika GitHub Corner <Badge content="Saika 2.6.0+" />
 
 Using GitHub Corner in Saika.
 
@@ -15,9 +15,7 @@ This plugin is exposed as `window.saikaGithubCorner`:
 
 ```js
 new Saika({
-  plugins: [
-    saikaGithubCorner()
-  ]
+  plugins: [saikaGithubCorner()]
 })
 ```
 

@@ -60,7 +60,7 @@ interface MultipleItem extends LinkItem {
 
 An array of [Vue Mixin](https://vuejs.org/v2/api/#mixins) that are applied to all markdown components.
 
-## editLink <Badge content="2.8.0+" />
+## editLink <Badge content="Saika 2.8.0+" />
 
 <!-- - Type: `EditLink` -->
 

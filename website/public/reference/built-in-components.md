@@ -93,7 +93,7 @@ Basically is `router-link`, but external link will open a new tab.
 
 <SaikaLink to="https://github.com">GitHub</SaikaLink>
 
-## Badge <Badge content="2.5.0+" />
+## Badge <Badge content="Saika 2.5.0+" />
 
 Display an indicator that requires attention.
 

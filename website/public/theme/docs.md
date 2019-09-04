@@ -64,7 +64,7 @@ interface MultipleItem {
 }
 ```
 
-### searchBox <Badge content="Docs 2.2.0+" />
+### searchBox <Badge content="Theme Docs 2.2.0+" />
 
 - Type: `SearchBox`
 - Default: `Default`
