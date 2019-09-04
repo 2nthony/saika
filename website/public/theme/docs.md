@@ -5,7 +5,10 @@
 Load this plugin via `<link>` and `<script>` tag:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@saika/theme-docs/dist/index.css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@saika/theme-docs/dist/index.css"
+/>
 
 <!-- Load this plugin after saika.js -->
 <script src="https://unpkg.com/@saika/theme-docs"></script>
@@ -59,7 +62,28 @@ interface MultipleItem {
   title: string
   children: SingleItem[]
 }
+```
 
+### searchBox <Badge content="Docs 2.2.0+" />
+
+- Type: `SearchBox`
+- Default: `Default`
+
+Search box for posts items, set `false` to disable search box.
+
+```ts
+type SearchBox = boolean | SearchBox
+
+interface SearchBox {
+  /**
+   * Max search suggestions
+   */
+  max: number
+}
+
+const Default = {
+  max: 5
+}
 ```
 
 ## Comparisons
