@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/evillt/saika/compare/@saika/theme-docs@2.1.4...@saika/theme-docs@2.2.0) (2019-09-04)
+
+### Features
+
+- **theme-docs:** now can use search for posts items ([2502e44](https://github.com/evillt/saika/commit/2502e44)), closes [#30](https://github.com/evillt/saika/issues/30)
+
 ## [2.1.4](https://github.com/evillt/saika/compare/@saika/theme-docs@2.1.3...@saika/theme-docs@2.1.4) (2019-09-02)
 
 **Note:** Version bump only for package @saika/theme-docs
