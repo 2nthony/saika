@@ -53,10 +53,6 @@ export default {
   },
 
   computed: {
-    postsLinks() {
-      return parallelLinks(this.$store.getters.posts)
-    },
-
     showSuggestions() {
       return this.focused && this.suggestions && this.suggestions.length
     },
@@ -70,6 +66,8 @@ export default {
       const SEARCH_BOX_DEFAULT = {
         max: 5
       }
+      const { postsLinks } = this.$store.getters
+
       const searchBox =
         typeof this.$config.searchBox === 'object'
           ? this.$config.searchBox
@@ -79,11 +77,11 @@ export default {
         item.title && item.title.toLowerCase().indexOf(query) > -1
 
       const res = []
-      for (let i = 0; i < this.postsLinks.length; i++) {
+      for (let i = 0; i < postsLinks.length; i++) {
         if (res.length >= searchBox.max) break
 
-        if (matches(this.postsLinks[i])) {
-          res.push(this.postsLinks[i])
+        if (matches(postsLinks[i])) {
+          res.push(postsLinks[i])
         }
       }
 
@@ -128,19 +126,6 @@ export default {
       this.focusIndex = -1
     }
   }
-}
-
-// TODO share this function
-function parallelLinks(items) {
-  return items.reduce((res, next) => {
-    const item = next.link ? [next] : []
-    const children = next.children || next.links || []
-    return [
-      ...res,
-      ...item,
-      ...children.map(child => ({ parent: next.title, ...child }))
-    ]
-  }, [])
 }
 </script>
 
