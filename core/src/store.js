@@ -4,7 +4,12 @@ import marked from './utils/marked'
 import extendMarkedRenderer from './utils/extendMarkedRenderer'
 import highlight from './utils/highlight'
 import load from './utils/load'
-import { getFileUrl, getFilenameByPath, inBrowser } from './utils'
+import {
+  getFileUrl,
+  getFilenameByPath,
+  inBrowser,
+  parallelLinks
+} from './utils'
 import cssVariables from './utils/cssVariables'
 import prismLanguages from './utils/prismLanguages'
 import hooks from './hooks'
@@ -153,6 +158,10 @@ const store = new Vuex.Store({
     posts(_, { config }) {
       const posts = config.posts || []
       return typeof posts === 'function' ? posts(store) : posts
+    },
+
+    postsLinks(_, { posts }) {
+      return parallelLinks(posts)
     },
 
     cssVariables(_, { config }) {

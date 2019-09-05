@@ -26,6 +26,10 @@ export function parallelLinks(items) {
   return items.reduce((res, next) => {
     const item = next.link ? [next] : []
     const children = next.children || next.links || []
-    return [...res, ...item, ...children]
+    return [
+      ...res,
+      ...item,
+      ...children.map(child => ({ parent: next.title, ...child }))
+    ]
   }, [])
 }
