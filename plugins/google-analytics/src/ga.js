@@ -23,14 +23,8 @@ function init(id) {
   }
 }
 
-function collect(url, id) {
+export function collect(url, id) {
   init(id)
   window.ga('set', 'page', url)
   window.ga('send', 'pageview')
-}
-
-export default function(router, id) {
-  router.afterEach(to => {
-    collect(to.fullPath, id)
-  })
 }

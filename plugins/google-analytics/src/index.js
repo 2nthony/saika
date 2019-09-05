@@ -1,6 +1,10 @@
-import ga from './ga'
+import { collect } from './ga'
 
 export default id => ({
   name: 'saika-plugin-google-analytics',
-  extend: api => ga(api.router, id)
+  extend: api => {
+    api.router.afterEach(to => {
+      collect(to.fullPath, id)
+    })
+  }
 })
