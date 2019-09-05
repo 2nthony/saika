@@ -2,11 +2,15 @@
   <div class="Sidebar" :class="{ isShown: $store.state.docsStore.showSidebar }">
     <InjectedComponents position="sidebar:start" />
 
-    <HeaderNav class="mobile-header-nav" v-if="nav" :nav="nav" />
+    <HeaderNav
+      class="mobile-header-nav"
+      v-if="$store.getters.config.nav"
+      :nav="$store.getters.config.nav"
+    />
 
     <div class="SidebarItems">
       <SidebarItem
-        v-for="(item, index) in posts"
+        v-for="(item, index) in $store.getters.posts"
         :key="index"
         :item="item"
         :is-open="openIndex === index"
@@ -30,16 +34,8 @@ export default {
   },
 
   computed: {
-    nav() {
-      return this.$store.getters.config.nav
-    },
-
-    posts() {
-      return this.$store.getters.posts
-    },
-
     openIndex() {
-      return this.posts.findIndex(item =>
+      return this.$store.getters.posts.findIndex(item =>
         getChildren(item).some(child => child.link === this.$route.path)
       )
     }
