@@ -93,7 +93,7 @@ export default {
 
   methods: {
     go(i) {
-      if (this.showSuggestions) {
+      if (this.showSuggestions && this.focusIndex > -1) {
         this.$router.push(this.suggestions[i].link)
         this.query = ''
         this.focusIndex = 0
