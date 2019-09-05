@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/evillt/saika/compare/@saika/theme-docs@2.2.0...@saika/theme-docs@2.3.0) (2019-09-05)
+
+### Bug Fixes
+
+- **\$theme-docs:** do nothing when item not focused ([8b344e1](https://github.com/evillt/saika/commit/8b344e1))
+
+### Features
+
+- **\$docs:** support toggle sidebar item ([#32](https://github.com/evillt/saika/issues/32)) ([bd3a92e](https://github.com/evillt/saika/commit/bd3a92e))
+
 # [2.2.0](https://github.com/evillt/saika/compare/@saika/theme-docs@2.1.4...@saika/theme-docs@2.2.0) (2019-09-04)
 
 ### Features
