@@ -1,12 +1,11 @@
 <template>
   <div class="search-box">
     <input
-      @input="query = $event.target.value"
+      v-model="query"
       aria-label="search"
       aria-autocomplete="list"
       placeholder="Search..."
       aria-placeholder="Search..."
-      :value="query"
       :class="{ focused }"
       autocomplete="off"
       spellcheck="false"
