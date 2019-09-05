@@ -5,7 +5,12 @@
     <HeaderNav class="mobile-header-nav" v-if="nav" :nav="nav" />
 
     <div class="SidebarItems">
-      <SidebarItem v-for="(item, index) in posts" :key="index" :item="item" />
+      <SidebarItem
+        v-for="(item, index) in posts"
+        :key="index"
+        :item="item"
+        :is-open="openIndex === index"
+      />
     </div>
 
     <InjectedComponents position="sidebar:end" />
@@ -31,8 +36,18 @@ export default {
 
     posts() {
       return this.$store.getters.posts
+    },
+
+    openIndex() {
+      return this.posts.findIndex(item =>
+        getChildren(item).some(child => child.link === this.$route.path)
+      )
     }
   }
+}
+
+function getChildren(item) {
+  return item.children || item.links || []
 }
 </script>
 

@@ -1,8 +1,9 @@
 <template>
   <div class="SidebarItem">
     <div class="link-category" v-if="item.title && children">
-      <div class="link-title text-overflow-ellipsis">
+      <div class="link-title text-overflow-ellipsis" @click="open = !open">
         <svg
+          :class="{ open }"
           width="6"
           height="10"
           viewBox="0 0 6 10"
@@ -16,7 +17,7 @@
           ></path></svg
         >{{ item.title }}
       </div>
-      <div class="link-posts">
+      <div class="link-posts" :class="{ open }">
         <div class="link" v-for="(link, index) in children" :key="index">
           <SaikaLink class="link-item" :to="link.link">{{
             link.title
@@ -47,12 +48,19 @@ export default {
       type: Object,
       required: true,
       default: () => ({})
-    }
+    },
+    isOpen: Boolean
   },
 
   computed: {
     children() {
       return this.item.children || this.item.links
+    }
+  },
+
+  data() {
+    return {
+      open: this.isOpen
     }
   }
 }
@@ -64,10 +72,26 @@ export default {
 }
 
 .link-title {
+  cursor: pointer;
+  margin: 18px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   & svg {
     margin-left: 2px;
     margin-right: 16px;
-    transform: rotate(90deg);
+    transform: rotate(0);
+    transition: all 0.15s ease;
+
+    &.open {
+      transform: rotate(90deg);
+    }
   }
 }
 
@@ -75,6 +99,11 @@ export default {
   padding-left: 19px;
   margin-left: 4px;
   border-left: 1px solid var(--border-color);
+  display: none;
+
+  &.open {
+    display: block;
+  }
 }
 
 .link-item {
