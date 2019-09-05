@@ -1,6 +1,6 @@
 # Introduction to Saika
 
-To create a elegant website to display markdown content.
+To represent markdown content with elegant UI.
 
 ## What is Saika
 
@@ -36,10 +36,10 @@ The `index.html` looks like:
 ```html {highlight: [6, '9-21']}
 <!DOCTYPE html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Site</title>
-  <link rel="stylesheet" href="https://unpkg.com/saika/dist/saika.css">
+  <link rel="stylesheet" href="https://unpkg.com/saika/dist/saika.css" />
 </head>
 <body>
   <div id="saika"></div>
