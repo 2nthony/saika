@@ -67,6 +67,8 @@ Then you can serve this folder as a static website on your machine using:
 - Golang: `caddy`
 - ...or whatever static web server
 
+Next, you may want to use [options](/reference/options) or other theme(like [theme docs](/theme/docs)) to customise the website.
+
 ## Browser Compatibility
 
 Saika supports all ever-green browsers, i.e. No IE support!
