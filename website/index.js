@@ -1,6 +1,7 @@
 import Saika from '../core/src'
 import saikaThemeDocs from '../themes/docs/src'
 import googleAnalytics from '../plugins/google-analytics/src'
+import PkgVersion from './components/PkgVersion.vue'
 
 new Saika({
   target: 'app',
@@ -151,3 +152,5 @@ Vue.component('ReverseText', {
     }
   }
 })
+
+Vue.component(PkgVersion.name, PkgVersion)
