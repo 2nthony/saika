@@ -17,7 +17,7 @@ export default {
   },
 
   mounted() {
-    fetch(`https://unpkg.com/${this.name}/package.json`)
+    fetch(`https://cdn.jsdelivr.net/npm/${this.name}/package.json`)
       .then(res => res.json())
       .then(res => {
         this.version = res.version
