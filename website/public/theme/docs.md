@@ -1,4 +1,4 @@
-# Saika Theme Docs
+# Saika Theme Docs <PkgVersion name="@saika/theme-docs" />
 
 ## Usage
 

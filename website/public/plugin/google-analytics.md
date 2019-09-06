@@ -1,4 +1,4 @@
-# Saika Google Analytics
+# Saika Google Analytics <PkgVersion name="@saika/google-analytics" />
 
 Using Google Analytics in Saika.
 

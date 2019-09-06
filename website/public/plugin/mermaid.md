@@ -1,4 +1,4 @@
-# Saika Mermaid
+# Saika Mermaid <PkgVersion name="@saika/mermaid" />
 
 Using Mermaid in Saika.
 
@@ -16,9 +16,7 @@ This plugin is exposed as `window.saikaMermaid`:
 
 ```js
 new Saika({
-  plugins: [
-    saikaMermaid()
-  ]
+  plugins: [saikaMermaid()]
 })
 ```
 

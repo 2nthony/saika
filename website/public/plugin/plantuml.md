@@ -1,4 +1,4 @@
-# Saika PlantUML
+# Saika PlantUML <PkgVersion name="@saika/plantuml" />
 
 Using PlantUML in Saika.
 
@@ -15,9 +15,7 @@ This plugin is exposed as `window.saikaPlantUML`:
 
 ```js
 new Saika({
-  plugins: [
-    saikaPlantUML()
-  ]
+  plugins: [saikaPlantUML()]
 })
 ```
 

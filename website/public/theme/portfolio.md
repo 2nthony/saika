@@ -1,11 +1,14 @@
-# Saika Theme Portfolio
+# Saika Theme Portfolio <PkgVersion name="@saika/theme-portfolio" />
 
 ## Usage
 
 Load this plugin via `<link>` and `<script>` tag:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@saika/theme-portfolio/dist/index.css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@saika/theme-portfolio/dist/index.css"
+/>
 
 <!-- Load this plugin after saika.js -->
 <script src="https://unpkg.com/@saika/theme-portfolio"></script>

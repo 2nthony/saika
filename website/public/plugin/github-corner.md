@@ -1,4 +1,6 @@
-# Saika GitHub Corner <Badge content="Saika 2.6.0+" />
+# Saika GitHub Corner <PkgVersion name="@saika/github-corner" />
+
+<Note fill>Requires Saika version 2.6.0+</Note>
 
 Using GitHub Corner in Saika.
 
