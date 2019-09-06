@@ -1,14 +1,8 @@
-# Saika
+# Saika [![NPM version](https://badgen.net/npm/v/saika)](https://npmjs.com/package/saika) [![CircleCI](https://badgen.net/circleci/github/evillt/saika)](https://circleci.com/gh/evillt/saika/tree/master) [![lerna](https://badgen.net/badge/maintained%20with/lerna/cc00ff)](https://lerna.js.org)
 
 > Effortless info-site, done right.
 
 Please consider starring the project to show your ❤️ and support.
-
-[![NPM version](https://badgen.net/npm/v/saika?icon=npm)](https://npmjs.com/package/saika)
-[![NPM download](https://badgen.net/npm/dm/saika)](https://npmjs.com/package/saika)
-[![CircleCI](https://badgen.net/circleci/github/evillt/saika?icon=circleci)](https://circleci.com/gh/evillt/saika/tree/master)
-[![License](https://badgen.net/npm/license/saika)](./LICENSE)
-[![donate](https://badgen.net/badge/support%20me/donate/f2a)](https://donate.evila.me)
 
 ## Features
 
