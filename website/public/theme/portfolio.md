@@ -1,5 +1,7 @@
 # Saika Theme Portfolio <PkgVersion name="@saika/theme-portfolio" />
 
+You can see the [demo](https://saika-theme-portfolio-demo.saika.dev).
+
 ## Usage
 
 Load this plugin via `<link>` and `<script>` tag:
