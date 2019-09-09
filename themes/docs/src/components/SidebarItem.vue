@@ -1,7 +1,7 @@
 <template>
   <div class="SidebarItem">
     <div class="link-category" v-if="item.title && children">
-      <div class="link-title text-overflow-ellipsis" @click="open = !open">
+      <div class="link-title text-overflow-ellipsis" @click="$emit('toggle')">
         <svg
           :class="{ open }"
           width="6"
@@ -49,18 +49,12 @@ export default {
       required: true,
       default: () => ({})
     },
-    isOpen: Boolean
+    open: Boolean
   },
 
   computed: {
     children() {
       return this.item.children || this.item.links
-    }
-  },
-
-  data() {
-    return {
-      open: this.isOpen
     }
   }
 }

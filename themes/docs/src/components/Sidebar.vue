@@ -13,7 +13,8 @@
         v-for="(item, index) in $store.getters.posts"
         :key="index"
         :item="item"
-        :is-open="openIndex === index"
+        :open="openedItems.indexOf(index) !== -1"
+        @toggle="toggleItem(index)"
       />
     </div>
 
@@ -33,11 +34,40 @@ export default {
     HeaderNav
   },
 
-  computed: {
-    openIndex() {
+  watch: {
+    '$route.path': {
+      handler(path) {
+        this.openItem(this.getCurrentIndex(path))
+      },
+      immediate: true
+    }
+  },
+
+  data() {
+    return {
+      openedItems: []
+    }
+  },
+
+  methods: {
+    getCurrentIndex(path) {
       return this.$store.getters.posts.findIndex(item =>
-        getChildren(item).some(child => child.link === this.$route.path)
+        getChildren(item).some(child => child.link === path)
       )
+    },
+
+    openItem(i) {
+      if (this.openedItems.indexOf(i) === -1) {
+        this.openedItems.push(i)
+      }
+    },
+
+    toggleItem(i) {
+      if (this.openedItems.indexOf(i) === -1) {
+        this.openedItems.push(i)
+      } else {
+        this.openedItems = this.openedItems.filter(v => v !== i)
+      }
     }
   }
 }
