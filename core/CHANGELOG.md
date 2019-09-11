@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.3](https://github.com/evillt/saika/compare/saika@2.8.2...saika@2.8.3) (2019-09-11)
+
+**Note:** Version bump only for package saika
+
 ## [2.8.2](https://github.com/evillt/saika/compare/saika@2.8.1...saika@2.8.2) (2019-09-05)
 
 **Note:** Version bump only for package saika
