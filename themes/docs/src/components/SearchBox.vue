@@ -1,5 +1,19 @@
 <template>
   <div class="search-box">
+    <span class="magnifier" :class="{ focused }" @click="handleMagnifier">
+      <svg
+        width="13"
+        height="13"
+        viewBox="0 0 13 13"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+      >
+        <path
+          d="M8.87 8.16l3.25 3.25-.7.71-3.26-3.25a5 5 0 1 1 .7-.7zM5 9a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
+        ></path>
+      </svg>
+    </span>
+
     <input
       v-model="query"
       aria-label="search"
@@ -9,10 +23,8 @@
       :class="{ focused }"
       autocomplete="off"
       spellcheck="false"
-      @focus="
-        focused = true
-        focusIndex = 0
-      "
+      ref="search"
+      @focus="onFocus"
       @blur="focused = false"
       @keyup.enter="go(focusIndex)"
       @keyup.up="onUp"
@@ -97,6 +109,18 @@ export default {
       }
     },
 
+    handleMagnifier() {
+      this.onFocus()
+      this.$nextTick(() => {
+        this.$refs.search.focus()
+      })
+    },
+
+    onFocus() {
+      this.focused = true
+      this.focusIndex = 0
+    },
+
     onUp() {
       if (this.showSuggestions) {
         if (this.focusIndex > 0) {
@@ -132,6 +156,10 @@ export default {
 .search-box {
   display: inline-block;
   position: relative;
+
+  & .magnifier {
+    display: none;
+  }
 
   & input {
     cursor: text;
@@ -197,9 +225,22 @@ export default {
     }
   }
 
-  /* TODO fit-up mobile side */
   @media (max-width: 768px) {
-    display: none;
+    & .magnifier {
+      display: block;
+
+      &.focused {
+        display: none;
+      }
+    }
+
+    & input {
+      display: none;
+
+      &.focused {
+        display: block;
+      }
+    }
   }
 }
 </style>
