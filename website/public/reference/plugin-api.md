@@ -21,4 +21,4 @@ Extending Saika instance.
 - Type: `(api: SaikaInstance) => boolean`
 - Required: `false`
 
-Condition to enable plugin.
+Whether to enable plugin.
