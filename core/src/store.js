@@ -64,11 +64,9 @@ const store = new Vuex.Store({
         getFileUrl(getters.config.editLink.baseUrl, filename)
 
       await Promise.all([
-        fetch(post.file, getters.config.fetchOptions)
-          .then(res => (res.ok && res.text()) || '')
-          .then(res => {
-            post.content = res
-          }),
+        dispatch('fetch', post.file).then(res => {
+          post.content = res
+        }),
         dispatch('fetchPrismLanguages')
       ])
 
@@ -87,6 +85,12 @@ const store = new Vuex.Store({
       commit('SET_POST', post)
       commit('SET_ENV', env)
       commit('SET_FETCHING', false)
+    },
+
+    fetch({ getters }, url) {
+      return fetch(url, getters.config.fetchOptions).then(
+        res => (res.ok && res.text()) || ''
+      )
     },
 
     fetchPrismLanguages({ getters }) {
