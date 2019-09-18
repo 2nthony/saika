@@ -128,5 +128,6 @@ Options for [window.fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetc
 ## prefetchMarkdown <Badge content="Saika 2.9.0+" />
 
 - Type: `boolean`
+- Default: `true`
 
 Prefetch markdown files using `<link rel=prefetch>`.
