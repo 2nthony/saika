@@ -243,31 +243,6 @@ function zip_deflate_start(level) {
     zip_flag_buf = new Array(parseInt(zip_LIT_BUFSIZE / 8));
 }
 
-function zip_deflate_end() {
-    zip_free_queue = zip_qhead = zip_qtail = null;
-    zip_outbuf = null;
-    zip_window = null;
-    zip_d_buf = null;
-    zip_l_buf = null;
-    zip_prev = null;
-    zip_dyn_ltree = null;
-    zip_dyn_dtree = null;
-    zip_static_ltree = null;
-    zip_static_dtree = null;
-    zip_bl_tree = null;
-    zip_l_desc = null;
-    zip_d_desc = null;
-    zip_bl_desc = null;
-    zip_bl_count = null;
-    zip_heap = null;
-    zip_depth = null;
-    zip_length_code = null;
-    zip_dist_code = null;
-    zip_base_length = null;
-    zip_base_dist = null;
-    zip_flag_buf = null;
-}
-
 function zip_reuse_queue(p) {
     p.next = zip_free_queue;
     zip_free_queue = p;
