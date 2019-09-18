@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/evillt/saika/compare/saika@2.8.3...saika@2.9.0) (2019-09-18)
+
+### Features
+
+- **\$core:** prefetch markdown files ([#37](https://github.com/evillt/saika/issues/37)) ([f984d31](https://github.com/evillt/saika/commit/f984d31))
+
+### Performance Improvements
+
+- use jsdelivr for prism languages ([d1ab525](https://github.com/evillt/saika/commit/d1ab525))
+
 ## [2.8.3](https://github.com/evillt/saika/compare/saika@2.8.2...saika@2.8.3) (2019-09-11)
 
 **Note:** Version bump only for package saika
