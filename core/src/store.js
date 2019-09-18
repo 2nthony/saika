@@ -145,6 +145,7 @@ const store = new Vuex.Store({
           // baseUrl: '',
           // text: 'Edit this page'
         },
+        prefetchMarkdown: true,
         ...originConfig
       }
     },

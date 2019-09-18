@@ -124,3 +124,9 @@ All [RouterOptions](https://router.vuejs.org/api/#router-construction-options) a
 - Type: `object`
 
 Options for [window.fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch). We use this to fetch markdown files.
+
+## prefetchMarkdown <Badge content="Saika 2.9.0+" />
+
+- Type: `boolean`
+
+Prefetch markdown files using `<link rel=prefetch>`.
