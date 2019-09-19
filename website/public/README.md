@@ -39,11 +39,14 @@ The `index.html` looks like:
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Site</title>
-  <link rel="stylesheet" href="https://unpkg.com/saika/dist/saika.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/saika/dist/saika.css"
+  />
 </head>
 <body>
   <div id="saika"></div>
-  <script src="https://unpkg.com/saika"></script>
+  <script src="https://cdn.jsdelivr.net/npm/saika"></script>
   <script>
     new Saika({
       target: '#saika',

@@ -10,7 +10,7 @@ Load this plugin via `<script>` tag:
 
 ```html
 <!-- Load this plugin after saika.js -->
-<script src="https://unpkg.com/@saika/github-corner"></script>
+<script src="https://cdn.jsdelivr.net/npm/@saika/github-corner"></script>
 ```
 
 This plugin is exposed as `window.saikaGithubCorner`:

@@ -9,11 +9,11 @@ Load this plugin via `<link>` and `<script>` tag:
 ```html
 <link
   rel="stylesheet"
-  href="https://unpkg.com/@saika/theme-portfolio/dist/index.css"
+  href="https://cdn.jsdelivr.net/npm/@saika/theme-portfolio/dist/index.css"
 />
 
 <!-- Load this plugin after saika.js -->
-<script src="https://unpkg.com/@saika/theme-portfolio"></script>
+<script src="https://cdn.jsdelivr.net/npm/@saika/theme-portfolio"></script>
 ```
 
 This plugin is exposed as `window.saikaThemePortfolio`:

@@ -8,7 +8,7 @@ Load this plugin via `<script>` tag:
 
 ```html
 <!-- Load this plugin after saika.js -->
-<script src="https://unpkg.com/@saika/google-analytics"></script>
+<script src="https://cdn.jsdelivr.net/npm/@saika/google-analytics"></script>
 ```
 
 This plugin is exposed as `window.saikaGoogleAnalytics`:

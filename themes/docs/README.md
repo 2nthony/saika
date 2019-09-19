@@ -3,19 +3,20 @@
 We provide this plugin to let saika become a documentation site.
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@saika/theme-docs/dist/index.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@saika/theme-docs/dist/index.css"
+/>
 
 <!-- Load this plugin after saika.js -->
-<script src="https://unpkg.com/@saika/theme-docs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@saika/theme-docs"></script>
 ```
 
 This plugin exposed as `window.saikaThemeDocs`:
 
 ```js
 new Saika({
-  plugins: [
-    saikaThemeDocs
-  ]
+  plugins: [saikaThemeDocs]
 })
 ```
 

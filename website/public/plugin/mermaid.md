@@ -8,8 +8,8 @@ Load this plugin via `<script>` tag:
 
 ```html
 <!-- Load this plugin after saika.js -->
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-<script src="https://unpkg.com/@saika/mermaid"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@saika/mermaid"></script>
 ```
 
 This plugin is exposed as `window.saikaMermaid`:

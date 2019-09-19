@@ -87,7 +87,7 @@ The text of edit link.
 
 - Type: `Array<string>`
 
-An array of language names of highlight. Check out [Prism.js](https://unpkg.com/prismjs/components/) for all supported language names(without the `prism-` prefix).
+An array of language names of highlight. Check out [Prism.js](https://cdn.jsdelivr.net/npm/prismjs/components/) for all supported language names(without the `prism-` prefix).
 
 Example: `highlight: ['typescript', 'dart']`
 
