@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/evillt/saika/compare/@saika/theme-docs@2.4.0...@saika/theme-docs@2.5.0) (2019-09-19)
+
+### Features
+
+- **\$docs:** add hotkeys support for `searchBox` ([#38](https://github.com/evillt/saika/issues/38)) ([9c41a19](https://github.com/evillt/saika/commit/9c41a19))
+
 # [2.4.0](https://github.com/evillt/saika/compare/@saika/theme-docs@2.3.1...@saika/theme-docs@2.4.0) (2019-09-11)
 
 ### Features
