@@ -66,25 +66,24 @@ interface MultipleItem {
 
 ### searchBox <Badge content="Theme Docs 2.2.0+" />
 
-- Type: `SearchBox`
+- Type: `boolean | object`
 - Default: `Default`
 
 Search box for posts items, set `false` to disable search box.
 
-```ts
-type SearchBox = boolean | SearchBox
+#### searchBox.max
 
-interface SearchBox {
-  /**
-   * Max search suggestions
-   */
-  max: number
-}
+- Type: `number`
+- Default: `5`
 
-const Default = {
-  max: 5
-}
-```
+Max search suggestions.
+
+#### searchBox.hotKeys <Badge content="Theme Docs 2.5.0+" />
+
+- Type: `Array<string>`
+- Default: `['s', '/']`
+
+Configure the hotkeys which when pressed will focus the search box. Set to an empty array to disable.
 
 ## Comparisons
 

@@ -64,6 +64,15 @@ export default {
   },
 
   computed: {
+    searchBox() {
+      const SEARCH_BOX_DEFAULT = {
+        max: 5,
+        hotKeys: ['s', '/']
+      }
+
+      return Object.assign(SEARCH_BOX_DEFAULT, this.$config.searchBox)
+    },
+
     showSuggestions() {
       return this.focused && this.suggestions && this.suggestions.length
     },
@@ -74,22 +83,14 @@ export default {
         return
       }
 
-      const SEARCH_BOX_DEFAULT = {
-        max: 5
-      }
       const { postsLinks } = this.$store.getters
-
-      const searchBox =
-        typeof this.$config.searchBox === 'object'
-          ? this.$config.searchBox
-          : SEARCH_BOX_DEFAULT
 
       const matches = item =>
         item.title && item.title.toLowerCase().indexOf(query) > -1
 
       const res = []
       for (let i = 0; i < postsLinks.length; i++) {
-        if (res.length >= searchBox.max) break
+        if (res.length >= this.searchBox.max) break
 
         if (matches(postsLinks[i])) {
           res.push(postsLinks[i])
@@ -98,6 +99,14 @@ export default {
 
       return res
     }
+  },
+
+  mounted() {
+    document.addEventListener('keydown', this.onHotKey)
+  },
+
+  beforeDestroy() {
+    document.removeEventListener('keydown', this.onHotKey)
   },
 
   methods: {
@@ -138,6 +147,16 @@ export default {
         } else {
           this.focusIndex = 0
         }
+      }
+    },
+
+    onHotKey(event) {
+      if (
+        event.srcElement === document.body &&
+        this.searchBox.hotKeys.includes(event.key)
+      ) {
+        event.preventDefault()
+        this.$refs.search.focus()
       }
     },
 
