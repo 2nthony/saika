@@ -1,6 +1,6 @@
 # Saika <PkgVersion name="saika" />
 
-To represent markdown content with elegant UI.
+To represent **technical** markdown content with elegant UI.
 
 ## What is Saika
 
