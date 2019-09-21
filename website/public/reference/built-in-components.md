@@ -119,3 +119,31 @@ Example:
 - Feature 3 <Badge type="warning">Warning</Badge>
 - Feature 4 <Badge type="error">Error</Badge>
 - Feature 5 <Badge color="magenta">Custom Color</Badge>
+
+## Snippet <Badge content="Saika 2.10.0+" />
+
+Display a snippet of copyable code for the command line
+
+| Prop   | Type              | Default  | Description             |
+| ------ | ----------------- | -------- | ----------------------- |
+| text   | `string \| array` |          | The text                |
+| propmt | `boolean`         | `true`   | Display the `$` prefix  |
+| width  | `string`          | `'100%'` | Alias for `style.width` |
+
+Example:
+
+```markdown
+<Snippet text="npm install saika" />
+
+<!-- Multi line -->
+<Snippet :text="['npm install saika', 'yarn add saika']" />
+
+<!-- No prompt -->
+<Snippet text="npm install saika" :prompt="false" />
+```
+
+<Snippet text="npm install saika" />
+
+<Snippet :text="['npm install saika', 'yarn add saika']" />
+
+<Snippet text="npm install saika" :prompt="false" />
