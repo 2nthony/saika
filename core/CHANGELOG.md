@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/evillt/saika/compare/saika@2.9.0...saika@2.10.0) (2019-09-21)
+
+### Features
+
+- **\$core:** new built-in component `snippet` ([#39](https://github.com/evillt/saika/issues/39)) ([9ae1e1d](https://github.com/evillt/saika/commit/9ae1e1d))
+
 # [2.9.0](https://github.com/evillt/saika/compare/saika@2.8.3...saika@2.9.0) (2019-09-18)
 
 ### Features
