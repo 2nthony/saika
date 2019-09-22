@@ -12028,13 +12028,6 @@ void-elements@^2.0.1:
   resolved "https://registry.npmjs.org/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
   integrity sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
 
-vue-content-loader@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.npmjs.org/vue-content-loader/-/vue-content-loader-0.2.2.tgz#c093b656edac3f2a2e3215eaa198ba1852ad6b7b"
-  integrity sha512-8jcb0dJFiVAz7EPwpQjOd/GnswUiSDeKihEABkq/iAYxAI2MHSS7+VWlRblQDH3D1rm3Lewt7fDJoOpJKbYHjw==
-  dependencies:
-    babel-helper-vue-jsx-merge-props "^2.0.3"
-
 vue-eslint-parser@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-5.0.0.tgz#00f4e4da94ec974b821a26ff0ed0f7a78402b8a1"
