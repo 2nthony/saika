@@ -1,12 +1,12 @@
 <template>
   <div v-if="isFetchingFile" class="Content">
-    <ContentLoader :height="160" :width="400" :speed="2">
-      <rect x="0" y="5" rx="4" ry="4" width="117" height="6.4" />
-      <rect x="0" y="25" rx="3" ry="3" width="85" height="6.4" />
-      <rect x="0" y="60" rx="3" ry="3" width="350" height="6.4" />
-      <rect x="0" y="80" rx="3" ry="3" width="380" height="6.4" />
-      <rect x="0" y="100" rx="3" ry="3" width="201" height="6.4" />
-    </ContentLoader>
+    <svg viewBox="0 0 400 160" version="1.1" fill="#ecebeb">
+      <rect x="0" y="15" rx="3" ry="3" width="117" height="6.4" />
+      <rect x="0" y="45" rx="3" ry="3" width="85" height="6.4" />
+      <rect x="0" y="70" rx="3" ry="3" width="350" height="6.4" />
+      <rect x="0" y="90" rx="3" ry="3" width="380" height="6.4" />
+      <rect x="0" y="110" rx="3" ry="3" width="200" height="6.4" />
+    </svg>
   </div>
   <div v-else class="Content">
     <InjectedComponents position="banner" />
@@ -22,16 +22,11 @@
 
 <script>
 import jump from 'jump.js'
-import { ContentLoader } from 'vue-content-loader'
 import hooks from '../hooks'
 import NotFound from './NotFound.vue'
 
 export default {
   name: 'PostContent',
-
-  components: {
-    ContentLoader
-  },
 
   computed: {
     isFetchingFile() {
