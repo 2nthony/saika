@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.2](https://github.com/evillt/saika/compare/saika@2.10.1...saika@2.10.2) (2019-10-02)
+
+### Reverts
+
+- **\$core:** drop lazy loading for image ([#40](https://github.com/evillt/saika/issues/40)) ([2231da0](https://github.com/evillt/saika/commit/2231da0))
+
 ## [2.10.1](https://github.com/evillt/saika/compare/saika@2.10.0...saika@2.10.1) (2019-09-22)
 
 **Note:** Version bump only for package saika
