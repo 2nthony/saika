@@ -45,7 +45,7 @@
 
 .open {
   & .top {
-    transform: rotate(45deg);
+    transform: translateY(1px) rotate(45deg);
   }
   & .bottom {
     transform: rotate(-45deg);
