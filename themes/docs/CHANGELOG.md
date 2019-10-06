@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.1](https://github.com/evillt/saika/compare/@saika/theme-docs@2.5.0...@saika/theme-docs@2.5.1) (2019-10-06)
+
+### Bug Fixes
+
+- **\$docs:** toggle button ui ([07a1038](https://github.com/evillt/saika/commit/07a1038))
+
 # [2.5.0](https://github.com/evillt/saika/compare/@saika/theme-docs@2.4.0...@saika/theme-docs@2.5.0) (2019-09-19)
 
 ### Features
