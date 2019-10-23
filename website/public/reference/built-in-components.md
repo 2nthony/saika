@@ -18,9 +18,9 @@ Example:
 
 ```markdown
 <ImageZoom
-url="https://i.loli.net/2019/10/23/aTkzcmJHELIUZjq.jpg""
-width="300"
-border
+  url="https://i.loli.net/2019/10/23/aTkzcmJHELIUZjq.jpg"
+  width="300"
+  border
 />
 ```
 
