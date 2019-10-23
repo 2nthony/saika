@@ -18,14 +18,14 @@ Example:
 
 ```markdown
 <ImageZoom
-  url="https://i.loli.net/2019/08/28/V3MNQ2L7tba4qKe.jpg"
-  width="300"
-  border
+url="https://i.loli.net/2019/10/23/aTkzcmJHELIUZjq.jpg""
+width="300"
+border
 />
 ```
 
 <ImageZoom
-  url="https://i.loli.net/2019/08/28/V3MNQ2L7tba4qKe.jpg"
+  url="https://i.loli.net/2019/10/23/aTkzcmJHELIUZjq.jpg"
   width="300"
   border
 />
