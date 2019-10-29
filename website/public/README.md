@@ -10,16 +10,16 @@ It's totally runtime-driven so there's no server-side components involved which 
 
 ## How does it work
 
-In short: URL is the API.
-
-We fetch and render corresponding markdown file for the URL you visit:
+We fetch and render corresponding markdown file for the `route` you visit:
 
 ```
 /         => /README.md
-/foo      => /foo.md
-/foo/     => /foo/README.md
-/foo/bar  => /foo/bar.md
+/bar      => /bar.md
+/bar/     => /bar/README.md
+/bar/foo  => /bar/foo.md
 ```
+
+Which mean is when you visit your site as `my-site.com/#/bar`, then will fetch `my-site.com/bar.md` and render `bar.md`'s content.
 
 ## Quick Start
 
