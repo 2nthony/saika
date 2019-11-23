@@ -4,7 +4,7 @@ Using Mermaid in Saika.
 
 ## Usage
 
-Load this plugin via `<script>` tag:
+Load these plugin via `<script>` tag:
 
 ```html
 <!-- Load this plugin after saika.js -->
