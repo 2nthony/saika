@@ -31,7 +31,7 @@ Internal links will converted to `<router-link>` for SPA-style navigation.
 **Output**:
 
 - [Home](/) <!-- Send the user to homepage -->
-- [Plugin](/guide/plugin) <!-- Send the user to the specified page -->
+- [Plugin](/plugin/introduction) <!-- Send the user to the specified page -->
 - [Check out the `posts` option](/reference/options#posts) <!-- Send the user to the specified page with anchor -->
 
 ### External Links
