@@ -33,7 +33,7 @@ Let say you have following files in `./my-site` folder:
 
 The `index.html` looks like:
 
-```html {highlight: ['6-9', '12-24']}
+```html {highlight: ['6-9', '12-18']}
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8" />
@@ -49,13 +49,7 @@ The `index.html` looks like:
   <script src="https://cdn.jsdelivr.net/npm/saika"></script>
   <script>
     new Saika({
-      target: '#saika',
-      posts: [
-        {
-          title: 'MyPost',
-          link: '/'
-        }
-      ]
+      target: '#saika'
     })
   </script>
 </body>
