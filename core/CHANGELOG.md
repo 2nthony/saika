@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.11.0](https://github.com/evillt/saika/compare/saika@2.10.2...saika@2.11.0) (2019-12-06)
+
+### Features
+
+- **\$core:** add copy code button ([#42](https://github.com/evillt/saika/issues/42)) ([d052c7c](https://github.com/evillt/saika/commit/d052c7c))
+
 ## [2.10.2](https://github.com/evillt/saika/compare/saika@2.10.1...saika@2.10.2) (2019-10-02)
 
 ### Reverts
