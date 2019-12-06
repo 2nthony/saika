@@ -1,9 +1,14 @@
 import marked from '../../utils/marked'
 import parseCodeOptions from '../../utils/parseCodeOptions'
+import CopyCodeButton from './CopyCodeButton.vue'
 
 export default {
   name: 'marked-renderer-code',
   extend: api => {
+    api.use(({ Vue }) => {
+      Vue.use(CopyCodeButton)
+    })
+
     api.hook('extendMarkedRenderer', renderer => {
       // `v-pre` Disable template interpolation in code
       renderer.codespan = text =>
@@ -46,6 +51,10 @@ export default {
             })
             .join('')
           res += `<div class="code-mask">${codeMask}</div>`
+        }
+
+        if (lang) {
+          res += `<CopyCodeButton code="${encodeURI(code)}" />`
         }
 
         return `<div data-lang="${lang || ''}" class="pre-wrapper">${res}</div>`
