@@ -16,8 +16,7 @@
 </template>
 
 <script>
-import copy from '@evillt/copy'
-import { createToast } from '@evillt/toast'
+import copy from '../utils/copy'
 import highlight from '../utils/highlight'
 import Copy from './icons/Copy.vue'
 
@@ -52,13 +51,7 @@ export default {
 
   methods: {
     handleCopy() {
-      const success = copy(this.content.join('\n'))
-      if (success) {
-        createToast('Copied to clipboard!', {
-          type: 'success',
-          timeout: 4000
-        })
-      }
+      copy(this.content.join('\n'))
     },
     highlightContent(text) {
       return {
