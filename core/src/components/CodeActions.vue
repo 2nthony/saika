@@ -22,10 +22,6 @@ const Component = {
     )
   },
 
-  components: {
-    Copy
-  },
-
   props: {
     code: String
   }
