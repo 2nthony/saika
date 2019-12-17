@@ -1,12 +1,12 @@
 import marked from '../../utils/marked'
 import parseCodeOptions from '../../utils/parseCodeOptions'
-import CopyCodeButton from './CopyCodeButton.vue'
+import CodeActions from '../../components/CodeActions.vue'
 
 export default {
   name: 'marked-renderer-code',
   extend: api => {
     api.use(({ Vue }) => {
-      Vue.use(CopyCodeButton)
+      Vue.use(CodeActions)
     })
 
     api.hook('extendMarkedRenderer', renderer => {
@@ -54,7 +54,7 @@ export default {
         }
 
         if (lang) {
-          res += `<CopyCodeButton code="${encodeURI(code)}" />`
+          res += `<CodeActions code="${encodeURI(code)}" />`
         }
 
         return `<div data-lang="${lang || ''}" class="pre-wrapper">${res}</div>`

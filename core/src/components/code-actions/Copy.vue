@@ -1,14 +1,14 @@
 <template>
-  <div class="CopyCodeButton" @click="handleCopy" title="Copy code">
+  <div class="copy-code-button" @click="handleCopy" title="Copy code">
     <Copy fill="white" stroke="#999" width="18" height="18" />
   </div>
 </template>
 
 <script>
-import Copy from '../../components/icons/Copy.vue'
+import Copy from '../icons/Copy.vue'
 import copy from '../../utils/copy'
 
-const CopyCodeButton = {
+export default {
   name: 'CopyCodeButton',
 
   components: {
@@ -25,21 +25,10 @@ const CopyCodeButton = {
     }
   }
 }
-
-CopyCodeButton.install = Vue => {
-  Vue.component(CopyCodeButton.name, CopyCodeButton)
-}
-
-export default CopyCodeButton
 </script>
 
 <style scoped>
-.CopyCodeButton {
-  display: flex;
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
+.copy-code-button {
   cursor: pointer;
-  z-index: 3;
 }
 </style>
