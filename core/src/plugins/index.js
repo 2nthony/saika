@@ -1,6 +1,7 @@
 import ThemeDefault from './theme-default'
 import bannerAndFooter from './banner-footer'
 import prefetchMarkdown from './prefetch-markdown'
+import htmlTitle from './html-title'
 
 // marked renderer
 import markedRendererHeading from './marked-renderer-heading'
@@ -12,6 +13,7 @@ export default [
   ThemeDefault,
   bannerAndFooter,
   prefetchMarkdown,
+  htmlTitle,
   markedRendererHeading,
   markedRendererLink,
   markedRendererCode,
