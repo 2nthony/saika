@@ -21,7 +21,8 @@ const store = new Vuex.Store({
     originConfig: {},
     isFetchingFile: true,
     post: {},
-    env: {}
+    env: {},
+    postLinkMeta: {}
   },
 
   mutations: {
@@ -39,6 +40,10 @@ const store = new Vuex.Store({
 
     SET_ENV(state, env) {
       state.env = env
+    },
+
+    SET_POSTLINKMETA(state, data) {
+      state.postLinkMeta = data
     }
   },
 
@@ -85,6 +90,8 @@ const store = new Vuex.Store({
       commit('SET_POST', post)
       commit('SET_ENV', env)
       commit('SET_FETCHING', false)
+
+      dispatch('currentPostLinkMeta', path)
     },
 
     fetch({ getters }, url) {
@@ -121,6 +128,23 @@ const store = new Vuex.Store({
           }),
         'prism-languages'
       )
+    },
+
+    currentPostLinkMeta({ commit, getters }, path) {
+      const { postsLinks } = getters
+
+      for (let i = 0; i < postsLinks.length; i++) {
+        if (path === postsLinks[i].link) {
+          commit(
+            'SET_POSTLINKMETA',
+            Object.assign(postsLinks[i], {
+              index: i
+            })
+          )
+
+          return
+        }
+      }
     }
   },
 
