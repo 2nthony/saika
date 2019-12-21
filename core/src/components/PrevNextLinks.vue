@@ -18,19 +18,12 @@ export default {
       return this.$store.getters.postsLinks
     },
 
-    currentLink() {
-      return this.$route.path
+    currentPostLinkMeta() {
+      return this.$store.state.postLinkMeta
     },
 
     currentLinkIndex() {
-      const { postsLinks } = this
-      for (let i = 0; i < postsLinks.length; i++) {
-        if (this.currentLink === postsLinks[i].link) {
-          return i
-        }
-      }
-
-      return false
+      return this.currentPostLinkMeta.index
     },
 
     prevLinkItem() {
