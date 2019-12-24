@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.1](https://github.com/evillt/saika/compare/saika@2.12.0...saika@2.12.1) (2019-12-24)
+
+### Bug Fixes
+
+- **\$core:** correct html title ([#47](https://github.com/evillt/saika/issues/47)) ([1f21182](https://github.com/evillt/saika/commit/1f21182))
+
 # [2.12.0](https://github.com/evillt/saika/compare/saika@2.11.0...saika@2.12.0) (2019-12-21)
 
 ### Features
