@@ -131,13 +131,14 @@ const store = new Vuex.Store({
     },
 
     currentPostLinkMeta({ commit, getters }, path) {
-      const { postsLinks } = getters
+      const { postsLinks, config } = getters
+      const links = postsLinks.concat(config.nav)
 
-      for (let i = 0; i < postsLinks.length; i++) {
-        if (path === postsLinks[i].link) {
+      for (let i = 0; i < links.length; i++) {
+        if (path === links[i].link) {
           commit(
             'SET_POSTLINKMETA',
-            Object.assign(postsLinks[i], {
+            Object.assign(links[i], {
               index: i
             })
           )
@@ -155,7 +156,7 @@ const store = new Vuex.Store({
         title: inBrowser && document.title,
         // logo: '',
         // posts: [],
-        // nav: [],
+        nav: [],
         sourcePath: '.',
         postMixins: [],
         highlight: [],
