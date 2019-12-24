@@ -9,7 +9,7 @@ export default {
 
       let preText = ''
 
-      if (postLinkMeta.link !== '/') {
+      if (postLinkMeta.link !== '/' && postLinkMeta.title) {
         preText = `${postLinkMeta.title} - `
       }
 
