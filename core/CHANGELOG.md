@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.2](https://github.com/evillt/saika/compare/saika@2.12.1...saika@2.12.2) (2020-06-21)
+
+### Bug Fixes
+
+- remove all about `toast` for now ([#52](https://github.com/evillt/saika/issues/52)) ([f7940e5](https://github.com/evillt/saika/commit/f7940e5))
+
 ## [2.12.1](https://github.com/evillt/saika/compare/saika@2.12.0...saika@2.12.1) (2019-12-24)
 
 ### Bug Fixes
