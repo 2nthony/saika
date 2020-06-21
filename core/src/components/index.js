@@ -6,7 +6,7 @@ import Note from './Note.vue'
 import ImageZoom from './ImageZoom.vue'
 import Badge from './Badge.vue'
 import EditLink from './EditLink.vue'
-import Snippet from './Snippet.vue'
+// import Snippet from './Snippet.vue'
 
 export default ({ Vue }) => {
   Vue.component(PostContent.name, PostContent)
@@ -17,5 +17,5 @@ export default ({ Vue }) => {
   Vue.component(ImageZoom.name, ImageZoom)
   Vue.component(Badge.name, Badge)
   Vue.component(EditLink.name, EditLink)
-  Vue.component(Snippet.name, Snippet)
+  // Vue.component(Snippet.name, Snippet)
 }

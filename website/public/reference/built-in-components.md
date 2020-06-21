@@ -120,6 +120,10 @@ Example:
 - Feature 4 <Badge type="error">Error</Badge>
 - Feature 5 <Badge color="magenta">Custom Color</Badge>
 
+---
+
+<details><summary>Disable for now</summary>
+
 ## Snippet <Badge content="Saika 2.10.0+" />
 
 Display a snippet of copyable code for the command line
@@ -142,8 +146,10 @@ Example:
 <Snippet text="npm install saika" :prompt="false" />
 ```
 
-<Snippet text="npm install saika" />
+<!-- <Snippet text="npm install saika" />
 
 <Snippet :text="['npm install saika', 'yarn add saika']" />
 
-<Snippet text="npm install saika" :prompt="false" />
+<Snippet text="npm install saika" :prompt="false" /> -->
+
+</details>
