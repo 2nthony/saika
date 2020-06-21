@@ -4,8 +4,8 @@ Saika's UI is inspired by these websites:
 
 - [**Docute**](https://docute.org)
 - [Vue.js](https://vuejs.org)
-- [ZEIT Design](https://zeit.co/design)
-- [ZEIT Docs](https://zeit.co/docs)
+- [Vercel Design](https://vercel.com/design)
+- [Vercel Docs](https://vercel.com/docs)
 
 Saika is a free and open-source project which is built upon many other open-source projects, such as:
 

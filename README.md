@@ -7,7 +7,7 @@ Please consider starring the project to show your ❤️ and support.
 ## Features
 
 - No build process, website generated on the fly.
-- An elegant UI inspired by zeit/design.
+- An elegant UI inspired by Vercel/design.
 - Extensible plugin system, plenty of official and community themes and plugins.
 - Powered by Markdown and Vue.
 
@@ -27,8 +27,8 @@ Please consider starring the project to show your ❤️ and support.
 
 - [**Docute**](https://docute.org)
 - [Vue.js](https://vuejs.org)
-- [ZEIT Design](https://zeit.co/design)
-- [ZEIT Docs](https://zeit.co/docs)
+- [Vercel Design](https://vercel.com/design)
+- [Vercel Docs](https://vercel.com/docs)
 
 ## Author
 
