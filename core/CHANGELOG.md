@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.3](https://github.com/evillt/saika/compare/saika@2.12.2...saika@2.12.3) (2020-07-25)
+
+### Bug Fixes
+
+- **\$core:** remove useless component ([#54](https://github.com/evillt/saika/issues/54)) ([2e0ddef](https://github.com/evillt/saika/commit/2e0ddef))
+
 ## [2.12.2](https://github.com/evillt/saika/compare/saika@2.12.1...saika@2.12.2) (2020-06-21)
 
 ### Bug Fixes
