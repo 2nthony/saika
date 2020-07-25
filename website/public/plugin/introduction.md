@@ -11,9 +11,7 @@ const showAuthor = {
 }
 
 new Saika({
-  plugins: [
-    showAuthor
-  ]
+  plugins: [showAuthor]
 })
 ```
 
@@ -41,16 +39,14 @@ To accept options in your plugin, you can use a factory function:
 const myPlugin = opts => {
   return {
     name: 'my-plugin',
-    extend(api) {
+    extend: api => {
       // do something with `opts` and `api`
     }
   }
 }
 
 new Saika({
-  plugins: [
-    myPlugin({ name: 'oh-my-name' })
-  ]
+  plugins: [myPlugin({ name: 'oh-my-name' })]
 })
 ```
 
