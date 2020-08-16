@@ -26,6 +26,10 @@ a {
   text-decoration: none;
 }
 
+details > summary {
+  outline: none;
+}
+
 .Wrap {
   max-width: var(--page-max-width);
   margin: 0 auto;
