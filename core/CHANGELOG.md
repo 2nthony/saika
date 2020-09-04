@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.5](https://github.com/evillt/saika/compare/saika@2.12.4...saika@2.12.5) (2020-09-04)
+
+### Bug Fixes
+
+- **store:** set empty`{}` to `state.postLinkMeta` ([#60](https://github.com/evillt/saika/issues/60)) ([cacea7f](https://github.com/evillt/saika/commit/cacea7f))
+
 ## [2.12.4](https://github.com/evillt/saika/compare/saika@2.12.3...saika@2.12.4) (2020-08-16)
 
 **Note:** Version bump only for package saika
