@@ -136,16 +136,13 @@ const store = new Vuex.Store({
 
       for (let i = 0; i < links.length; i++) {
         if (path === links[i].link) {
-          commit(
-            'SET_POSTLINKMETA',
-            Object.assign(links[i], {
-              index: i
-            })
-          )
+          commit('SET_POSTLINKMETA', Object.assign(links[i], { index: i }))
 
           return
         }
       }
+
+      commit('SET_POSTLINKMETA', {})
     }
   },
 
