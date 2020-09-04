@@ -107,7 +107,7 @@ new Saika({
         },
         {
           title: 'Google Analytics',
-          link: '/plugin/google-analytics'
+          link: '/plugin/ga'
         },
         {
           title: 'Mermaid',
