@@ -1,7 +1,7 @@
 <template>
   <HomeSection>
     <template #title>
-      <Edit3Icon />Posts
+      <EditIcon />Posts
     </template>
 
     <div class="columns is-multiline">
@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import { Edit3Icon, ChevronRightIcon } from 'vue-feather-icons'
+import { EditIcon, ChevronRightIcon } from 'vue-feather-icons'
 import PostCard from './PostCard.vue'
 import HomeSection from './HomeSection.vue'
 
 export default {
   components: {
-    Edit3Icon,
+    EditIcon,
     ChevronRightIcon,
     PostCard,
     HomeSection
