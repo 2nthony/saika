@@ -5,6 +5,17 @@ import Posts from './views/Posts.vue'
 
 export default {
   name: 'saika-theme-portfolio',
+
+  when: api => {
+    const { github } = api.config
+
+    if (!github) {
+      console.error('[saika portfolio]: Missing required option `github`')
+    }
+
+    return Boolean(github)
+  },
+
   extend: api => {
     const { nav } = api.config
 
