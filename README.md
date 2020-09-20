@@ -11,6 +11,25 @@ Please consider starring the project to show your ❤️ and support.
 - Extensible plugin system, plenty of official and community themes and plugins.
 - Powered by Markdown and Vue.
 
+## Ecosystem
+
+### Themes
+
+| Project                                          | Stauts                                               | Description                    |
+| ------------------------------------------------ | ---------------------------------------------------- | ------------------------------ |
+| [docs](https://saika.dev/#/theme/docs)           | ![](https://badgen.net/npm/v/@saika/theme-docs)      | Similar to Vercel's docs       |
+| [portfolio](https://saika.dev/#/theme/portfolio) | ![](https://badgen.net/npm/v/@saika/theme-portfolio) | Portfolio page with github api |
+
+### Plugins
+
+| Project                                                   | Stauts                                                | Description           |
+| --------------------------------------------------------- | ----------------------------------------------------- | --------------------- |
+| [google-analytics](https://saika.dev/#/plugin/ga)         | ![](https://badgen.net/npm/v/@saika/google-analytics) | -                     |
+| [mermaid](https://saika.dev/#/plugin/mermaid)             | ![](https://badgen.net/npm/v/@saika/mermaid)          | Mermaid-js            |
+| [plantuml](https://saika.dev/#/plugin/plantuml)           | ![](https://badgen.net/npm/v/@saika/plantuml)         | PlantUML              |
+| [github-corner](https://saika.dev/#/plugin/github-corner) | ![](https://badgen.net/npm/v/@saika/github-corner)    | Badge for github repo |
+| [disqus](https://github.com/evillt/saika-plugin-disqus)   | ![](https://badgen.net/npm/v/saika-plugin-disqus)     | Disqus comment system |
+
 ## Documentation
 
 - https://saika.dev
