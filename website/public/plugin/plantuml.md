@@ -1,5 +1,7 @@
 # Saika PlantUML <PkgVersion name="@saika/plantuml" />
 
+> Know about [PlantUml](https://plantuml.com)
+
 Using PlantUML in Saika.
 
 ## Usage

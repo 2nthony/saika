@@ -1,5 +1,7 @@
 # Saika Mermaid <PkgVersion name="@saika/mermaid" />
 
+> Know about [mermaid](http://mermaid-js.github.io/mermaid/)
+
 Using Mermaid in Saika.
 
 ## Usage
