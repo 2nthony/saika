@@ -2,6 +2,7 @@ import Saika from '../core/src'
 import saikaThemeDocs from '../themes/docs/src'
 import googleAnalytics from '../plugins/google-analytics/src'
 import PkgVersion from './components/PkgVersion.vue'
+import { copyCode } from 'saika-code-block-buttons'
 
 new Saika({
   target: 'app',
@@ -27,6 +28,8 @@ new Saika({
 
   footer: `© {{ new Date().getFullYear() }} Made with <font color="#f04">❤</font> by
   <a href="https://github.com/evillt">EVILLT</a>.`,
+
+  codeBlockButtons: [copyCode],
 
   nav: [
     {
