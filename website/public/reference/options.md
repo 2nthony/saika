@@ -142,12 +142,14 @@ type Icon = URL | SVGString
 interface CodeBlockButton {
   icon: Icon
   action: (code) => void
+  tip?: string
 }
 
 const example = {
   icon: 'https://cdn.jsdelivr.net/npm/feather-icons/dist/icons/copy.svg',
   // icon: `<svg>...</svg>`
   action: code => console.log(code)
+  tip: 'Copy to clipboard'
 }
 ```
 
