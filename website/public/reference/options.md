@@ -153,4 +153,6 @@ const example = {
 }
 ```
 
-Set up buttons for code block at top-right. e.g. copy-code, jump to jsfiddle.
+Set up buttons for code block at top-right. e.g. copy code, jump to jsfiddle.
+
+We also preseted some [codeBlockButtons](https://github.com/evillt/saika-code-block-buttons) for you.
