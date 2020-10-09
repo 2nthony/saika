@@ -93,7 +93,7 @@
   & pre,
   & .code-mask {
     font-family: var(--code-font);
-    border: 1px solid #eaeaea;
+    border: 1px solid var(--border-color);
     position: relative;
     white-space: pre;
     overflow: auto;

@@ -77,12 +77,11 @@ To check a plugin is exists.
 Register components at specific position.
 
 ```ts
-type RegisterComponent =
-  (
-    position: Position,
-    component: VueComponent,
-    props: object
-  ) => SaikaInstance
+type RegisterComponent = (
+  position: Position,
+  component: VueComponent,
+  props: object
+) => SaikaInstance
 
 type Position =
   // The start of root component
@@ -102,6 +101,8 @@ type Position =
 Get the components list with specific position.
 
 ## @deprecates
+
+<details><summary>Hidden</summary>
 
 These API will remove in next major release.
 
@@ -126,3 +127,5 @@ Process markdown string.
 - Type: `(html: string) => string | Promise<string>`
 
 Process HTML string.
+
+</details>
