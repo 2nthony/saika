@@ -88,6 +88,16 @@
       font: 13px var(--code-font);
       color: #cacaca;
     }
+
+    &.has-code-block-buttons:hover {
+      &:before {
+        opacity: 0;
+      }
+      /* code-block-buttons.vue */
+      & .code-block-buttons {
+        opacity: 1;
+      }
+    }
   }
 
   & pre,
