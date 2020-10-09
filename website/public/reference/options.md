@@ -131,3 +131,24 @@ Options for [window.fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetc
 - Default: `true`
 
 Prefetch markdown files using `<link rel=prefetch>`.
+
+## codeBlockButtons <Badge content="saika 2.13.0+" />
+
+- Type: `Array<CodeBlockButton>`
+
+```ts
+type Icon = URL | SVGString
+
+interface CodeBlockButton {
+  icon: Icon
+  action: (code) => void
+}
+
+const example = {
+  icon: 'https://cdn.jsdelivr.net/npm/feather-icons/dist/icons/copy.svg',
+  // icon: `<svg>...</svg>`
+  action: code => console.log(code)
+}
+```
+
+Set up buttons for code block at top-right. e.g. copy-code, jump to jsfiddle.

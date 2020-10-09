@@ -1,9 +1,15 @@
 import marked from '../../utils/marked'
 import parseCodeOptions from '../../utils/parseCodeOptions'
+import CodeBlockButtons from './code-block-buttons.vue'
 
 export default {
   name: 'marked-renderer-code',
+
   extend: api => {
+    api.use(({ Vue }) => {
+      Vue.component(CodeBlockButtons.name, CodeBlockButtons)
+    })
+
     api.hook('extendMarkedRenderer', renderer => {
       // `v-pre` Disable template interpolation in code
       renderer.codespan = text =>
@@ -15,6 +21,8 @@ export default {
         const { env } = this.options
 
         let res = origCode.call(this, code, lang, escaped)
+        let classnames = 'pre-wrapper'
+
         res = res.replace(/^<pre>/, `<pre v-pre>`)
 
         if (opts.mixin) {
@@ -48,7 +56,18 @@ export default {
           res += `<div class="code-mask">${codeMask}</div>`
         }
 
-        return `<div data-lang="${lang || ''}" class="pre-wrapper">${res}</div>`
+        if (Array.isArray(api.config.codeBlockButtons)) {
+          classnames += ' has-code-block-buttons'
+          res = `
+            <component :is="{render: h => h('code-block-buttons', { props: {encodedCode: \`${encodeURIComponent(
+              code
+            )}\`} })}" />
+            ${res}
+          `
+        }
+
+        return `<div data-lang="${lang ||
+          ''}" class="${classnames}">${res}</div>`
       }
     })
   }
