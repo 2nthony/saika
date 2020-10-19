@@ -4,8 +4,7 @@
   "version": "2.13.1",
   "license": "MIT",
   "files": [
-    "dist",
-    "!**/__test__/**"
+    "dist"
   ],
   "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
   "main": "dist/saika.js",
