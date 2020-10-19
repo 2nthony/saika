@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.2](https://github.com/evillt/saika/compare/saika@2.13.1...saika@2.13.2) (2020-10-19)
+
+### Bug Fixes
+
+- **core:** npm files ([35f160a](https://github.com/evillt/saika/commit/35f160a))
+
 ## [2.13.1](https://github.com/evillt/saika/compare/saika@2.13.0...saika@2.13.1) (2020-10-19)
 
 **Note:** Version bump only for package saika
