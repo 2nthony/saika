@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/evillt/saika/compare/@saika/theme-docs@2.5.1...@saika/theme-docs@2.6.0) (2020-11-02)
+
+### Features
+
+- **theme-docs:** support configure search box placeholder ([#69](https://github.com/evillt/saika/issues/69)) ([e52feec](https://github.com/evillt/saika/commit/e52feec))
+
 ## [2.5.1](https://github.com/evillt/saika/compare/@saika/theme-docs@2.5.0...@saika/theme-docs@2.5.1) (2019-10-06)
 
 ### Bug Fixes
