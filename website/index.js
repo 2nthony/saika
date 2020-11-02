@@ -139,15 +139,15 @@ new Saika({
       title: 'Credits',
       link: '/credits'
     }
-  ]
+  ],
+
+  searchBox: {
+    placeholder: 'Search... ("/" to focus)'
+  }
 })
 
 Vue.component('ReverseText', {
-  template: `
-    <div>
-      {{ reversedText }}
-    </div>
-  `,
+  template: `<div>{{ reversedText }}</div>`,
   props: ['text'],
   computed: {
     reversedText() {
