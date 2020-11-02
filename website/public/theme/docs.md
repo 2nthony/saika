@@ -85,6 +85,13 @@ Max search suggestions.
 
 Configure the hotkeys which when pressed will focus the search box. Set to an empty array to disable.
 
+#### searchBox.placeholder <Badge content="Theme Docs 2.6.0+" />
+
+- Type: `string`
+- Default: `'Search...'`
+
+The input placeholder.
+
 ## Comparisons
 
 ### VuePress / GitBook / Hexo
