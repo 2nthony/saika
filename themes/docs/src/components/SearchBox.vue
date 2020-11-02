@@ -18,8 +18,8 @@
       v-model="query"
       aria-label="search"
       aria-autocomplete="list"
-      placeholder="Search..."
-      aria-placeholder="Search..."
+      :placeholder="searchBox.placeholder"
+      :aria-placeholder="searchBox.placeholder"
       :class="{ focused }"
       autocomplete="off"
       spellcheck="false"
@@ -67,7 +67,8 @@ export default {
     searchBox() {
       const SEARCH_BOX_DEFAULT = {
         max: 5,
-        hotKeys: ['s', '/']
+        hotKeys: ['s', '/'],
+        placeholder: 'Search...'
       }
 
       return Object.assign(SEARCH_BOX_DEFAULT, this.$config.searchBox)
