@@ -29,6 +29,7 @@
       @keyup.enter="go(focusIndex)"
       @keyup.up="onUp"
       @keyup.down="onDown"
+      @keyup.esc="exit"
     />
 
     <ul v-if="showSuggestions" class="suggestions" @mouseleave="unfocus">
@@ -114,8 +115,7 @@ export default {
     go(i) {
       if (this.showSuggestions && this.focusIndex > -1) {
         this.$router.push(this.suggestions[i].link)
-        this.query = ''
-        this.focusIndex = 0
+        this.exit()
       }
     },
 
@@ -149,6 +149,11 @@ export default {
           this.focusIndex = 0
         }
       }
+    },
+
+    exit() {
+      this.query = ''
+      this.$refs.search.blur()
     },
 
     onHotKey(event) {
