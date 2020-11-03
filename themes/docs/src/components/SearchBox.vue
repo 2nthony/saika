@@ -24,6 +24,7 @@
       autocomplete="off"
       spellcheck="false"
       ref="search"
+      @input="focusIndex = 0"
       @focus="onFocus"
       @blur="focused = false"
       @keyup.enter="go(focusIndex)"
