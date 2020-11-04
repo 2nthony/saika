@@ -225,7 +225,7 @@ export default {
     &.focused {
       border-radius: var(--radius);
       background-color: #f3f4f5;
-      box-shadow: 0 0 1px #666;
+      box-shadow: 0 0 0 1px var(--border-color);
     }
 
     & .tag-wrapper {
