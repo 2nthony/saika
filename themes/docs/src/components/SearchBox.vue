@@ -33,7 +33,7 @@
       @keyup.esc="exit"
     />
 
-    <ul v-if="showSuggestions" class="suggestions" @mouseleave="unfocus">
+    <ul v-if="showSuggestions" class="suggestions">
       <li
         v-for="(s, i) in suggestions"
         :key="s.link"
@@ -169,10 +169,6 @@ export default {
 
     focus(i) {
       this.focusIndex = i
-    },
-
-    unfocus() {
-      this.focusIndex = -1
     }
   }
 }
