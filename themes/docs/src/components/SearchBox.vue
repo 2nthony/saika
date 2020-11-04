@@ -24,14 +24,16 @@
       autocomplete="off"
       spellcheck="false"
       ref="search"
+      @input="focusIndex = 0"
       @focus="onFocus"
       @blur="focused = false"
       @keyup.enter="go(focusIndex)"
       @keyup.up="onUp"
       @keyup.down="onDown"
+      @keyup.esc="exit"
     />
 
-    <ul v-if="showSuggestions" class="suggestions" @mouseleave="unfocus">
+    <ul v-if="showSuggestions" class="suggestions">
       <li
         v-for="(s, i) in suggestions"
         :key="s.link"
@@ -114,8 +116,7 @@ export default {
     go(i) {
       if (this.showSuggestions && this.focusIndex > -1) {
         this.$router.push(this.suggestions[i].link)
-        this.query = ''
-        this.focusIndex = 0
+        this.exit()
       }
     },
 
@@ -151,6 +152,11 @@ export default {
       }
     },
 
+    exit() {
+      this.query = ''
+      this.$refs.search.blur()
+    },
+
     onHotKey(event) {
       if (
         event.srcElement === document.body &&
@@ -163,10 +169,6 @@ export default {
 
     focus(i) {
       this.focusIndex = i
-    },
-
-    unfocus() {
-      this.focusIndex = -1
     }
   }
 }
@@ -223,7 +225,7 @@ export default {
     &.focused {
       border-radius: var(--radius);
       background-color: #f3f4f5;
-      box-shadow: 0 0 1px #666;
+      box-shadow: 0 0 0 1px var(--border-color);
     }
 
     & .tag-wrapper {
