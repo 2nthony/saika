@@ -6,10 +6,10 @@ import { copyCode } from 'saika-code-block-buttons'
 
 new Saika({
   target: 'app',
-  title: 'Saika',
+  title: 'In-Depth Wiki',
   highlight: ['bash', 'typescript', 'json', 'markdown'],
   editLink: {
-    baseUrl: 'https://github.com/evillt/saika/tree/master/website/public',
+    baseUrl: 'https://github.com/jshmllr/saika/tree/master/website/public',
     text: 'Edit this page on GitHub'
   },
   postMixins: [
@@ -34,12 +34,12 @@ new Saika({
   nav: [
     {
       title: 'GitHub',
-      link: 'https://github.com/evillt/saika'
+      link: 'https://github.com/jshmllr/saika'
     }
   ],
   posts: [
     {
-      title: 'Guide',
+      title: 'In-Depth Wiki',
       children: [
         {
           title: 'Introduction',
