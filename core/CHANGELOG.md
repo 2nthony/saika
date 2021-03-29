@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.4](https://github.com/evillt/saika/compare/saika@2.13.3...saika@2.13.4) (2021-03-29)
+
+### Bug Fixes
+
+- **post-content.css:** syntax error ([#76](https://github.com/evillt/saika/issues/76)) ([734803d](https://github.com/evillt/saika/commit/734803d))
+
 ## [2.13.3](https://github.com/evillt/saika/compare/saika@2.13.2...saika@2.13.3) (2020-11-02)
 
 **Note:** Version bump only for package saika
