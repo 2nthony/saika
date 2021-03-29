@@ -18,34 +18,34 @@
     font-size: 3rem;
     margin: 0;
     font-weight: 700;
-    letter-spacing: -.066875rem;
+    letter-spacing: -0.066875rem;
   }
 
   & h2 {
     font-size: 2.25rem;
-    margin-top: 40px 0 0 0;
-    letter-spacing: -.049375rem;
+    margin-top: 40px;
+    letter-spacing: -0.049375rem;
   }
 
   & h3 {
     font-size: 1.5rem;
-    margin-top: 40px 0 0 0;
+    margin-top: 40px;
     letter-spacing: -0.029375rem;
   }
 
   & h4 {
     font-size: 1.25rem;
-    letter-spacing: -.020625rem;
+    letter-spacing: -0.020625rem;
   }
 
   & h5 {
     font-size: 1rem;
-    letter-spacing: -.01125rem;
+    letter-spacing: -0.01125rem;
   }
 
   & h6 {
-    font-size: .875rem;
-    letter-spacing: -.005625rem;
+    font-size: 0.875rem;
+    letter-spacing: -0.005625rem;
   }
 
   & hr {
@@ -65,9 +65,10 @@
   & code {
     font-family: var(--code-font);
     color: var(--inline-code-color);
-    font-size: .9em;
+    font-size: 0.9em;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       content: '`';
     }
   }
@@ -76,7 +77,8 @@
     padding: 20px;
 
     & code {
-      &::before, &::after {
+      &::before,
+      &::after {
         content: '';
       }
     }
@@ -118,7 +120,7 @@
     word-spacing: normal;
     word-break: normal;
     line-height: 1.575em;
-    font-size: .875em;
+    font-size: 0.875em;
     -webkit-overflow-scrolling: touch;
 
     & code {
@@ -127,7 +129,6 @@
       line-height: 20px;
     }
   }
-
 
   & .code-mask {
     overflow: hidden;
@@ -229,7 +230,7 @@
     counter-reset: list;
 
     & li::before {
-      content: counter(list) ".";
+      content: counter(list) '.';
       counter-increment: list;
     }
   }
@@ -239,7 +240,7 @@
   }
 
   & blockquote {
-    border-left: .25rem solid #dfe2e5;
+    border-left: 0.25rem solid #dfe2e5;
     padding: 0 1rem;
     color: #6a737d;
     margin: 20px 0;
