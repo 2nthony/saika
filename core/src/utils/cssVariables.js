@@ -9,7 +9,6 @@ export default {
   foreground: '#000',
   textSize: '1rem',
   borderColor: '#eaeaea',
-  successColor: '#0076FF',
   dangerColor: '#F04',
   errorColor: 'var(--danger-color)',
   warningColor: '#F5A623',
@@ -21,5 +20,8 @@ export default {
   pageMaxWidth: '1048px',
   sidebarWidth: '280px',
   highlightBackgroundColor: '#eee',
-  highlightLineBorderColor: '#9e9e9e'
+  highlightLineBorderColor: '#9e9e9e',
+
+  // TODO migrate to vercel vars start
+  geistSuccess: '#0070f3'
 }

@@ -59,8 +59,8 @@ export default {
   }
 
   &.is-success {
-    border-color: var(--success-color);
-    color: var(--success-color);
+    border-color: var(--geist-success);
+    color: var(--geist-success);
   }
 
   &.is-fill {
@@ -77,7 +77,7 @@ export default {
     }
 
     &.is-success {
-      background-color: var(--success-color);
+      background-color: var(--geist-success);
     }
 
     &,

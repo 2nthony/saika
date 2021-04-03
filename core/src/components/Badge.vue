@@ -50,7 +50,7 @@ export default {
   }
 
   &.is-success {
-    background-color: var(--success-color);
+    background-color: var(--geist-success);
   }
 }
 </style>

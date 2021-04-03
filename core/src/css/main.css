@@ -25,7 +25,7 @@ body {
 }
 
 a {
-  color: var(--success-color);
+  color: var(--geist-success);
   text-decoration: none;
 }
 
@@ -48,7 +48,7 @@ details > summary {
 }
 
 .Content a {
-  color: var(--success-color);
+  color: var(--geist-success);
 
   &:hover {
     text-decoration: underline;
