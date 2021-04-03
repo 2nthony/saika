@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/evillt/saika/compare/@saika/theme-portfolio@1.0.4...@saika/theme-portfolio@1.0.5) (2021-04-03)
+
+### Bug Fixes
+
+- wrong `a` color ([e259b94](https://github.com/evillt/saika/commit/e259b94))
+
 ## [1.0.4](https://github.com/evillt/saika/compare/@saika/theme-portfolio@1.0.3...@saika/theme-portfolio@1.0.4) (2021-04-03)
 
 **Note:** Version bump only for package @saika/theme-portfolio
