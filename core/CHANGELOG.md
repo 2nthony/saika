@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.6](https://github.com/evillt/saika/compare/saika@2.13.5...saika@2.13.6) (2021-04-03)
+
+**Note:** Version bump only for package saika
+
 ## [2.13.5](https://github.com/evillt/saika/compare/saika@2.13.4...saika@2.13.5) (2021-04-03)
 
 **Note:** Version bump only for package saika
