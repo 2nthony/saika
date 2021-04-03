@@ -228,7 +228,7 @@ export default {
       }
 
       &.router-link-exact-active {
-        color: var(--accent-color);
+        color: var(--success-color);
       }
     }
 

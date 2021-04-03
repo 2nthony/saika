@@ -8,7 +8,6 @@ export default {
   textColor: '#000',
   foreground: '#000',
   textSize: '1rem',
-  accentColor: 'var(--success-color)',
   borderColor: '#eaeaea',
   successColor: '#0076FF',
   dangerColor: '#F04',
