@@ -272,4 +272,12 @@
   & .header-anchor-icon {
     visibility: hidden;
   }
+
+  & a {
+    color: var(--geist-success);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

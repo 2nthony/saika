@@ -25,7 +25,7 @@ body {
 }
 
 a {
-  color: var(--geist-success);
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -45,14 +45,6 @@ details > summary {
 .external-link-icon {
   margin-left: 3px;
   display: inline-block;
-}
-
-.Content a {
-  color: var(--geist-success);
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 .saika-banner {
