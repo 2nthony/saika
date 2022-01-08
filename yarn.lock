@@ -777,9 +777,9 @@
   resolved "https://registry.npmjs.org/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@2nthony/copy@^1.0.3":
+"@evillt/copy@^1.0.3":
   version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@2nthony/copy/-/copy-1.0.3.tgz#61ab2883662ce9b03cd11863b9b82b028035e393"
+  resolved "https://registry.yarnpkg.com/@evillt/copy/-/copy-1.0.3.tgz#61ab2883662ce9b03cd11863b9b82b028035e393"
   integrity sha512-oSX57OWC0gikuKmwM07zAq8C6+KRlmAF9Ni36ADrB6JibiVVI9242GR5pstoC+4qaQ1A0eMVN2Gd+nNXlAMwbQ==
 
 "@evocateur/libnpmaccess@^3.1.2":
@@ -10555,7 +10555,7 @@ saika-code-block-buttons@^1.0.1:
   resolved "https://registry.yarnpkg.com/saika-code-block-buttons/-/saika-code-block-buttons-1.0.1.tgz#86668deea4a404dbab096c873b6c74fae65a37f8"
   integrity sha512-fxOSlf6quSnjWwfoe+LHHoUBcFrDcrUICG9NLmeQEl/O1N3Ap/jHndJjz4G7crz98Xe68v3Nb3A63SUPR+RNfQ==
   dependencies:
-    "@2nthony/copy" "^1.0.3"
+    "@evillt/copy" "^1.0.3"
     feather-icons "^4.28.0"
 
 sass@^1.18.0:
