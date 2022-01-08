@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.2](https://github.com/2nthony/saika/compare/@saika/theme-docs@2.6.1...@saika/theme-docs@2.6.2) (2022-01-08)
+
+### Bug Fixes
+
+- **core:** link color ([#91](https://github.com/2nthony/saika/issues/91)) ([f1eb200](https://github.com/2nthony/saika/commit/f1eb200))
+
 ## [2.6.1](https://github.com/2nthony/saika/compare/@saika/theme-docs@2.6.0...@saika/theme-docs@2.6.1) (2020-11-04)
 
 **Note:** Version bump only for package @saika/theme-docs

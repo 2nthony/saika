@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.8](https://github.com/2nthony/saika/compare/saika@2.13.7...saika@2.13.8) (2022-01-08)
+
+### Bug Fixes
+
+- **core:** link color ([#91](https://github.com/2nthony/saika/issues/91)) ([f1eb200](https://github.com/2nthony/saika/commit/f1eb200))
+
 ## [2.13.7](https://github.com/2nthony/saika/compare/saika@2.13.6...saika@2.13.7) (2021-04-03)
 
 ### Bug Fixes

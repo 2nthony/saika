@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/2nthony/saika/compare/@saika/google-analytics@1.0.5...@saika/google-analytics@1.0.6) (2022-01-08)
+
+**Note:** Version bump only for package @saika/google-analytics
+
 ## [1.0.5](https://github.com/2nthony/saika/compare/@saika/google-analytics@1.0.4...@saika/google-analytics@1.0.5) (2019-09-05)
 
 **Note:** Version bump only for package @saika/google-analytics
