@@ -29,6 +29,8 @@ export default {
 }
 
 .header-nav-item {
+  color: var(--text-color);
+
   &:not(:first-child) {
     margin-left: 25px;
   }

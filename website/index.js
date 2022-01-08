@@ -26,8 +26,8 @@ new Saika({
     process.env.NODE_ENV === 'production' && googleAnalytics('UA-145247644-2')
   ].filter(Boolean),
 
-  footer: `© {{ new Date().getFullYear() }} Made with <font color="#f04">❤</font> by
-  <a href="https://github.com/evillt">EVILLT</a>.`,
+  footer: `© {{ new Date().getFullYear() }} Made with <font color="#f04">❤</font> &nbsp; by
+  <a href="https://github.com/2nthony">2nthony</a>.`,
 
   codeBlockButtons: [copyCode],
 
@@ -77,7 +77,7 @@ new Saika({
         {
           title: 'Saika Instance',
           link: '/reference/saika-instance'
-        },
+        }
       ]
     },
     {
@@ -151,7 +151,10 @@ Vue.component('ReverseText', {
   props: ['text'],
   computed: {
     reversedText() {
-      return this.text.split('').reverse().join('')
+      return this.text
+        .split('')
+        .reverse()
+        .join('')
     }
   }
 })

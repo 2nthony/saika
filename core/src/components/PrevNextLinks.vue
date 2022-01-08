@@ -48,6 +48,11 @@ export default {
   margin-top: 40px;
   padding-top: 30px;
 
+  & .prev-link,
+  & .next-link {
+    color: var(--geist-success);
+  }
+
   & .prev-link {
     float: left;
   }

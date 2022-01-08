@@ -61,4 +61,8 @@ details > summary {
 
 .saika-footer {
   margin-top: 5rem;
+
+  & a {
+    color: var(--geist-success);
+  }
 }
