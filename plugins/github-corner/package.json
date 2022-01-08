@@ -13,7 +13,7 @@
     "dist/index.js"
   ],
   "author": "evillt <ijoec123@gmail.com>",
-  "homepage": "https://github.com/evillt/saika#readme",
+  "homepage": "https://github.com/2nthony/saika#readme",
   "license": "MIT",
   "devDependencies": {
     "bili": "^4.8.1",

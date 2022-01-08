@@ -9,7 +9,7 @@ new Saika({
   title: 'Saika',
   highlight: ['bash', 'typescript', 'json', 'markdown'],
   editLink: {
-    baseUrl: 'https://github.com/evillt/saika/tree/master/website/public',
+    baseUrl: 'https://github.com/2nthony/saika/tree/master/website/public',
     text: 'Edit this page on GitHub'
   },
   postMixins: [
@@ -34,7 +34,7 @@ new Saika({
   nav: [
     {
       title: 'GitHub',
-      link: 'https://github.com/evillt/saika'
+      link: 'https://github.com/2nthony/saika'
     }
   ],
   posts: [

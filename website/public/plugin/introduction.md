@@ -52,4 +52,4 @@ new Saika({
 
 For more details about how to develop a plugin, please check out [Plugin Api](/reference/plugin-api).
 
-Check out [plugins](https://github.com/evillt/saika/tree/master/plugins) for a list of Saika plugins by the maintainers and users.
+Check out [plugins](https://github.com/2nthony/saika/tree/master/plugins) for a list of Saika plugins by the maintainers and users.

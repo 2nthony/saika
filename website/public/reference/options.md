@@ -111,7 +111,7 @@ Reference to [banner](#banner) but with class `saika-footer`.
 
 - Type: `object`
 
-Override CSS variables. Check out [cssVariables.js](https://github.com/evillt/saika/blob/master/core/src/utils/cssVariables.js) for details.
+Override CSS variables. Check out [cssVariables.js](https://github.com/2nthony/saika/blob/master/core/src/utils/cssVariables.js) for details.
 
 ## router
 
@@ -155,4 +155,4 @@ const example = {
 
 Set up buttons for code block at top-right. e.g. copy code, jump to jsfiddle.
 
-We also preseted some [codeBlockButtons](https://github.com/evillt/saika-code-block-buttons) for you.
+We also preseted some [codeBlockButtons](https://github.com/2nthony/saika-code-block-buttons) for you.
