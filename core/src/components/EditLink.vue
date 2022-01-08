@@ -28,6 +28,7 @@ export default {
   margin-top: 40px;
 
   & a {
+    color: var(--geist-success);
     display: inline-flex;
     align-items: center;
   }
