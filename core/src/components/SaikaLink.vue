@@ -9,7 +9,6 @@ export default {
 
   render(h, { data, children }) {
     const attrs = { ...data.attrs }
-    console.log(data)
     const { to } = attrs
     if (isExternalLink(to)) {
       return h(
