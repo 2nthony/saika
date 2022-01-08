@@ -6,4 +6,4 @@ https://saika.dev/#/plugin/plantuml
 
 ## License
 
-MIT © [evillt](https://github.com/evillt)
+MIT © [2nthony](https://github.com/2nthony)

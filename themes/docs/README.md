@@ -44,4 +44,4 @@ The posts item is your sidebar item.
 
 # License
 
-MIT © [evillt](https://github.com/evillt)
+MIT © [2nthony](https://github.com/2nthony)
