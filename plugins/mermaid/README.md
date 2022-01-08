@@ -2,7 +2,7 @@
 
 ## Documentation
 
-https://saika.dev/#/plugin/mermaid
+https://saika.vercel.app/#/plugin/mermaid
 
 ## License
 

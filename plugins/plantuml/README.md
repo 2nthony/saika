@@ -2,7 +2,7 @@
 
 ## Documentation
 
-https://saika.dev/#/plugin/plantuml
+https://saika.vercel.app/#/plugin/plantuml
 
 ## License
 

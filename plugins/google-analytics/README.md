@@ -2,7 +2,7 @@
 
 ## Documentation
 
-https://saika.dev/#/plugin/google-analytics
+https://saika.vercel.app/#/plugin/google-analytics
 
 ## License
 
