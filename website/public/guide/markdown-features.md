@@ -41,14 +41,14 @@ External links will converted to `<a target="_blank" rel="noopener noreferrer">`
 **Input**:
 
 ```markdown
-- [Saika](https://saika.dev)
-- [Saika repo](https://github.com/evillt/saika)
+- [Saika](https://saika.vercel.app)
+- [Saika repo](https://github.com/2nthony/saika)
 ```
 
 **Output**:
 
-- [Saika](https://saika.dev)
-- [Saika repo](https://github.com/evillt/saika)
+- [Saika](https://saika.vercel.app)
+- [Saika repo](https://github.com/2nthony/saika)
 
 ## Lists
 

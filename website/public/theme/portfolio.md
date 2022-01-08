@@ -1,6 +1,6 @@
 # Saika Theme Portfolio <PkgVersion name="@saika/theme-portfolio" />
 
-You can see the [demo](https://saika-theme-portfolio-demo.saika.dev).
+You can see the [demo](https://saika-theme-portfolio-demo.saika.vercel.app).
 
 ## Usage
 

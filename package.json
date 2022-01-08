@@ -3,7 +3,7 @@
   "name": "saika-monorepo",
   "repository": {
     "type": "git",
-    "url": "evillt/saika"
+    "url": "2nthony/saika"
   },
   "workspaces": [
     "core",
@@ -11,7 +11,7 @@
     "packages/*",
     "themes/*"
   ],
-  "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
+  "author": "2nthony <ant.hu@outlook.com>",
   "scripts": {
     "lint": "xo",
     "test": "npm run lint && echo lol",

@@ -2,8 +2,8 @@
 
 ## Documentation
 
-https://saika.dev/#/plugin/google-analytics
+https://saika.vercel.app/#/plugin/google-analytics
 
 ## License
 
-MIT © [evillt](https://github.com/evillt)
+MIT © [2nthony](https://github.com/2nthony)

@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "alias": ["saika.dev", "saika"],
   "builds": [
     {
       "src": "package.json",

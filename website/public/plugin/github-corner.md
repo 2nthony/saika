@@ -27,7 +27,7 @@ new Saika({
 
 - Type: `string`
 
-GitHub repo. e.g. `evillt/saika`.
+GitHub repo. e.g. `2nthony/saika`.
 
 ### options.backgroundColor
 
