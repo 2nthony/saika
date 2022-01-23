@@ -6,7 +6,7 @@
   "files": [
     "dist"
   ],
-  "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
+  "author": "2nthony <ant.hu@outlook.com> (https://github.com/2nthony)",
   "main": "dist/saika.js",
   "scripts": {
     "build": "poi --prod",
