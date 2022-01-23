@@ -7,9 +7,11 @@
   "author": "2nthony <ant.hu@outlook.com>",
   "license": "MIT",
   "files": [
+    "src",
     "dist/index.css",
     "dist/index.js"
   ],
+  "module": "src/index.js",
   "main": "dist/index.js",
   "scripts": {
     "build": "bili",
@@ -22,6 +24,6 @@
     "bili": "^4.8.1",
     "postcss-preset-env": "^6.7.0",
     "rollup-plugin-vue": "^5.0.1",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.14"
   }
 }

@@ -4,9 +4,11 @@
   "version": "2.13.9",
   "license": "MIT",
   "files": [
+    "src",
     "dist"
   ],
   "author": "2nthony <ant.hu@outlook.com> (https://github.com/2nthony)",
+  "module": "src/index.js",
   "main": "dist/saika.js",
   "scripts": {
     "build": "poi --prod",
@@ -17,12 +19,12 @@
     "loadjs": "^3.6.1",
     "medium-zoom": "^1.0.4",
     "prismjs": "^1.17.1",
-    "vue": "^2.6.10",
+    "vue": "^2.6.14",
     "vue-router": "^3.0.7",
     "vuex": "^3.1.1"
   },
   "devDependencies": {
     "postcss-preset-env": "^6.7.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.14"
   }
 }
