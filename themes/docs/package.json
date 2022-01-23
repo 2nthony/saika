@@ -5,9 +5,11 @@
     "access": "public"
   },
   "files": [
+    "src",
     "dist/index.js",
     "dist/index.css"
   ],
+  "module": "src/index.js",
   "main": "dist/index.js",
   "scripts": {
     "build": "bili",
