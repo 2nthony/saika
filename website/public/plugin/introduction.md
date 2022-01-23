@@ -6,7 +6,7 @@ A plugin is essentially a pure object:
 const showAuthor = {
   name: 'showAuthor',
   extend: api => {
-    api.hook('processMarkdown', text => text.replace(/{author}/g, 'EVILLT'))
+    api.hook('processMarkdown', text => text.replace(/{author}/g, '2nthony'))
   }
 }
 
@@ -28,7 +28,7 @@ Will render as:
 ```markdown
 # Page Title
 
-EVILLT
+2nthony
 ```
 
 ---

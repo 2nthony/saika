@@ -13,7 +13,7 @@
     "build": "bili",
     "prepublishOnly": "yarn build"
   },
-  "author": "evillt <ijoec123@gmail.com>",
+  "author": "2nthony <ant.hu@outlook.com>",
   "license": "MIT",
   "devDependencies": {
     "bili": "^4.8.1",

@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 /**
- * Modified by evillt(https://github.com/evillt)
+ * Modified by 2nthony(https://github.com/2nthony)
  */
 
 /*

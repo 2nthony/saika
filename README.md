@@ -1,4 +1,6 @@
-# Saika [![NPM version](https://badgen.net/npm/v/saika)](https://npmjs.com/package/saika)[![lerna](https://badgen.net/badge/maintained%20with/lerna/cc00ff)](https://lerna.js.org)
+# Saika
+
+[![NPM version](https://badgen.net/npm/v/saika?label=&color=cyan)](https://npmjs.com/package/saika) [![lerna](https://badgen.net/badge/maintained%20with/lerna/cc00ff)](https://lerna.js.org)
 
 > Effortless info-site, done right.
 
@@ -15,20 +17,20 @@ Please consider starring the project to show your ❤️ and support.
 
 ### Themes
 
-| Project                                          | Stauts                                               | Description                    |
-| ------------------------------------------------ | ---------------------------------------------------- | ------------------------------ |
+| Project                                                 | Stauts                                               | Description                    |
+| ------------------------------------------------------- | ---------------------------------------------------- | ------------------------------ |
 | [docs](https://saika.vercel.app/#/theme/docs)           | ![](https://badgen.net/npm/v/@saika/theme-docs)      | Similar to Vercel's docs       |
 | [portfolio](https://saika.vercel.app/#/theme/portfolio) | ![](https://badgen.net/npm/v/@saika/theme-portfolio) | Portfolio page with github api |
 
 ### Plugins
 
-| Project                                                   | Stauts                                                | Description           |
-| --------------------------------------------------------- | ----------------------------------------------------- | --------------------- |
+| Project                                                          | Stauts                                                | Description           |
+| ---------------------------------------------------------------- | ----------------------------------------------------- | --------------------- |
 | [google-analytics](https://saika.vercel.app/#/plugin/ga)         | ![](https://badgen.net/npm/v/@saika/google-analytics) | -                     |
 | [mermaid](https://saika.vercel.app/#/plugin/mermaid)             | ![](https://badgen.net/npm/v/@saika/mermaid)          | Mermaid-js            |
 | [plantuml](https://saika.vercel.app/#/plugin/plantuml)           | ![](https://badgen.net/npm/v/@saika/plantuml)         | PlantUML              |
 | [github-corner](https://saika.vercel.app/#/plugin/github-corner) | ![](https://badgen.net/npm/v/@saika/github-corner)    | Badge for github repo |
-| [disqus](https://github.com/2nthony/saika-plugin-disqus)  | ![](https://badgen.net/npm/v/saika-plugin-disqus)     | Disqus comment system |
+| [disqus](https://github.com/2nthony/saika-plugin-disqus)         | ![](https://badgen.net/npm/v/saika-plugin-disqus)     | Disqus comment system |
 
 ## Documentation
 
@@ -55,4 +57,4 @@ Please consider starring the project to show your ❤️ and support.
 
 Authored and maintained by **2nthony** with help from contributors ([list](https://github.com/2nthony/saika/contributors)).
 
-> [evila.me](https://evila.me) · GitHub [@2nthony](https://github.com/2nthony) · Twitter [@2nthony](https://twitter.com/2nthony)
+> GitHub [@2nthony](https://github.com/2nthony) · Twitter [@2nthony_hu](https://twitter.com/2nthony_hu)

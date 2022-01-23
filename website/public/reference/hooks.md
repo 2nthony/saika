@@ -6,8 +6,8 @@ It pretty useful for develop Saika Plugin.
 api.hooks.add('SayHi', name => {
   console.log('Hi', name)
 })
-api.hooks.invoke('SayHi', 'evillt')
-// Hi, evillt
+api.hooks.invoke('SayHi', '2nthony')
+// Hi, 2nthony
 ```
 
 ## add
