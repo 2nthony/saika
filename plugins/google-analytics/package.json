@@ -8,8 +8,10 @@
     "build": "bili",
     "prepublishOnly": "yarn build"
   },
+  "module": "src/index.js",
   "main": "dist/index.js",
   "files": [
+    "src",
     "dist/index.js"
   ],
   "author": "2nthony <ant.hu@outlook.com>",
