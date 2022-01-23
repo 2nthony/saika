@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import pkg from '../package'
 import marked from './utils/marked'
 import createRouter from './router'
 import store from './store'
@@ -125,7 +126,7 @@ class Saika {
   }
 }
 
-Saika.version = __SAIKA_VERSION__
+Saika.version = pkg.version
 Saika.marked = marked
 
 export default Saika

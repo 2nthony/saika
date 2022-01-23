@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import prismjsPkg from 'prismjs/package'
 import marked from './utils/marked'
 import extendMarkedRenderer from './utils/extendMarkedRenderer'
 import highlight from './utils/highlight'
@@ -124,7 +125,7 @@ const store = new Vuex.Store({
             )
           })
           .map(lang => {
-            return `https://cdn.jsdelivr.net/npm/prismjs@${__PRISM_VERSION__}/components/prism-${lang}.min.js`
+            return `https://cdn.jsdelivr.net/npm/prismjs@${prismjsPkg.version}/components/prism-${lang}.min.js`
           }),
         'prism-languages'
       )
