@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/2nthony/saika/compare/@saika/theme-portfolio@1.0.5...@saika/theme-portfolio@1.0.6) (2022-01-23)
+
+### Bug Fixes
+
+- includes `src` ([#96](https://github.com/2nthony/saika/issues/96)) ([c1c2890](https://github.com/2nthony/saika/commit/c1c2890))
+
 ## [1.0.5](https://github.com/2nthony/saika/compare/@saika/theme-portfolio@1.0.4...@saika/theme-portfolio@1.0.5) (2021-04-03)
 
 ### Bug Fixes

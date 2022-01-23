@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.10](https://github.com/2nthony/saika/compare/saika@2.13.9...saika@2.13.10) (2022-01-23)
+
+### Bug Fixes
+
+- includes `src` ([#96](https://github.com/2nthony/saika/issues/96)) ([c1c2890](https://github.com/2nthony/saika/commit/c1c2890))
+
 ## [2.13.9](https://github.com/2nthony/saika/compare/saika@2.13.8...saika@2.13.9) (2022-01-08)
 
 ### Bug Fixes
