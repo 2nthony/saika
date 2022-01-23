@@ -7,9 +7,11 @@
   "author": "2nthony <ant.hu@outlook.com>",
   "license": "MIT",
   "files": [
+    "src",
     "dist/index.css",
     "dist/index.js"
   ],
+  "module": "src/index.js",
   "main": "dist/index.js",
   "scripts": {
     "build": "bili",
