@@ -57,4 +57,4 @@ Please consider starring the project to show your ❤️ and support.
 
 Authored and maintained by **2nthony** with help from contributors ([list](https://github.com/2nthony/saika/contributors)).
 
-> GitHub [@2nthony](https://github.com/2nthony) · Twitter [@2nthony_hu](https://twitter.com/2nthony_hu)
+> GitHub [@2nthony](https://github.com/2nthony) · Twitter [@\_2nthony](https://twitter.com/_2nthony)
